@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Landing Page')</title>
+    <title>@yield('title', 'Trivian')</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-
-
-    <!-- Hero Content -->
-    @include('components.hero')
 
 
     <!-- Main Content -->
@@ -18,8 +14,9 @@
         @yield('content')
     </main>
 
-    <footer class="bg-gray-800 text-white text-center p-4">
-        &copy; 2024 MyApp. All rights reserved.
-    </footer>
+
+  <!-- Footer -->
+    @include('components.footer')
+
 </body>
 </html>
