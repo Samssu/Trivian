@@ -1,7 +1,5 @@
     @extends('layouts.app')
     @include('components.navbar')
-
-
     
     <!-- Hero Section -->
     <section class="relative bg-cover bg-center text-white min-h-[65vh]" style="background-image: url('{{ asset('images/Background.jpg') }}');">
@@ -224,226 +222,279 @@
                 </div>
             </div>
         </section>
-
-    <!-- Explore Section -->
-    <section class="text-center py-32 bg-white">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-5xl font-bold mb-10">Explore The Community</h2>
-            <p class="text-2xl text-gray-700 mb-12">
-                Discover New Opportunities and Relationships
-            </p>
-            <a href="#"
+<!-- Explore Section -->
+<section class="text-center py-32 bg-white">
+    <div class="container mx-auto max-w-5xl">
+        <!-- Heading -->
+        <h2 class="text-5xl font-bold mb-10">Explore The Community</h2>
+        <!-- Subtitle -->
+        <p class="text-2xl text-gray-700 mb-12">
+            Discover New Opportunities and Relationships
+        </p>
+        <!-- Button -->
+        <a href="#"
             class="px-12 py-6 bg-red-500 text-white rounded-lg text-2xl shadow-lg hover:bg-red-600 transition">
             Start Now
-            </a>
+        </a>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Section Heading -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800">
+                Most <span class="text-red-500">Popular Categories</span>
+            </h2>
+            <p class="text-lg text-gray-600 mt-4">
+                Find the community that interests you the most and start your new journey today!
+            </p>
         </div>
-    </section>
 
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <!-- Heading -->
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">
-                    Most <span class="text-red-500">Popular Categories</span>
-                </h2>
-                <p class="text-lg text-gray-600 mt-4">
-                    Find the community that interests you the most and start your new journey today!
-                </p>
-            </div>
-
-            <!-- Categories Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Single Category -->
-                <div class="border-2 border-red-500 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Design</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
+        <!-- Categories Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+            <!-- Single Category - Design -->
+            <div class="border-2 border-red-500 bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Design</h3>
                     </div>
-                </div>
-
-                <!-- Example Categories -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m4 0h3M3 14h11m4 0h3M3 18h18m-10-8h6m-6-4h6" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Development</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h2m4 0h2M3 14h18m-12-4h4m-4 4h4m-4 4h6" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Marketing</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m4 0h3M3 14h11m4 0h3M3 18h18m-10-8h6m-6-4h6" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Development</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h2m4 0h2M3 14h18m-12-4h4m-4 4h4m-4 4h6" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Marketing</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m4 0h3M3 14h11m4 0h3M3 18h18m-10-8h6m-6-4h6" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Development</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h2m4 0h2M3 14h18m-12-4h4m-4 4h4m-4 4h6" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Marketing</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m4 0h3M3 14h11m4 0h3M3 18h18m-10-8h6m-6-4h6" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Development</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h2m4 0h2M3 14h18m-12-4h4m-4 4h4m-4 4h6" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Marketing</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m4 0h3M3 14h11m4 0h3M3 18h18m-10-8h6m-6-4h6" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Development</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h2m4 0h2M3 14h18m-12-4h4m-4 4h4m-4 4h6" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Marketing</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m4 0h3M3 14h11m4 0h3M3 18h18m-10-8h6m-6-4h6" />
-                            </svg>
-                            <h3 class="text-lg font-bold text-gray-800">Development</h3>
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
                 </div>
             </div>
+            <!-- Single Category - Design -->
+            <div class="border-2 border-red-500 bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Design</h3>
+                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Single Category - Development -->
+            <div class="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m4 0h3M3 14h11m4 0h3M3 18h18m-10-8h6m-6-4h6" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Development</h3>
+                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Single Category - Development -->
+            <div class="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m4 0h3M3 14h11m4 0h3M3 18h18m-10-8h6m-6-4h6" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Development</h3>
+                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Single Category - Development -->
+            <div class="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m4 0h3M3 14h11m4 0h3M3 18h18m-10-8h6m-6-4h6" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Development</h3>
+                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Single Category - Development -->
+            <div class="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m4 0h3M3 14h11m4 0h3M3 18h18m-10-8h6m-6-4h6" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Development</h3>
+                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Single Category - Marketing -->
+            <div class="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h2m4 0h2M3 14h18m-12-4h4m-4 4h4m-4 4h6" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Marketing</h3>
+                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Single Category - Marketing -->
+            <div class="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h2m4 0h2M3 14h18m-12-4h4m-4 4h4m-4 4h6" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Marketing</h3>
+                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Single Category - Marketing -->
+            <div class="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h2m4 0h2M3 14h18m-12-4h4m-4 4h4m-4 4h6" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Marketing</h3>
+                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Single Category - Marketing -->
+            <div class="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h2m4 0h2M3 14h18m-12-4h4m-4 4h4m-4 4h6" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Marketing</h3>
+                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Single Category - Business -->
+            <div class="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H4a4 4 0 00-4 4v2M16 3.5c0 1.33-1.34 2.5-3 2.5s-3-1.17-3-2.5 1.34-2.5 3-2.5 3 1.17 3 2.5z" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Business</h3>
+                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Single Category - Business -->
+            <div class="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H4a4 4 0 00-4 4v2M16 3.5c0 1.33-1.34 2.5-3 2.5s-3-1.17-3-2.5 1.34-2.5 3-2.5 3 1.17 3 2.5z" />
+                        </svg>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-gray-800">Business</h3>
+                    </div>
+                    <!-- Arrow Icon -->
+                    <a href="#" class="text-red-500 hover:text-red-600">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Project Galery-->
     <section class="py-16 bg-red-500 text-white">

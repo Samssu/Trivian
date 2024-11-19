@@ -7,29 +7,29 @@
         </a>
 
         <!-- Mobile Menu Button -->
-        <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
+        <button id="menu-toggle" class="md:hidden text-red-500 focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
         </button>
 
         <!-- Navigation Links -->
-        <ul id="menu" class="hidden md:flex space-x-6 text-gray-600 font-medium">
+        <ul id="menu" class="hidden md:flex space-x-6 text-red-500 font-medium">
             <li>
                 <a href="#home" 
-                   class="relative hover:text-red-500 hover:bg-red-50 hover:bg-opacity-60 hover:rounded-lg px-3 py-2 transition">
+                   class="relative hover:text-red-600 hover:bg-red-50 hover:bg-opacity-60 hover:rounded-lg px-3 py-2 transition">
                    Home
                 </a>
             </li>
             <li>
                 <a href="#community" 
-                   class="relative hover:text-red-500 hover:bg-red-50 hover:bg-opacity-60 hover:rounded-lg px-3 py-2 transition">
+                   class="relative hover:text-red-600 hover:bg-red-50 hover:bg-opacity-60 hover:rounded-lg px-3 py-2 transition">
                    Community
                 </a>
             </li>
             <li>
                 <a href="#gallery" 
-                   class="relative hover:text-red-500 hover:bg-red-50 hover:bg-opacity-60 hover:rounded-lg px-3 py-2 transition">
+                   class="relative hover:text-red-600 hover:bg-red-50 hover:bg-opacity-60 hover:rounded-lg px-3 py-2 transition">
                    Gallery
                 </a>
             </li>
