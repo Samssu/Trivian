@@ -1,24 +1,36 @@
 
-const carousel = document.getElementById('carousel');
-const slides = carousel.querySelectorAll('.flex > div');
-const prevButton = document.getElementById('prevButton');
-const nextButton = document.getElementById('nextButton');
-let currentIndex = 0;
 
-function updateCarousel() {
-    const offset = -currentIndex * slides[0].offsetWidth;
-    carousel.querySelector('.flex').style.transform = `translateX(${offset}px)`;
-}
+    const carouselContent = document.getElementById('carouselContent');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const cards = document.querySelectorAll('#carouselContent > div');
+    let currentIndex = 0;
 
-prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+    function updateCarousel() {
+        const width = document.querySelector('#carousel').clientWidth; // Dynamically get carousel width
+        carouselContent.style.transform = `translateX(-${currentIndex * width}px)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        } else {
+            currentIndex = cards.length - 1; // Loop to last card
+            updateCarousel();
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < cards.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        } else {
+            currentIndex = 0; // Loop back to first card
+            updateCarousel();
+        }
+    });
+
+    // Initialize carousel position
+    window.addEventListener('resize', updateCarousel);
     updateCarousel();
-});
-
-nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-    updateCarousel();
-});
-
-// Initial update
-updateCarousel();
