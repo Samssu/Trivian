@@ -1,4 +1,4 @@
-<footer class="bg-light py-5 border-top">
+<footer class="py-5 border-top">
     <div class="container">
         <div class="row">
             <!-- Section 1: Logo and Contact -->

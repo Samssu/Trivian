@@ -2,7 +2,7 @@
     <div class="container">
         <!-- Logo -->
         <a class="navbar-brand text-primary fw-bold d-flex align-items-center" href="/">
-            <img src="/path-to-logo.png" alt="Logo" class="me-2" style="width: 32px; height: 32px;">
+            <img src="/images/maxy.png" alt="Logo" class="me-2" style="width: 32px; height: 32px;">
             Thrivian
         </a>
 
@@ -11,32 +11,19 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navigation Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item me-3">
-                    <a class="nav-link text-primary" href="#home">Home</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link text-primary" href="#community">Community</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-primary" href="#gallery">Gallery</a>
-                </li>
-            </ul>
 
             <!-- Buttons -->
             <div class="d-flex gap-2">
                 <a href="/login" class="btn btn-outline-primary">Log in</a>
-                <a href="/register" class="btn btn-primary text-white">Register</a>
+                <a href="/register" class="btn btn-primary text-white">Sign Up Now</a>
             </div>
         </div>
     </div>
 </nav>
 
 <script>
-    let lastScrollY = window.scrollY;
     const navbar = document.getElementById("navbar");
+    let lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > lastScrollY) {

@@ -2,7 +2,7 @@
     @include('components.navbar')
 
 <!-- Hero Section -->
-<section class="hero-section d-flex align-items-center text-white fade-in" style="min-height: 75vh; padding-top: 100px; background: url('/images/images.jpg') no-repeat center center/cover;">
+<section class="hero-section d-flex align-items-center text-white fade-in" style="min-height: 75vh; padding-top: 100px; background: url('/images/herossection.png') no-repeat center center/cover;">
     <div class="position-absolute top-0 start-0 w-100 h-100 opacity-50"></div> <!-- Overlay -->
     <div class="container position-relative z-2">
         <div class="row align-items-center">
@@ -21,109 +21,102 @@
     </div>
 </section>
 
-
-
 <!-- Features Section -->
 <section class="py-5 bg-white">
-        <div class="container text-center">
-            <div class="row g-4">
-                <!-- Feature 1 -->
-                <div class="col-md-3">
-                    <div class="d-flex flex-column align-items-center">
-                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-                            <i class="bi bi-globe2 fs-3"></i>
-                        </div>
-                        <h5 class="fw-bold">Global Community</h5>
-                        <p class="text-muted">
-                            Build and grow an active global community with Thrivian.
-                        </p>
+    <div class="container text-center">
+        <div class="row g-4">
+            <!-- Feature 1 -->
+            <div class="col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mb-3" style="background-color: #232E66; color: white; width: 70px; height: 70px;">
+                        <i class="bi bi-globe2 fs-3"></i>
                     </div>
+                    <h5 class="fw-bold">Global Community</h5>
+                    <p class="text-muted">
+                        Build and grow an active global community with Thrivian.
+                    </p>
                 </div>
+            </div>
 
-                <!-- Feature 2 -->
-                <div class="col-md-3">
-                    <div class="d-flex flex-column align-items-center">
-                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-                            <i class="bi bi-search fs-3"></i>
-                        </div>
-                        <h5 class="fw-bold">Find Your Community</h5>
-                        <p class="text-muted">
-                            Find a community that matches your interests and join it.
-                        </p>
+            <!-- Feature 2 -->
+            <div class="col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mb-3" style="background-color: #232E66; color: white; width: 70px; height: 70px;">
+                        <i class="bi bi-search fs-3"></i>
                     </div>
+                    <h5 class="fw-bold">Find Your Community</h5>
+                    <p class="text-muted">
+                        Find a community that matches your interests and join it.
+                    </p>
                 </div>
+            </div>
 
-                <!-- Feature 3 -->
-                <div class="col-md-3">
-                    <div class="d-flex flex-column align-items-center">
-                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-                            <i class="bi bi-people fs-3"></i>
-                        </div>
-                        <h5 class="fw-bold">User Connection</h5>
-                        <p class="text-muted">
-                            Increase interaction and relationships with other users.
-                        </p>
+            <!-- Feature 3 -->
+            <div class="col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mb-3" style="background-color: #232E66; color: white; width: 70px; height: 70px;">
+                        <i class="bi bi-people fs-3"></i>
                     </div>
+                    <h5 class="fw-bold">User Connection</h5>
+                    <p class="text-muted">
+                        Increase interaction and relationships with other users.
+                    </p>
                 </div>
+            </div>
 
-                <!-- Feature 4 -->
-                <div class="col-md-3">
-                    <div class="d-flex flex-column align-items-center">
-                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-                            <i class="bi bi-folder fs-3"></i>
-                        </div>
-                        <h5 class="fw-bold">Project Gallery</h5>
-                        <p class="text-muted">
-                            Showcase your best projects in the Thrivian Project Gallery.
-                        </p>
+            <!-- Feature 4 -->
+            <div class="col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mb-3" style="background-color: #232E66; color: white; width: 70px; height: 70px;">
+                        <i class="bi bi-folder fs-3"></i>
                     </div>
+                    <h5 class="fw-bold">Project Gallery</h5>
+                    <p class="text-muted">
+                        Showcase your best projects in the Thrivian Project Gallery.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
- <!-- banner 1 -->
+<!-- Dicory News -->
 <section class="py-5">
     <div class="container-xl">
         <div class="row align-items-center">
-            <!-- Left Content -->
-            <div class="col-lg-6 position-relative">
-                <!-- Background Shape -->
-                <div class="position-absolute rounded-circle bg-primary opacity-25" style="width: 300px; height: 300px; top: -40px; left: -60px;"></div>
+        <div class="col-lg-6 col-md-12 position-relative">
+    <!-- Rounded Background -->
+    <div class="position-absolute" 
+         style="background-color: #232E66; width: 300px; height: 200px; border-radius: 20px; left: 20%; z-index: 1;">
+    </div>
 
-                <!-- Image 1 -->
-                <div class="position-relative">
-                    <img src="{{ asset('images/images.jpg') }}" alt="Community Discussion" class="img-fluid rounded shadow-lg" style="max-width: 100%; height: auto;">
-                </div>
+    <!-- Main Image -->
+    <div class="position-relative z-2" 
+         style="top: 40%; left: 50%; transform: translate(-10%, 0);">
+        <img src="{{ asset('images/Picture.png') }}" alt="Community Discussion" style="width: 340px; height: 340px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    </div>
 
-                <!-- Image 2 -->
-                <div class="position-absolute" style="top: 25%; left: 80px;">
-                    <img src="{{ asset('images/images2.png') }}" alt="Community Meeting" class="img-fluid rounded shadow-lg" style="width: 90%; transform: rotate(3deg);">
-                </div>
+    <!-- Second Image -->
+    <div class="position-absolute" 
+         style="top: 30%; /* Adjusted to create gap */left: 0%; /* Adjusted for better alignment */z-index: 2;">
+        <img src="{{ asset('images/Picture (1).png') }}" alt="Meeting" style="width: 300px; height: 300px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    </div>
+</div>
 
-                <!-- Decorative Dots -->
-                <div class="position-absolute" style="bottom: -30px; left: 20px;">
-                    <svg width="160" height="160" xmlns="http://www.w3.org/2000/svg" fill="none">
-                        <circle cx="10" cy="10" r="3" fill="#FFD700" />
-                        <circle cx="30" cy="10" r="3" fill="#FFD700" />
-                        <circle cx="50" cy="10" r="3" fill="#FFD700" />
-                        <circle cx="70" cy="10" r="3" fill="#FFD700" />
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Right Content -->
-            <div class="col-lg-6">
-                <h2 class="fw-bold display-3 text-dark mb-5">Discover New Opportunities and Relationships</h2>
-                <p class="fs-4 text-muted mb-5">
+            <!-- Right Content (Text) -->
+            <div class="col-lg-6 col-md-12">
+                <h2 class="fw-bold display-4 text-dark mb-4 text-center text-lg-start">
+                    Discover New Opportunities and Relationships
+                </h2>
+                <p class="fs-5 text-muted mb-4 text-center text-lg-start">
                     Discover new opportunities and join communities that match your interests. Tap into a community that supports your personal and professional development, and be inspired by fellow members with similar interests.
                 </p>
-                <div class="d-flex align-items-center">
-                    <img src="{{ asset('images/images.jpg') }}" alt="User 1" class="rounded-circle me-3" style="width: 70px; height: 70px;">
-                    <img src="{{ asset('images/images.jpg') }}" alt="User 2" class="rounded-circle me-3" style="width: 70px; height: 70px;">
-                    <img src="{{ asset('images/images.jpg') }}" alt="User 3" class="rounded-circle me-3" style="width: 70px; height: 70px;">
-                    <img src="{{ asset('images/images.jpg') }}" alt="User 4" class="rounded-circle me-3" style="width: 70px; height: 70px;">
-                    <span class="text-muted fs-5 fw-medium">+20 More</span>
+                <div class="d-flex align-items-center justify-content-center justify-content-lg-start flex-wrap gap-3">
+                    <img src="{{ asset('images/User1.png') }}" alt="User 1" style="width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src="{{ asset('images/User2.png') }}" alt="User 2" style="width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src="{{ asset('images/User3.png') }}" alt="User 3" style="width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src="{{ asset('images/User4.png') }}" alt="User 4" style="width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <span class="text-muted fs-6 fw-medium">+20 More</span>
                 </div>
             </div>
         </div>
@@ -131,8 +124,9 @@
 </section>
 
 
+
 <!-- Why Join Us Section -->
-<section class="py-5 bg-light">
+<section class="py-5">
     <div class="container-xl">
         <div class="row align-items-center">
             <!-- Left Content -->
@@ -215,7 +209,7 @@
 
 
 <!-- Stats Section -->
-<section class="bg-primary text-white py-5">
+<section style="background-color: #232E66; color: white;" class="py-5">
     <div class="container text-center">
         <div class="row g-4">
             <div class="col-md-4">
@@ -233,6 +227,7 @@
         </div>
     </div>
 </section>
+
 
 
 <!-- Categories Section -->
@@ -412,7 +407,7 @@
 
 
 <!-- Project Gallery -->
-<section class="py-5 bg-primary text-white">
+<section class="py-5" style="background-color: #232E66; color: white;">
     <div class="container">
         <div class="row align-items-center">
             <!-- Left Content -->
@@ -421,14 +416,14 @@
                 <p class="lead mb-4">
                     Discover exciting projects from our community. The Project Gallery is a place where users can share their work, view projects from others, and get inspired. See how our community members apply their creativity and expertise in various fields.
                 </p>
-                <a href="#" class="btn btn-light btn-lg text-primary">Start Now</a>
+                <a href="#" class="btn btn-light btn-lg" style="color: #232E66;">Start Now</a>
             </div>
 
             <!-- Carousel -->
             <div class="col-md-6 position-relative">
                 <!-- Left Navigation Button -->
                 <button id="prevButton" class="btn btn-light position-absolute top-50 start-0 translate-middle-y shadow rounded-circle p-3">
-                    <i class="bi bi-arrow-left text-primary fs-4"></i>
+                    <i class="bi bi-arrow-left" style="color: #232E66; font-size: 1.5rem;"></i>
                 </button>
 
                 <!-- Carousel -->
@@ -437,7 +432,7 @@
                         <!-- Card 1 -->
                         <div class="flex-shrink-0 w-100 p-2">
                             <div class="card shadow border-0" style="width: 250px; margin: auto;"> <!-- Smaller card -->
-                                <img src="/images/project1.jpg" class="card-img-top" alt="Project 1" style="height: 150px; object-fit: cover;">
+                                <img src="/images/maxy.png" class="card-img-top" alt="Project 1" style="height: 150px; object-fit: cover;">
                                 <div class="card-body text-center">
                                     <h5 class="card-title fw-bold">Annisa Isnaini</h5>
                                     <p class="card-text text-muted">Counseling App</p>
@@ -474,20 +469,74 @@
 
                 <!-- Right Navigation Button -->
                 <button id="nextButton" class="btn btn-light position-absolute top-50 end-0 translate-middle-y shadow rounded-circle p-3">
-                    <i class="bi bi-arrow-right text-primary fs-4"></i>
+                    <i class="bi bi-arrow-right" style="color: #232E66; font-size: 1.5rem;"></i>
                 </button>
             </div>
         </div>
     </div>
 </section>
-<script src="{{ asset('js/carousel.js') }}"></script>
+
+<script>
+    
+
+    const carouselContent = document.getElementById('carouselContent');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const cards = document.querySelectorAll('#carouselContent > div');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const width = document.querySelector('#carousel').clientWidth; // Dynamically get carousel width
+        carouselContent.style.transform = `translateX(-${currentIndex * width}px)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        } else {
+            currentIndex = cards.length - 1; // Loop to last card
+            updateCarousel();
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < cards.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        } else {
+            currentIndex = 0; // Loop back to first card
+            updateCarousel();
+        }
+    });
+
+    // Initialize carousel position
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+
+</script>
 
 <!-- Banner 3 -->
 <section class="py-5">
     <div class="container-xl">
         <div class="row align-items-center">
-            <!-- Left Content -->
-            <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+            <!-- Left Content (Image) -->
+            <div class="col-lg-6 position-relative order-lg-1 text-center text-lg-start">
+                <!-- Decorative Shape -->
+                <div 
+                    class="position-absolute" 
+                    style="background-color: #232E66; width: 550px; height: 550px; border-radius: 50% 40% 30% 60%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+                </div>
+                <!-- Image -->
+                <div class="position-relative z-2">
+                    <img src="/images/union.png" alt="Community" 
+                         class="img-fluid rounded shadow-lg mx-auto mx-lg-0"
+                         style="width: 100%; max-width: 600px; height: auto;">
+                </div>
+            </div>
+
+            <!-- Right Content (Text) -->
+            <div class="col-lg-6 order-lg-2 text-center text-lg-start">
                 <h2 class="fw-bold display-4 display-md-3 mb-4">
                     Join the Leading Technology Community in Indonesia!
                 </h2>
@@ -495,33 +544,22 @@
                     Join the leading technology community in Indonesia! Discover opportunities to learn, collaborate, and grow in the world of UX, frontend and backend development, and the latest technologies. From workshops to collaborative projects, there are many ways to improve your skills and expand your network. Come on, be part of digital change by joining our community!
                 </p>
             </div>
-
-            <!-- Right Content -->
-            <div class="col-lg-6 position-relative order-lg-2 text-center text-lg-end">
-                <!-- Decorative Shape -->
-                <div class="position-absolute bg-primary rounded-circle" 
-                     style="width: 400px; height: 400px; top: -50px; right: -50px; z-index: 1;">
-                </div>
-                <!-- Image -->
-                <div class="position-relative z-2">
-                    <img src="/images/images.jpg" alt="Community" 
-                         class="img-fluid rounded shadow-lg mx-auto mx-lg-0"
-                         style="width: 100%; max-width: 600px; height: auto;">
-                </div>
-            </div>
         </div>
     </div>
 </section>
 
 
+
+</section>
+
 <!-- Join Section -->
 <section class="py-5">
-    <div class="container text-center bg-primary text-white rounded-lg shadow-lg p-5">
+    <div class="container text-center" style="background-color: #232E66; color: white; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 3rem;">
         <h2 class="fw-bold mb-4">Join the community today</h2>
         <p class="fs-5 mb-4">
             Start your journey by joining our community of inspiration and collaboration. Learn new skills, and connect with fellow members who share similar interests. Together, we can achieve more!
         </p>
-        <a href="/signup" class="btn btn-light btn-lg shadow-sm">
+        <a href="/signup" class="btn btn-light btn-lg shadow-sm" style="color: #232E66;">
             Sign Up Now →
         </a>
     </div>

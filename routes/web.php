@@ -19,6 +19,9 @@ Route::view('/register', 'auth.register')->name('register');
 Route::get('/', function () {
     return view('landing');
 });
+Route::get('/home', function () {
+    return view('home');
+});
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');

@@ -1,0 +1,53 @@
+/* Decorative Background */
+.decorative-background {
+    background-color: #232E66;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.1;
+}
+
+/* Main Image */
+.main-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards */
+.card {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.badge {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .decorative-background {
+        width: 100px;
+        height: 100px;
+        top: 5%;
+        left: 25%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .main-image img {
+        max-width: 100%;
+    }
+}
