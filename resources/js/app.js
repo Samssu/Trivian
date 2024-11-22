@@ -1,5 +1,4 @@
 require('./bootstrap');
-require('./carousel');
 
 document.addEventListener("DOMContentLoaded", function () {
     const fadeElements = document.querySelectorAll(".fade-in");
@@ -18,3 +17,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fadeElements.forEach(element => observer.observe(element));
 });
+

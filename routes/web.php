@@ -22,6 +22,15 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+Route::get('/gallery', function () {
+    return view('gallery');
+});
+Route::get('/community', function () {
+    return view('community');
+});
+Route::get('/activity', function () {
+    return view('activity');
+});
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
