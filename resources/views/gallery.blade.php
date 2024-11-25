@@ -25,7 +25,7 @@
 
 
 <!-- Sidebar -->
-@include('components.sidebarcommunity')
+@include('components.sidebargallery')
 
 <!-- Main Content -->
 <section class="main-content flex-grow-1 bg-light p-4 shadow-sm rounded" style="border-radius: 10px;">
