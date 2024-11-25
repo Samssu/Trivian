@@ -1,12 +1,6 @@
 @extends('layouts.app')
 @include('partials.navbar2')
 
-
-
-
-
-
-
 <section class="hero-section d-flex align-items-center justify-content-center text-white" style="height: 50vh; background: linear-gradient(to right, #232E66, #6A7FDB);">
     <div class="container text-center">
         <!-- Title -->
@@ -29,7 +23,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 
-<!-- Join Community -->
+<!-- The Community -->
 <section class="container my-5">
     <!-- Header Section -->
     <section class="text-center mb-5">
@@ -42,21 +36,28 @@
         <!-- Card 1 -->
         <section class="col">
             <div class="card shadow-sm h-100">
-                <img src="/images/aws.png" class="card-img-top p-3" alt="AWS">
+                <img src="/images/awssingapore.png" class="card-img-top p-3" alt="AWS">
                 <div class="card-body">
                     <h5 class="card-title">AWS User Group Indonesia</h5>
                     <p class="card-text text-muted">
                         Want to learn about cloud computing? Join the leading-edge AWS User Group.
                     </p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-outline-primary btn-sm">View</a>
-                        <a href="#" class="btn btn-primary btn-sm">Join</a>
+                    <div class="d-flex gap-3">
+                      <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
+                       <a href="#" class="btn btn-primary btn-sm w-100" style="background-color: #2E2E66; border-color: #2E2E66"">Join</a>
                     </div>
+
                 </div>
                 <div class="card-footer bg-white d-flex justify-content-center gap-3">
-                    <i class="bi bi-facebook text-primary"></i>
-                    <i class="bi bi-instagram text-danger"></i>
-                    <i class="bi bi-twitter text-info"></i>
+                    <a href="https://facebook.com" target="_blank" class="text-primary">
+                        <i class="bi bi-facebook fs-5"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-danger">
+                        <i class="bi bi-instagram fs-5"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-info">
+                        <i class="bi bi-twitter fs-5"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -64,21 +65,27 @@
         <!-- Card 2 -->
         <section class="col">
             <div class="card shadow-sm h-100">
-                <img src="/images/gdsc.png" class="card-img-top p-3" alt="Google Developer Group">
+                <img src="/images/google dev.png" class="card-img-top p-3" alt="Google Developer Group">
                 <div class="card-body">
                     <h5 class="card-title">Google Developer Group</h5>
                     <p class="card-text text-muted">
                         Explore Google technologies through hands-on events.
                     </p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-outline-primary btn-sm">View</a>
-                        <a href="#" class="btn btn-primary btn-sm">Join</a>
+                    <div class="d-flex gap-3">
+                      <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
+                      <a href="#" class="btn btn-primary btn-sm w-100"style="background-color: #2E2E66; border-color: #2E2E66">Join</a>
                     </div>
                 </div>
                 <div class="card-footer bg-white d-flex justify-content-center gap-3">
-                    <i class="bi bi-facebook text-primary"></i>
-                    <i class="bi bi-instagram text-danger"></i>
-                    <i class="bi bi-twitter text-info"></i>
+                    <a href="https://facebook.com" target="_blank" class="text-primary">
+                        <i class="bi bi-facebook fs-5"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-danger">
+                        <i class="bi bi-instagram fs-5"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-info">
+                        <i class="bi bi-twitter fs-5"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -90,61 +97,79 @@
                 <div class="card-body">
                     <h5 class="card-title">ReactJS Indonesia</h5>
                     <p class="card-text text-muted">
-                        Build scalable UI components with ReactJS.
+                    ReactJS Indonesia is the place for frontend developers! Discuss, learn, and build a cool portfolio with React technology with the community
                     </p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-outline-primary btn-sm">View</a>
-                        <a href="#" class="btn btn-primary btn-sm">Join</a>
+                    <div class="d-flex gap-3">
+                      <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
+                      <a href="#" class="btn btn-primary btn-sm w-100" style="background-color: #2E2E66; border-color: #2E2E66">Join</a>
                     </div>
                 </div>
                 <div class="card-footer bg-white d-flex justify-content-center gap-3">
-                    <i class="bi bi-facebook text-primary"></i>
-                    <i class="bi bi-instagram text-danger"></i>
-                    <i class="bi bi-twitter text-info"></i>
+                    <a href="https://facebook.com" target="_blank" class="text-primary">
+                        <i class="bi bi-facebook fs-5"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-danger">
+                        <i class="bi bi-instagram fs-5"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-info">
+                        <i class="bi bi-twitter fs-5"></i>
+                    </a>
                 </div>
             </div>
         </section>
-
+        
         <!-- Card 4 -->
         <section class="col">
             <div class="card shadow-sm h-100">
-                <img src="/images/uxid.png" class="card-img-top p-3" alt="UXID">
+                <img src="/images/uxid.png" class="card-img-top p-3" alt="">
                 <div class="card-body">
                     <h5 class="card-title">UXID (UX Indonesia)</h5>
                     <p class="card-text text-muted">
-                        Learn user experience design and innovation.
+                    Join UXID and learn the art of designing better user experiences! Find workshops, mentoring and collaboration opportunities with Indonesia's best designers
                     </p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-outline-primary btn-sm">View</a>
-                        <a href="#" class="btn btn-primary btn-sm">Join</a>
+                    <div class="d-flex gap-3">
+                      <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
+                      <a href="#" class="btn btn-primary btn-sm w-100" style="background-color: #2E2E66; border-color: #2E2E66">Join</a>
                     </div>
                 </div>
                 <div class="card-footer bg-white d-flex justify-content-center gap-3">
-                    <i class="bi bi-facebook text-primary"></i>
-                    <i class="bi bi-instagram text-danger"></i>
-                    <i class="bi bi-twitter text-info"></i>
+                    <a href="https://facebook.com" target="_blank" class="text-primary">
+                        <i class="bi bi-facebook fs-5"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-danger">
+                        <i class="bi bi-instagram fs-5"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-info">
+                        <i class="bi bi-twitter fs-5"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Card 5 -->
+        <!-- Card 5-->
         <section class="col">
             <div class="card shadow-sm h-100">
-                <img src="/images/laravel.png" class="card-img-top p-3" alt="Laravel">
+                <img src="/images/Laravel8.png" class="card-img-top p-3" alt="Laravel Indonesia">
                 <div class="card-body">
                     <h5 class="card-title">Laravel Indonesia</h5>
                     <p class="card-text text-muted">
-                        Learn backend development with Laravel.
+                    Improve your backend skills with Laravel Indonesia! Join to learn the Laravel framework, share solutions, and discuss interesting projects.
                     </p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-outline-primary btn-sm">View</a>
-                        <a href="#" class="btn btn-primary btn-sm">Join</a>
+                    <div class="d-flex gap-3">
+                      <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
+                      <a href="#" class="btn btn-primary btn-sm w-100" style="background-color: #2E2E66; border-color: #2E2E66">Join</a>
                     </div>
                 </div>
                 <div class="card-footer bg-white d-flex justify-content-center gap-3">
-                    <i class="bi bi-facebook text-primary"></i>
-                    <i class="bi bi-instagram text-danger"></i>
-                    <i class="bi bi-twitter text-info"></i>
+                    <a href="https://facebook.com" target="_blank" class="text-primary">
+                        <i class="bi bi-facebook fs-5"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-danger">
+                        <i class="bi bi-instagram fs-5"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-info">
+                        <i class="bi bi-twitter fs-5"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -152,21 +177,27 @@
         <!-- Card 6 -->
         <section class="col">
             <div class="card shadow-sm h-100">
-                <img src="/images/meta.png" class="card-img-top p-3" alt="Developer Circles">
+                <img src="/images/react.png" class="card-img-top p-3" alt="ReactJS">
                 <div class="card-body">
                     <h5 class="card-title">Developer Circles by Meta</h5>
                     <p class="card-text text-muted">
-                        Connect and learn with global developers.
+                    Developer Circles by Meta is a place for those of you who want to learn coding, AI, and web development. Come join and be part of the global community!
                     </p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-outline-primary btn-sm">View</a>
-                        <a href="#" class="btn btn-primary btn-sm">Join</a>
+                    <div class="d-flex gap-3">
+                      <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
+                      <a href="#" class="btn btn-primary btn-sm w-100" style="background-color: #2E2E66; border-color: #2E2E66">Join</a>
                     </div>
                 </div>
                 <div class="card-footer bg-white d-flex justify-content-center gap-3">
-                    <i class="bi bi-facebook text-primary"></i>
-                    <i class="bi bi-instagram text-danger"></i>
-                    <i class="bi bi-twitter text-info"></i>
+                    <a href="https://facebook.com" target="_blank" class="text-primary">
+                        <i class="bi bi-facebook fs-5"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-danger">
+                        <i class="bi bi-instagram fs-5"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-info">
+                        <i class="bi bi-twitter fs-5"></i>
+                    </a>
                 </div>
             </div>
         </section>
