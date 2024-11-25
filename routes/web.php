@@ -31,6 +31,11 @@ Route::get('/community', function () {
 Route::get('/activity', function () {
     return view('activity');
 });
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
