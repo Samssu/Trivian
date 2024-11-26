@@ -1,7 +1,9 @@
 <!-- SideBar Kanan Community -->
-<section class="container d-flex mt-4" style="gap: 20px;">
+<section class="container d-flex mt-4" style="gap: 50px;">
     <!-- Sidebar -->
-    <section class="sidebar bg-white shadow-sm p-3" style="border-radius: 10px; max-width: 300px;">
+    <section class="sidebar bg-white shadow-sm p-4"
+        style="border-radius: 10px; width: 100%; max-width: 250px; min-height: 600px;">
+
         <!-- Create Community Button -->
         <section class="create-community mb-3">
             <button class="btn btn-primary w-100" style="border-radius: 10px;">
@@ -58,3 +60,31 @@
             </div>
         </section>
     </section>
+
+    <style>
+    @media (max-width: 768px) {
+
+        /* Perkecil ukuran sidebar pada layar ponsel */
+        .sidebar {
+            width: 50%;
+            /* Sidebar menempati 80% dari lebar layar */
+            max-width: 200px;
+            /* Batasi lebar maksimal sidebar */
+            min-height: auto;
+            /* Tinggi otomatis di ponsel */
+            margin: 0 auto;
+            /* Pusatkan sidebar jika diperlukan */
+        }
+
+        /* Tambahkan padding untuk jarak yang nyaman */
+        .sidebar {
+            padding: 10px;
+        }
+
+        /* Jarak antara elemen container tetap fleksibel */
+        .container.d-flex {
+            gap: 20px;
+            /* Kurangi jarak antar elemen */
+        }
+    }
+    </style>

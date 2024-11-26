@@ -1,34 +1,36 @@
 <!-- SideBar Kanan Community -->
-<section class="container d-flex mt-4" style="gap: 20px;">
+<section class="container d-flex mt-4" style="gap: 50px;  margin-left: 100px;">
     <!-- Sidebar -->
-    <section class="sidebar bg-white shadow-sm p-3" style="border-radius: 10px; max-width: 300px;">
+    <section class="sidebar bg-white shadow-sm p-4"
+        style="border-radius: 10px; width: 100%; max-width: 250px; min-height: 600px;">
+
         <!-- Create Community Button -->
         <section class="create-community mb-3">
-            <button class="btn btn-primary w-100" style="border-radius: 10px;">
-                + Create Community
-            </button>
-        </section>
+    <a href="{{ route('create-community') }}" class="btn btn-primary w-100" style="border-radius: 10px;">
+        + Create Community
+    </a>
+</section>
+
 
         <!-- Category Section -->
         <section class="category-section mb-4">
             <h6 class="text-white bg-primary p-2 rounded" style="font-size: 14px;">Category</h6>
             <ul class="list-unstyled ms-2">
-                <li><input type="checkbox" id="category1" class="me-2"> <label for="category1">Website</label></li>
-                <li><input type="checkbox" id="category2" class="me-2"> <label for="category2">Technology</label></li>
-                <li><input type="checkbox" id="category3" class="me-2"> <label for="category3">Mobile Developer</label>
+                <li><input type="checkbox" id="website" class="me-2"> <label for="website">Website</label></li>
+                <li><input type="checkbox" id="tecnology" class="me-2"> <label for="tecnology">Technology</label></li>
+                <li><input type="checkbox" id="mobiledev" class="me-2"> <label for="mobiledev">Mobile Developer</label>
                 </li>
-                <li><input type="checkbox" id="category4" class="me-2"> <label for="category4">Artificial
-                        Intelligence</label></li>
-                <li><input type="checkbox" id="category5" class="me-2"> <label for="category5">Design</label></li>
-                <li><input type="checkbox" id="category6" class="me-2"> <label for="category6">Business</label></li>
-                <li><input type="checkbox" id="category7" class="me-2"> <label for="category7">Lifestyle</label></li>
-                <li><input type="checkbox" id="category8" class="me-2"> <label for="category8">Communication</label>
+                <li><input type="checkbox" id="ai" class="me-2"> <label for="ai">Artificial Intelligence</label></li>
+                <li><input type="checkbox" id="design" class="me-2"> <label for="design">Design</label></li>
+                <li><input type="checkbox" id="business" class="me-2"> <label for="business">Business</label></li>
+                <li><input type="checkbox" id="lifestyle" class="me-2"> <label for="lifestyle">Lifestyle</label></li>
+                <li><input type="checkbox" id="communication" class="me-2"> <label for="communication">Communication</label>
                 </li>
-                <li><input type="checkbox" id="category9" class="me-2"> <label for="category9">Game</label></li>
-                <li><input type="checkbox" id="category10" class="me-2"> <label for="category10">Education</label></li>
-                <li><input type="checkbox" id="category11" class="me-2"> <label for="category11">Sport</label></li>
-                <li><input type="checkbox" id="category12" class="me-2"> <label for="category12">Music</label></li>
-                <li><input type="checkbox" id="category13" class="me-2"> <label for="category13">Health</label></li>
+                <li><input type="checkbox" id="game" class="me-2"> <label for="game">Game</label></li>
+                <li><input type="checkbox" id="education" class="me-2"> <label for="education">Education</label></li>
+                <li><input type="checkbox" id="sport" class="me-2"> <label for="sport">Sport</label></li>
+                <li><input type="checkbox" id="music" class="me-2"> <label for="music">Music</label></li>
+                <li><input type="checkbox" id="health" class="me-2"> <label for="health">Health</label></li>
             </ul>
         </section>
 
@@ -58,3 +60,31 @@
             </div>
         </section>
     </section>
+
+    <style>
+    @media (max-width: 768px) {
+
+        /* Perkecil ukuran sidebar pada layar ponsel */
+        .sidebar {
+            width: 50%;
+            /* Sidebar menempati 80% dari lebar layar */
+            max-width: 200px;
+            /* Batasi lebar maksimal sidebar */
+            min-height: auto;
+            /* Tinggi otomatis di ponsel */
+            margin: 0 auto;
+            /* Pusatkan sidebar jika diperlukan */
+        }
+
+        /* Tambahkan padding untuk jarak yang nyaman */
+        .sidebar {
+            padding: 10px;
+        }
+
+        /* Jarak antara elemen container tetap fleksibel */
+        .container.d-flex {
+            gap: 20px;
+            /* Kurangi jarak antar elemen */
+        }
+    }
+    </style>

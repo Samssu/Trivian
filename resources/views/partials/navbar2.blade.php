@@ -82,6 +82,6 @@ navLinks.forEach(link => {
         link.style.backgroundColor = "rgba(255, 255, 255, 0.2)"; // 20% opacity
         link.style.color = "#232E66";
         link.style.borderRadius = "10px";
-    }
+    }
 });
 </script>

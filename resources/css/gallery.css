@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-section {
+        height: auto;
+        padding: 20px 10px;
+        text-align: center;
+    }
+    .hero-section .container {
+        padding: 10px;
+    }
+    .hero-section h1 {
+        font-size: 2rem; /* Perkecil ukuran font untuk ponsel */
+    }
+    .hero-section p {
+        font-size: 1rem; /* Sesuaikan teks deskripsi */
+    }
+    .hero-section .input-group {
+        flex-direction: column; /* Ubah menjadi vertikal untuk layar kecil */
+    }
+    .hero-section .form-control {
+        border-radius: 25px; /* Pertahankan radius */
+    }
+    .hero-section .btn {
+        margin-top: 10px; /* Tambahkan jarak antara input dan tombol */
+        border-radius: 25px; /* Pertahankan desain */
+    }
+
+    /* Main Content */
+    .main-content {
+        padding: 10px; /* Kurangi padding untuk layar kecil */
+        border-radius: 10px;
+    }
+    .nav-tabs {
+        flex-wrap: wrap; /* Pastikan tab tetap dalam satu kolom jika ruang tidak cukup */
+    }
+
+    /* Card Section */
+    .row {
+        gap: 20px; /* Kurangi jarak antar kartu */
+    }
+    .card {
+        margin: 0 auto; /* Pusatkan kartu */
+        max-width: 95%; /* Pastikan kartu tidak terlalu lebar di layar kecil */
+    }
+}
+.main-content {
+    background-color: black;
+}
