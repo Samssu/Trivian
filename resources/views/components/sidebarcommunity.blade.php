@@ -1,15 +1,15 @@
 <!-- SideBar Kanan Community -->
-<section class="container d-flex mt-4" style="gap: 50px;  margin-left: 100px;">
+<section class="container d-flex mt-4" style="gap: 50px; ">
     <!-- Sidebar -->
     <section class="sidebar bg-white shadow-sm p-4"
         style="border-radius: 10px; width: 100%; max-width: 250px; min-height: 600px;">
 
         <!-- Create Community Button -->
         <section class="create-community mb-3">
-    <a href="{{ route('create-community') }}" class="btn btn-primary w-100" style="border-radius: 10px;">
-        + Create Community
-    </a>
-</section>
+            <a href="{{ route('create-community') }}" class="btn btn-primary w-100" style="border-radius: 10px;">
+                + Create Community
+            </a>
+        </section>
 
 
         <!-- Category Section -->
@@ -24,7 +24,8 @@
                 <li><input type="checkbox" id="design" class="me-2"> <label for="design">Design</label></li>
                 <li><input type="checkbox" id="business" class="me-2"> <label for="business">Business</label></li>
                 <li><input type="checkbox" id="lifestyle" class="me-2"> <label for="lifestyle">Lifestyle</label></li>
-                <li><input type="checkbox" id="communication" class="me-2"> <label for="communication">Communication</label>
+                <li><input type="checkbox" id="communication" class="me-2"> <label
+                        for="communication">Communication</label>
                 </li>
                 <li><input type="checkbox" id="game" class="me-2"> <label for="game">Game</label></li>
                 <li><input type="checkbox" id="education" class="me-2"> <label for="education">Education</label></li>

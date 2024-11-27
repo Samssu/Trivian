@@ -18,7 +18,7 @@
     <!-- Sidebar -->
     @include('components.sidebarhome')
 
-    <section class="col-md-8 col-lg-9 mx-auto">
+    <section class="col-md-8 col-lg-9 mx-auto" style="padding-top: 20px;">
         <!-- Title and Back Button -->
         <div class="d-flex align-items-center mb-4">
             <a href="{{ route('community') }}" class="btn btn-outline-primary px-3 py-2 me-3">
@@ -28,7 +28,7 @@
         </div>
 
         <!-- Community Header -->
-        <div class="card mb-4 border-0 shadow-sm" style="margin-right: 100px;">
+        <div class="card mb-4 border-0 shadow-sm" style="margin-right: 110px;">
             <div class="card-body p-0">
                 <!-- Cover Image -->
                 <div class="position-relative" style="height: 350px;">
@@ -70,54 +70,61 @@
                                 style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
                             <img src="/images/kokomi.png" alt="Member 3" class="rounded-circle border border-white"
                                 style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                            <img src="/images/kokomi.png" alt="Member 2" class="rounded-circle border border-white"
+                            <img src="/images/kokomi.png" alt="Member 4" class="rounded-circle border border-white"
                                 style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                            <img src="/images/kokomi.png" alt="Member 3" class="rounded-circle border border-white"
+                            <img src="/images/kokomi.png" alt="Member 5" class="rounded-circle border border-white"
                                 style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
                         </div>
+
                         <!-- Member Count -->
-                        <small class="text-muted ms-3"><i class="bi bi-people"></i> 154.3K members</small>
+                        <a href="{{ route('member-community') }}" class="ms-3 text-primary text-decoration-none">
+                            <small><i class="bi bi-people"></i> 154.3K members</small>
+                        </a>
                     </div>
-                </div>
-
-                <!-- Main Content -->
-                <section class="main-content flex-grow-1 bg-light p-4 shadow-sm rounded" style="border-radius: 10px;">
-                    <!-- Tabs Navigation -->
-                    <div class="d-flex flex-wrap gap-3">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <button class="nav-link active" id="my-communities-tab" data-bs-toggle="tab"
-                                    data-bs-target="#my-communities" type="button" role="tab"
-                                    aria-controls="my-communities" aria-selected="true">
-                                    Latest
-                                </button>
-                            </li>
-                            <li class="nav-item">
-                                <button class="nav-link" id="explore-tab" data-bs-toggle="tab" data-bs-target="#explore"
-                                    type="button" role="tab" aria-controls="explore" aria-selected="false">
-                                    Popular
-                                </button>
-                            </li>
-                            <li class="nav-item">
-                                <button class="nav-link" id="explore-tab" data-bs-toggle="tab" data-bs-target="#explore"
-                                    type="button" role="tab" aria-controls="explore" aria-selected="false">
-                                    Colaboration
-                                </button>
-                            </li>
-                            <li class="nav-item">
-                                <button class="nav-link" id="explore-tab" data-bs-toggle="tab" data-bs-target="#explore"
-                                    type="button" role="tab" aria-controls="explore" aria-selected="false">
-                                    About
-                                </button>
-                            </li>
-                        </ul>
-
-                    </div>
-                </section>
 
 
+                    <!-- Main Content -->
+                    <section class="main-content flex-grow-1 bg-light p-4 shadow-sm rounded"
+                        style="border-radius: 10px;">
+                        <!-- Tabs Navigation -->
+                        <div class="d-flex flex-wrap gap-3">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <button class="nav-link active" id="my-communities-tab" data-bs-toggle="tab"
+                                        data-bs-target="#my-communities" type="button" role="tab"
+                                        aria-controls="my-communities" aria-selected="true">
+                                        Latest
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" id="explore-tab" data-bs-toggle="tab"
+                                        data-bs-target="#explore" type="button" role="tab" aria-controls="explore"
+                                        aria-selected="false">
+                                        Popular
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" id="explore-tab" data-bs-toggle="tab"
+                                        data-bs-target="#explore" type="button" role="tab" aria-controls="explore"
+                                        aria-selected="false">
+                                        Colaboration
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" id="explore-tab" data-bs-toggle="tab"
+                                        data-bs-target="#explore" type="button" role="tab" aria-controls="explore"
+                                        aria-selected="false">
+                                        About
+                                    </button>
+                                </li>
+                            </ul>
 
-                <!-- Tabs Content -->
+                        </div>
+                    </section>
+
+
+
+                    <!-- Tabs Content -->
 
                     <!-- My Communities Tab Pane -->
                     <div class="tab-pane fade show active" id="my-communities" role="tabpanel"
@@ -130,10 +137,6 @@
                         <!-- Community Cards Section -->
                         @include('components.form-text')
                     </div>
-
-
-
-
 
                     <!-- Panggil file JS -->
                     <script src="{{ asset('js/profil-community.js') }}"></script>

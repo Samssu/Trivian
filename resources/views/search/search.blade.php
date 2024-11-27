@@ -6,18 +6,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity</title>
+    <title>Search | Trivian</title>
 </head>
 
 <body>
     <!-- navbar -->
     @include('partials.navbar2')
 
+    <!-- Hero Section -->
     <section class="hero-section d-flex align-items-center justify-content-center text-white position-relative"
-        style="height: 50vh; background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/images/bgactivity.png'); background-size: cover; background-position: center; margin-top: 56px;">
+        style="height: 50vh; background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/images/gedung.png'); background-size: cover; background-position: center; margin-top: 56px;">
         <div class="container text-center">
             <!-- Title -->
-            <h1 class="display-4 fw-bold mb-4">Find Your Community</h1>
+            <h1 class="display-4 fw-bold mb-4">Search</h1>
             <p class="lead mb-5">Explore, connect, and grow with like-minded individuals across the globe.</p>
 
             <!-- Search Bar -->
@@ -35,10 +36,7 @@
         </div>
     </section>
 
-    <!-- sidebar -->
-    @include('components.sidebaractivity')
-
-
+    <!-- Main Content -->
 
 
 </body>

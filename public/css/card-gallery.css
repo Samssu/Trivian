@@ -1,0 +1,19 @@
+.like-container:hover i,
+.view-container:hover i {
+    color: #007bff;
+    transition: color 0.2s ease-in-out;
+}
+
+.bi-heart-fill {
+    color: red;
+}
+
+.d-flex.align-items-center.gap-3 {
+    justify-content: flex-start;
+    /* Pastikan ikon rata kiri */
+}
+
+.btn {
+    margin-top: 1rem;
+    /* Beri jarak antara ikon dan tombol */
+}

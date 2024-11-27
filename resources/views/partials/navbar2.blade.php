@@ -36,24 +36,26 @@
             <!-- Search and Notifications -->
             <div class="d-flex align-items-center gap-4 me-3">
                 <!-- Search Icon -->
-                <button class="btn btn-link text-white p-0" data-bs-toggle="modal" data-bs-target="#searchModal"
-                    style="text-decoration: none;">
+                <a href="{{route('search')}}" class="btn btn-link text-white p-0" style="text-decoration: none;">
                     <i class="bi bi-search fs-3"></i>
-                </button>
+                </a>
 
                 <!-- Notification Icon -->
-                <button class="btn btn-link text-white position-relative p-0" style="text-decoration: none;">
+                <a href="{{ route('notifications') }}" class="btn btn-link text-white position-relative p-0"
+                    style="text-decoration: none;">
                     <i class="bi bi-bell fs-3"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         999+
                     </span>
-                </button>
+                </a>
+
             </div>
 
             <!-- Buttons -->
             <div class="d-flex gap-3" style="margin-right: -200px">
                 <a href="/login" class="btn btn-outline-light px-4 py-2">Log In</a>
                 <a href="/register" class="btn btn-light text-primary fw-bold px-4 py-2">Sign Up Now</a>
+                <!-- <a href="{{route('profile')}" class="btn btn-light text-primary fw-bold px-4 py-2">Profile</a> -->
             </div>
         </div>
     </div>
@@ -82,6 +84,6 @@ navLinks.forEach(link => {
         link.style.backgroundColor = "rgba(255, 255, 255, 0.2)"; // 20% opacity
         link.style.color = "#232E66";
         link.style.borderRadius = "10px";
-    }
+    }
 });
 </script>

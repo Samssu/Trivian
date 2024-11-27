@@ -1,5 +1,5 @@
  <!-- Posts Section -->
- <div class="list-group mt-4" id="last">
+ <div class="list-group mt-1" id="last">
      <!-- 1 Container Komentar -->
      <div class="list-group-item border-0 shadow-sm mb-3">
          <div class="d-flex align-items-start">

@@ -4,11 +4,11 @@
     <section class="sidebar bg-white shadow-sm p-4"
         style="border-radius: 10px; width: 100%; max-width: 250px; min-height: 600px;">
 
-        <!-- Create Community Button -->
+        <!-- Create gallery Button -->
         <section class="create-community mb-3">
-            <button class="btn btn-primary w-100" style="border-radius: 10px;">
-                + Create New Project
-            </button>
+            <a href="{{route('create-gallery')}}" class="btn btn-primary w-100" style="border-radius: 10px;">
+                + Create Project
+            </a>
         </section>
 
         <!-- Category Section -->
