@@ -6,7 +6,7 @@
              <div class="d-flex flex-wrap align-items-center">
                  <!-- User Profile -->
                  <div class="me-3 mb-3 mb-md-0">
-                     <img src="/images/pasfoto1.png" alt="User Avatar" class="rounded-circle"
+                     <img src="/images/kokomi.png" alt="User Avatar" class="rounded-circle"
                          style="width: 50px; height: 50px; object-fit: cover;">
                  </div>
 
@@ -37,6 +37,12 @@
                                      <i class="bi bi-image"></i>
                                      <input type="file" accept="image/*" style="display: none;" id="uploadImage">
                                  </label>
+                                 <!-- Input for Link -->
+                                 <input type="text" class="form-control form-control-sm" id="linkInput"
+                                     placeholder="Enter URL" aria-label="Link">
+                                 <button class="btn btn-sm btn-outline-secondary" onclick="insertLink()">
+                                     <i class="bi bi-link-45deg"></i>
+                                 </button>
                              </div>
 
                              <!-- Cancel Button -->
@@ -45,6 +51,7 @@
                              </button>
                          </div>
                      </div>
+
                  </div>
 
                  <!-- Post Button -->

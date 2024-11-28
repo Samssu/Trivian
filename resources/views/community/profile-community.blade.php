@@ -25,6 +25,7 @@
                 <i class="bi bi-arrow-left"></i>
             </a>
             <h2 class="fw-bold mb-0">Profile Community</h2>
+
         </div>
 
         <!-- Community Header -->
@@ -32,32 +33,51 @@
             <div class="card-body p-0">
                 <!-- Cover Image -->
                 <div class="position-relative" style="height: 350px;">
-                    <img src="/images/kokomi.png" alt="Community Cover" class="w-100 h-100" style="object-fit: cover;">
+                    <img src="/images/bglaravel.jpg" alt="Community Cover" class="w-100 h-100"
+                        style="object-fit: cover;">
                     <!-- Community Logo -->
-                    <img src="/images/Laravel8.png" alt="Community Logo"
+                    <img src="/images/laravel.png" alt="Community Logo"
                         class="rounded-circle position-absolute border border-white"
-                        style="width: 150px; height: 150px; bottom: -40px; left: 20px; background: white; object-fit: contain; aspect-ratio: 1 / 1;">
+                        style="width: 150px; height: 150px; bottom: -40px; left: 20px; background: white; object-fit: cover; aspect-ratio: 1 / 1;">
+
 
                 </div>
                 <div class="pt-5 px-4 pb-4">
                     <div class="d-flex justify-content-between align-items-center">
                         <!-- Community Info -->
                         <div>
-                            <h3 class="fw-bold">Adobe XD Community</h3>
-                            <p class="text-muted mb-0">Connect with like-minded designers and developers to share your
-                                passion for creating amazing user experiences.</p>
+                            <!-- Judul -->
+                            <h3 class="fw-bold">Laravel Indonesia</h3>
+
+                            <!-- Role  -->
+                            <a href="#" class="btn"
+                                style="font-size: 0.7rem; padding: 5px 10px; background-color: #808080; color: white; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bold;">
+                                Community
+                            </a>
+                            <a href="#" class="btn"
+                                style="font-size: 0.7rem; padding: 5px 10px; background-color: #B3C8CF; color: white; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bold;">
+                                Marketing
+                            </a>
+                            <a href="#" class="btn"
+                                style="font-size: 0.7rem; padding: 5px 10px; background-color: #FF7F3E; color: white; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bold;">
+                                LifeStyle
+                            </a>
                         </div>
+
                         <!-- Join Button -->
                         <button id="joinButton" class="btn btn-primary px-4">+ Join</button>
                     </div>
 
                     <!-- Community Description -->
-                    <p class="text-muted mt-3">Connect with a global network of designers and developers who share your
-                        passion for creating stunning and user-friendly interfaces. Gain access to exclusive tutorials,
-                        design challenges, and the latest updates on Adobe XD features. Whether you're a beginner or a
-                        seasoned professional, the Adobe XD Community offers valuable resources and a supportive
-                        environment to enhance your design skills. Come be a part of our vibrant community and take your
-                        design projects to the next level!</p>
+                    <p class="text-muted mt-3">
+                        Connect with a global network of Laravel developers and enthusiasts who share your passion for
+                        creating powerful and scalable web applications. Gain access to exclusive tutorials, development
+                        challenges, and the latest updates on Laravel features. Whether you're a beginner or an
+                        experienced developer, the Laravel Community offers valuable resources and a supportive
+                        environment to enhance your development skills. Come be a part of our vibrant community and take
+                        your Laravel projects to the next level!
+                    </p>
+
                     <!-- Stats -->
 
                     <!-- Members Count with Avatars -->
@@ -82,61 +102,76 @@
                         </a>
                     </div>
 
-
                     <!-- Main Content -->
                     <section class="main-content flex-grow-1 bg-light p-4 shadow-sm rounded"
                         style="border-radius: 10px;">
-                        <!-- Tabs Navigation -->
-                        <div class="d-flex flex-wrap gap-3">
+                        <!-- Konten Utama -->
+                        <div class="d-flex flex-column"
+                            style="z-index: 1; position: relative; height: 100%; padding: 20px; overflow-y: auto;">
+
+                            <!-- Tabs -->
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
-                                    <button class="nav-link active" id="my-communities-tab" data-bs-toggle="tab"
-                                        data-bs-target="#my-communities" type="button" role="tab"
-                                        aria-controls="my-communities" aria-selected="true">
-                                        Latest
-                                    </button>
+                                    <button class="nav-link active" data-bs-toggle="tab"
+                                        data-bs-target="#all">latest</button>
                                 </li>
                                 <li class="nav-item">
-                                    <button class="nav-link" id="explore-tab" data-bs-toggle="tab"
-                                        data-bs-target="#explore" type="button" role="tab" aria-controls="explore"
-                                        aria-selected="false">
-                                        Popular
-                                    </button>
+                                    <button class="nav-link" data-bs-toggle="tab"
+                                        data-bs-target="#moderator">Popular</button>
                                 </li>
                                 <li class="nav-item">
-                                    <button class="nav-link" id="explore-tab" data-bs-toggle="tab"
-                                        data-bs-target="#explore" type="button" role="tab" aria-controls="explore"
-                                        aria-selected="false">
-                                        Colaboration
-                                    </button>
+                                    <button class="nav-link" data-bs-toggle="tab"
+                                        data-bs-target="#all1">Collaboration</button>
                                 </li>
                                 <li class="nav-item">
-                                    <button class="nav-link" id="explore-tab" data-bs-toggle="tab"
-                                        data-bs-target="#explore" type="button" role="tab" aria-controls="explore"
-                                        aria-selected="false">
-                                        About
-                                    </button>
+                                    <button class="nav-link" data-bs-toggle="tab"
+                                        data-bs-target="#moderator1">About</button>
                                 </li>
                             </ul>
+                        </div>
 
+                        <!-- latest -->
+                        <div class="tab-content mt-3">
+                            <div class="tab-pane fade show active" id="all">
+                                <div class="list-group">
+                                    <!-- User Item -->
+                                    @include('components.form-text')
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Popular-->
+                        <div class="tab-pane fade" id="moderator">
+                            <div class="list-group">
+
+                                <!-- User Item -->
+                                @include('components.form-text')
+
+                            </div>
+                        </div>
+
+                        <!-- collaboration -->
+                        <div class="tab-pane fade">
+                            <div class="tab-pane fade show active" id="all1">
+                                <div class="list-group">
+                                    <!-- User Item -->
+                                    @include('components.form-text')
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- about -->
+                        <div class="tab-pane fade" id="moderator1">
+                            <div class="list-group">
+
+                                <!-- User Item -->
+                                @include('components.form-text')
+
+                            </div>
                         </div>
                     </section>
 
 
-
-                    <!-- Tabs Content -->
-
-                    <!-- My Communities Tab Pane -->
-                    <div class="tab-pane fade show active" id="my-communities" role="tabpanel"
-                        aria-labelledby="my-communities-tab">
-                        @include('components.form-text')
-                    </div>
-
-                    <!-- Explore Tab Pane -->
-                    <div class="tab-pane " id="explore" role="tabpanel" aria-labelledby="explore-tab">
-                        <!-- Community Cards Section -->
-                        @include('components.form-text')
-                    </div>
 
                     <!-- Panggil file JS -->
                     <script src="{{ asset('js/profil-community.js') }}"></script>

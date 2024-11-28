@@ -103,3 +103,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// Fungsi untuk membuka gambar dalam mode fullscreen
+function openImageFullscreen(event) {
+    event.preventDefault(); // Mencegah link default (redirect)
+
+    const img = document.getElementById("fullscreen");
+    const overlay = document.getElementById("image-overlay");
+    const fullscreenImage = document.getElementById("fullscreen-image");
+
+    // Set gambar fullscreen sesuai gambar yang diklik
+    fullscreenImage.src = img.src;
+    fullscreenImage.style.maxWidth = "100%";
+    fullscreenImage.style.maxHeight = "100%";
+
+    // Tampilkan overlay dan gambar
+    overlay.style.display = "flex";
+}
+
+// Fungsi untuk menutup fullscreen ketika klik overlay
+function closeFullscreen() {
+    const overlay = document.getElementById("image-overlay");
+    overlay.style.display = "none";
+}

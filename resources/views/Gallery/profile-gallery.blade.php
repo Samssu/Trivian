@@ -28,8 +28,16 @@
                     almost perfect, he made it
                     himself with his persistence.</p>
             </div>
+            <!-- Gambar Thumbnail -->
             <div class="col-lg-6">
-                <img src="/images/kokomi.png" alt="Project" class="img-fluid rounded shadow">
+                <a href="#" onclick="openFullscreen(event)">
+                    <img src="/images/oyen.jpg" alt="Project" class="img-fluid rounded shadow" />
+                </a>
+            </div>
+
+            <!-- Overlay untuk Fullscreen -->
+            <div id="fullscreen-overlay" class="fullscreen-overlay" onclick="closeFullscreen()" style="display: none;">
+                <img id="fullscreen-image" src="" alt="Fullscreen Image" class="img-fluid" />
             </div>
         </div>
 
@@ -45,8 +53,16 @@
                     almost perfect, he made it
                     himself with his persistence..</p>
             </div>
+            <!-- Gambar Thumbnail -->
             <div class="col-lg-6">
-                <img src="/images/kokomi.png" alt="Screens" class="img-fluid rounded shadow">
+                <a href="#" onclick="openFullscreen(event)">
+                    <img src="/images/oyen.jpg" alt="Project" class="img-fluid rounded shadow" />
+                </a>
+            </div>
+
+            <!-- Overlay untuk Fullscreen -->
+            <div id="fullscreen-overlay" class="fullscreen-overlay" onclick="closeFullscreen()" style="display: none;">
+                <img id="fullscreen-image" src="" alt="Fullscreen Image" class="img-fluid" />
             </div>
         </div>
 
@@ -62,8 +78,16 @@
                     almost perfect, he made it
                     himself with his persistence.</p>
             </div>
+            <!-- Gambar Thumbnail -->
             <div class="col-lg-6">
-                <img src="/images/kokomi.png" alt="Screens" class="img-fluid rounded shadow">
+                <a href="#" onclick="openFullscreen(event)">
+                    <img src="/images/oyen.jpg" alt="Project" class="img-fluid rounded shadow" />
+                </a>
+            </div>
+
+            <!-- Overlay untuk Fullscreen -->
+            <div id="fullscreen-overlay" class="fullscreen-overlay" onclick="closeFullscreen()" style="display: none;">
+                <img id="fullscreen-image" src="" alt="Fullscreen Image" class="img-fluid" />
             </div>
         </div>
 
@@ -99,7 +123,8 @@
             </div>
         </section>
 
-
+        <!-- Panggil file JS -->
+        <script src="{{ asset('js/profile-gallery.js') }}"></script>
 </body>
 
 </html>

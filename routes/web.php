@@ -37,8 +37,13 @@ Route::get('/', function () {
 
 // Home
 Route::get('/home', function () {
-    return view('HomePage/home');
-});
+    return view('HomePage.home'); 
+})->name('home');
+
+
+Route::get('/view-post', function () {
+    return view('HomePage.view-post'); 
+})->name('view-post');
 
 // Community
 Route::get('/create-community', function () {

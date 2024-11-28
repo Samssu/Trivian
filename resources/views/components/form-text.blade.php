@@ -8,28 +8,88 @@
                  style="width: 50px; height: 50px; object-fit: cover;">
              <div class="flex-grow-1">
                  <!-- Post Header -->
-                 <div class="d-flex justify-content-between">
-                     <h6 class="fw-bold mb-0">Fadhly Rafiansyah</h6>
-                     <small class="text-muted">19 Nov</small>
+                 <div class="d-flex flex-column">
+                     <div class="d-flex align-items-center">
+                         <h6 class="fw-bold mb-0">
+                             <a href="{{ route('profile') }}" class="text-decoration-none text-dark">
+                                 Samsu Hidayat
+                             </a>
+                             <span class="text-muted ms-2">
+                                 <a href="{{ route('profile') }}"
+                                     class="text-decoration-none text-muted">@miawmiawbiasa</a>
+                             </span>
+                         </h6>
+
+                         <small class="text-muted ms-3">28 Nov</small>
+                     </div>
+
+                     <!-- Jam atau Riwayat Waktu -->
+                     <small class="text-muted mt-1">2 hours ago</small>
                  </div>
-                 <small class="text-muted">@fadhlyrafi</small>
+
+                 <!-- Role  -->
+                 <a href="#" class="btn"
+                     style="font-size: 0.7rem; padding: 5px 10px; background-color: #FF7F3E; color: white; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bold;">
+                     LifeStyle
+                 </a>
+
                  <!-- Post Content -->
                  <p class="mt-3 mb-1">
-                     Halo teman-teman Laravel Indonesia,<br>
-                     Saya ingin berbagi kabar tentang rilis terbaru Laravel 10 yang membawa banyak fitur
-                     baru
-                     dan
-                     peningkatan performa. Saya sudah mencoba beberapa fitur ini dan ingin
-                     mendiskusikannya
-                     dengan
-                     kalian. Berikut beberapa fitur yang menurut saya menarik:
+                     Halo teman-teman pecinta kucing,<br>
+                     Saya ingin berbagi kabar tentang kucing terbaru yang membawa banyak keunikan
+                     baru dan peningkatan kelincahan. Saya sudah mencoba beberapa trik ini dan ingin
+                     mendiskusikannya dengan kalian. Berikut beberapa trik yang menurut saya menarik:
                  <ul>
-                     <li>Improved Routing System</li>
-                     <li>Laravel 10 memperkenalkan sistem routing yang lebih fleksibel.</li>
+                     <li>Melompat lebih tinggi</li>
+                     <li>Kucing kini bisa lebih fleksibel dalam gerakan.</li>
                  </ul>
-                 Ada yang sudah mencoba mengatur rute dengan sintaks baru ini? Bagaimana pengalaman
-                 kalian?
+                 Ada yang sudah mencoba melatih kucing untuk melakukan trik ini? Ayo lihat diwebsite saya?
                  </p>
+
+
+                 <!-- Link di bawah paragraf -->
+                 <a href="https://KucingImpact.com">https://KucingImpact.com</a>
+
+
+                 <!-- Gambar di bawah paragraf -->
+                 <div class="image-container mt-3">
+                     <a href="{{ route('view-post') }}" onclick="openImageFullscreen(event)">
+                         <img id="fullscreen" src="/images/oyen.jpg" alt="Deskripsi Gambar" class="img-fluid rounded"
+                             style="max-width: 100%; height: auto; cursor: pointer;" />
+                     </a>
+                 </div>
+
+                 <!-- Overlay untuk Fullscreen -->
+                 <div id="image-overlay" class="image-overlay" onclick="closeFullscreen()" style="display: none;">
+                     <img id="fullscreen-image" src="" alt="Fullscreen Image" class="img-fluid" />
+                 </div>
+
+
+                 <!-- CSS untuk Overlay Fullscreen -->
+                 <style>
+                 .image-overlay {
+                     position: fixed;
+                     top: 0;
+                     left: 0;
+                     width: 100%;
+                     height: 100%;
+                     background-color: rgba(0, 0, 0, 0.7);
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     z-index: 9999;
+                     cursor: pointer;
+                 }
+
+                 .image-overlay img {
+                     max-width: 90%;
+                     max-height: 90%;
+                     object-fit: contain;
+                 }
+                 </style>
+
+
+
                  <!-- Post Actions -->
                  <div class="d-flex gap-4 text-muted mt-3">
                      <!-- Like Button -->

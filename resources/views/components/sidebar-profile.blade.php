@@ -14,8 +14,8 @@
 
                 <div class="card-body text-center">
                     <!-- Name and Job Title -->
-                    <h5 class="card-title" style="color: #2E2E66;">John Doe</h5>
-                    <p class="card-text text-muted" style="font-size: 0.85rem;">Web Developer</p>
+                    <h5 class="card-title" style="color: #2E2E66;">Samsu Hidayat</h5>
+                    <p class="card-text text-muted" style="font-size: 0.85rem;">@miawmiawbiasa</p>
 
                     <!-- About Section -->
                     <p class="text-muted mb-3" style="font-size: 0.9rem;">Passionate about coding and developing
