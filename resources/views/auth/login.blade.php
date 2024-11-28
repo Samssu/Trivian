@@ -57,7 +57,8 @@
                 <span class="bg-white px-2" style="position: relative; top: -12px;">or continue with</span>
             </div>
             <div class="d-flex justify-content-center gap-3 mb-3">
-                <a href="#"
+
+                <a href="{{ route('auth.google') }}"
                     class="btn btn-outline-secondary rounded-circle shadow-sm d-flex justify-content-center align-items-center"
                     style="width: 45px; height: 45px;">
                     <i class="bi bi-google text-danger"></i>
@@ -65,7 +66,7 @@
                 <a href="#"
                     class="btn btn-outline-secondary rounded-circle shadow-sm d-flex justify-content-center align-items-center"
                     style="width: 45px; height: 45px;">
-                    <i class="bi bi-facebook text-primary"></i>
+                    <i class="bi bi-linkedin text-primary"></i>
                 </a>
                 <a href="#"
                     class="btn btn-outline-secondary rounded-circle shadow-sm d-flex justify-content-center align-items-center"
@@ -83,19 +84,19 @@
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    document.querySelectorAll('.toggle-password').forEach(button => {
-        button.addEventListener('click', function() {
-            const input = this.previousElementSibling;
-            const icon = this.querySelector('i');
-            if (input.type === "password") {
-                input.type = "text";
-                icon.classList.replace('bi-eye-slash', 'bi-eye');
-            } else {
-                input.type = "password";
-                icon.classList.replace('bi-eye', 'bi-eye-slash');
-            }
+        document.querySelectorAll('.toggle-password').forEach(button => {
+            button.addEventListener('click', function() {
+                const input = this.previousElementSibling;
+                const icon = this.querySelector('i');
+                if (input.type === "password") {
+                    input.type = "text";
+                    icon.classList.replace('bi-eye-slash', 'bi-eye');
+                } else {
+                    input.type = "password";
+                    icon.classList.replace('bi-eye', 'bi-eye-slash');
+                }
+            });
         });
-    });
     </script>
 </body>
 
