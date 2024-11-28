@@ -21,7 +21,7 @@
             <p class="lead mb-5">Explore, connect, and grow with like-minded individuals across the globe.</p>
 
             <!-- Search Bar -->
-            <form action="/search" method="GET" class="d-flex justify-content-center">
+            <form action="#" method="GET" class="d-flex justify-content-center">
                 <div class="input-group" style="max-width: 600px;">
                     <input type="text" name="query" class="form-control form-control-lg"
                         placeholder="Search for communities, topics, or people..." aria-label="Search"

@@ -24,9 +24,11 @@ Route::get('/notifications', function () {
 })->name('notifications');
 
 Route::get('/profile', function () {
-    return view('profile.profile'); 
-})->name('profile');
+    return view('profile.profile');})->name('profile');
 
+Route::get('/edit-profile', function () {
+    return view('profile.edit-profile');
+})->name('edit-profile');
 
 //LandingPage
 Route::get('/', function () {

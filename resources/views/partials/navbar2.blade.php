@@ -55,7 +55,6 @@
             <div class="d-flex gap-3" style="margin-right: -200px">
                 <a href="/login" class="btn btn-outline-light px-4 py-2">Log In</a>
                 <a href="/register" class="btn btn-light text-primary fw-bold px-4 py-2">Sign Up Now</a>
-                <!-- <a href="{{route('profile')}" class="btn btn-light text-primary fw-bold px-4 py-2">Profile</a> -->
             </div>
         </div>
     </div>

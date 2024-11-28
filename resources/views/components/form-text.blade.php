@@ -123,3 +123,6 @@
          </div>
      </div>
      <!-- batas Comentar -->
+
+     <!-- Panggil file JS -->
+     <script src="{{ asset('js/comentar.js') }}"></script>
