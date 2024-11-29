@@ -14,33 +14,59 @@
                     </div>
                 </a>
                 <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <a href="#" class="list-group-item d-flex align-items-center text-decoration-none">
+                    <ul class="list-group list-group-flush" id="community-list">
+                        <!-- Komunitas terlihat secara default -->
+                        <a href="{{ route('profile-uxid') }}"
+                            class="list-group-item d-flex align-items-center text-decoration-none">
                             <img src="/images/uxid.png" alt="UXID" class="me-2" style="width: 30px; height: 30px;">
                             UXID (UX Indonesia)
                         </a>
-                        <a href="#" class="list-group-item d-flex align-items-center text-decoration-none">
-                            <img src="/images/aws.png" alt="AWS" class="me-2" style="width: 30px; height: 30px;">
-                            AWS User Group Indonesia
+                        <a href="{{ route('profile-google') }}"
+                            class="list-group-item d-flex align-items-center text-decoration-none">
+                            <img src="/images/google dev.png" alt="google" class="me-2"
+                                style="width: 30px; height: 30px;">
+                            Google developer Group
                         </a>
-                        <a href="#" class="list-group-item d-flex align-items-center text-decoration-none">
-                            <img src="/images/google dev.png" alt="GDG" class="me-2" style="width: 30px; height: 30px;">
-                            Google Developer Group
-                        </a>
-                        <a href="#" class="list-group-item d-flex align-items-center text-decoration-none">
-                            <img src="/images/Laravel8.png" alt="Laravel" class="me-2"
+                        <a href="{{ route('profile-laravel') }}"
+                            class="list-group-item d-flex align-items-center text-decoration-none">
+                            <img src="/images/laravel8.png" alt="Laravel" class="me-2"
                                 style="width: 30px; height: 30px;">
                             Laravel Indonesia
                         </a>
-                        <a href="#" class="list-group-item d-flex align-items-center text-decoration-none">
-                            <img src="/images/react.png" alt="ReactJS" class="me-2" style="width: 30px; height: 30px;">
-                            ReactJS Indonesia
+                        <a href="{{ route('profile-reactjs') }}"
+                            class="list-group-item d-flex align-items-center text-decoration-none">
+                            <img src="/images/React.png" alt="reactjs" class="me-2" style="width: 30px; height: 30px;">
+                            ReactJs Indonesia
                         </a>
+
+                        <!-- Komunitas tersembunyi -->
+                        <div id="hidden-communities" style="display: none;">
+                            <a href="{{ route('profile-oyen') }}"
+                                class="list-group-item d-flex align-items-center text-decoration-none">
+                                <img src="/images/oyen.jpg" alt="oyen" class="me-2" style="width: 30px; height: 30px;">
+                                Komunitas Oyen
+                            </a>
+                            <a href="{{ route('profile-warungasep') }}"
+                                class="list-group-item d-flex align-items-center text-decoration-none">
+                                <img src="/images/bgbangasep.webp" alt="asep" class="me-2"
+                                    style="width: 30px; height: 30px;">
+                                Warung bang Asep
+                            </a>
+                            <a href="{{ route('profile-solid') }}"
+                                class="list-group-item d-flex align-items-center text-decoration-none">
+                                <img src="/images/react.png" alt="solid" class="me-2"
+                                    style="width: 30px; height: 30px;">
+                                Solid Community
+                            </a>
+                        </div>
                     </ul>
-                    <a href="#" class="btn btn-outline-primary w-100 mt-3"
-                        style="background-color: #ffffff; border-color: #2E2E66">See All</a>
+                    <!-- Tombol untuk toggle "See All" / "See Less" -->
+                    <button id="toggle-btn" class="btn btn-outline-primary w-100 mt-3"
+                        style="background-color: #ffffff; border-color: #2E2E66" onclick="toggleCommunities()">See
+                        All</button>
                 </div>
             </section>
+
 
             <!-- Recommendations For You -->
             <section class="card my-3 shadow-sm">
@@ -49,7 +75,7 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <a href="#"
+                        <a href="{{ route('profile-uxid') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                             <div class="d-flex align-items-center">
                                 <img src="/images/uxid.png" alt="UXID" class="me-2" style="width:30px; height:30px;">
@@ -58,38 +84,40 @@
                             <button class="btn btn-outline-primary btn-sm"
                                 style="background-color: #ffffff; border-color: #2E2E66">Join</button>
                         </a>
-                        <a href="#"
+                        <a href="{{ route('profile-google') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                             <div class="d-flex align-items-center">
-                                <img src="/images/aws.png" alt="AWS" class="me-2" style="width:30px; height:30px;">
-                                AWS User Group Indonesia
+                                <img src="/images/google dev.png" alt="google" class="me-2"
+                                    style="width:30px; height:30px;">
+                                Google Developer Group
                             </div>
                             <button class="btn btn-outline-primary btn-sm"
                                 style="background-color: #ffffff; border-color: #2E2E66">Join</button>
                         </a>
-                        <a href="#"
+                        <a href="{{ route('profile-laravel') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                             <div class="d-flex align-items-center">
-                                <img src="/images/aws.png" alt="AWS" class="me-2" style="width:30px; height:30px;">
-                                AWS User Group Indonesia
+                                <img src="/images/laravel8.png" alt="Laravel" class="me-2"
+                                    style="width:30px; height:30px;">
+                                Laravel Indonesia
                             </div>
                             <button class="btn btn-outline-primary btn-sm"
                                 style="background-color: #ffffff; border-color: #2E2E66">Join</button>
                         </a>
-                        <a href="#"
+                        <a href="{{ route('profile-oyen') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                             <div class="d-flex align-items-center">
-                                <img src="/images/aws.png" alt="AWS" class="me-2" style="width:30px; height:30px;">
-                                AWS User Group Indonesia
+                                <img src="/images/oyen.jpg" alt="oyen" class="me-2" style="width:30px; height:30px;">
+                                Komunitas Oyen
                             </div>
                             <button class="btn btn-outline-primary btn-sm"
                                 style="background-color: #ffffff; border-color: #2E2E66">Join</button>
                         </a>
-                        <a href="#"
+                        <a href="{{ route('profile-solid') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                             <div class="d-flex align-items-center">
-                                <img src="/images/aws.png" alt="AWS" class="me-2" style="width:30px; height:30px;">
-                                AWS User Group Indonesia
+                                <img src="/images/react.png" alt="solid" class="me-2" style="width:30px; height:30px;">
+                                Solid Community
                             </div>
                             <button class="btn btn-outline-primary btn-sm"
                                 style="background-color: #ffffff; border-color: #2E2E66">Join</button>
@@ -133,3 +161,20 @@
                 </div>
             </section>
         </aside>
+
+        <script>
+        function toggleCommunities() {
+            const hiddenCommunities = document.getElementById('hidden-communities');
+            const toggleButton = document.getElementById('toggle-btn');
+
+            if (hiddenCommunities.style.display === 'none') {
+                // Tampilkan komunitas tersembunyi
+                hiddenCommunities.style.display = 'block';
+                toggleButton.textContent = 'See Less';
+            } else {
+                // Sembunyikan komunitas tambahan
+                hiddenCommunities.style.display = 'none';
+                toggleButton.textContent = 'See All';
+            }
+        }
+        </script>

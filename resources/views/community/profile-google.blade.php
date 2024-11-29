@@ -33,10 +33,10 @@
             <div class="card-body p-0">
                 <!-- Cover Image -->
                 <div class="position-relative" style="height: 350px;">
-                    <img src="/images/bglaravel.jpg" alt="Community Cover" class="w-100 h-100"
+                    <img src="/images/herossection.png" alt="Community Cover" class="w-100 h-100"
                         style="object-fit: cover;">
                     <!-- Community Logo -->
-                    <img src="/images/laravel.png" alt="Community Logo"
+                    <img src="/images/google dev.png" alt="Community Logo"
                         class="rounded-circle position-absolute border border-white"
                         style="width: 150px; height: 150px; bottom: -40px; left: 20px; background: white; object-fit: cover; aspect-ratio: 1 / 1;">
 
@@ -47,7 +47,7 @@
                         <!-- Community Info -->
                         <div>
                             <!-- Judul -->
-                            <h3 class="fw-bold">Laravel Indonesia</h3>
+                            <h3 class="fw-bold">Google developers Group</h3>
 
                             <!-- Role  -->
                             <a href="#" class="btn"
@@ -135,7 +135,7 @@
                             <div class="tab-pane fade show active" id="all">
                                 <div class="list-group">
                                     <!-- User Item -->
-                                    @include('components.form-text')
+                                    @include('form-text.js-form')
                                 </div>
                             </div>
                         </div>
@@ -145,7 +145,7 @@
                             <div class="list-group">
 
                                 <!-- User Item -->
-                                @include('components.form-text')
+                                @include('form-text.js-form')
 
                             </div>
                         </div>
@@ -155,7 +155,7 @@
                             <div class="tab-pane fade show active" id="all1">
                                 <div class="list-group">
                                     <!-- User Item -->
-                                    @include('components.form-text')
+
                                 </div>
                             </div>
                         </div>
@@ -165,7 +165,7 @@
                             <div class="list-group">
 
                                 <!-- User Item -->
-                                @include('components.form-text')
+
 
                             </div>
                         </div>

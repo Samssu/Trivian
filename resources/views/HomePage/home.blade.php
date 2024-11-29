@@ -27,27 +27,24 @@
         <div class="d-flex flex-column"
             style="z-index: 1; position: relative; height: 100%; padding: 20px; overflow-y: auto;">
             <!-- Text Post -->
-            @include('components.input-field')
+            @include('form-text.input-field')
 
             <!-- Main Section -->
             <div class="card-body">
                 <!-- Form comentar  -->
-                @include('components.form-text')
-                @include('components.form-text')
-                @include('components.form-text')
-                @include('components.form-text')
-                @include('components.form-text')
-                @include('components.form-text')
-                @include('components.form-text')
-                @include('components.form-text')
+                @include('form-text.ui-form')
+                @include('form-text.kucing-form')
+                @include('form-text.js-form')
+
+
+
             </div>
         </div>
         </div>
     </section>
 
 
-    <!-- Panggil file JS -->
-    <script src="{{ asset('js/comentar.js') }}"></script>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

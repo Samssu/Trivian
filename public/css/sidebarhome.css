@@ -1,0 +1,6 @@
+.community-image {
+    width: 30px; /* Lebar gambar */
+    height: 30px; /* Tinggi gambar */
+    object-fit: cover; /* Pastikan gambar tetap proporsional */
+    border-radius: 50%; /* Opsional: membuat gambar menjadi lingkaran */
+}

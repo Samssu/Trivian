@@ -58,7 +58,7 @@
                  <div class="ms-3 mt-3 mt-md-0">
                      <button class="btn btn-primary w-100 w-md-auto"
                          style="border-radius: 20px; background-color: #2E2E66; border-color: #2E2E66">
-                         Post
+                         Create Post
                      </button>
                  </div>
              </div>
