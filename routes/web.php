@@ -16,8 +16,12 @@ use Illuminate\Support\Facades\Route;
 // Auth
 Route::view('/login', 'auth.login')->name('login');
 Route::view('/register', 'auth.register')->name('register');
+
 Route::get('/search', function () {
     return view('search.search');})->name('search');
+
+Route::get('/search-result', function () {
+    return view('search.search-result');})->name('search-result');
 
 Route::get('/notifications', function () {
     return view('notifications.notifications');
@@ -37,17 +41,47 @@ Route::get('/', function () {
 
 // Home
 Route::get('/home', function () {
-    return view('HomePage/home');
-});
+    return view('HomePage.home'); 
+})->name('home');
+
+
+Route::get('/view-post', function () {
+    return view('HomePage.view-post'); 
+})->name('view-post');
 
 // Community
 Route::get('/create-community', function () {
     return view('community.create-community'); 
 })->name('create-community');
 
-Route::get('/profile-community', function () {
-    return view('community.profile-community'); 
-})->name('profile-community');
+Route::get('/profile-uxid', function () {
+    return view('community.profile-uxid'); 
+})->name('profile-uxid');
+
+Route::get('/profile-google', function () {
+    return view('community.profile-google'); 
+})->name('profile-google');
+
+Route::get('/profile-laravel', function () {
+    return view('community.profile-laravel'); 
+})->name('profile-laravel');
+
+Route::get('/profile-reactjs', function () {
+    return view('community.profile-reactjs'); 
+})->name('profile-reactjs');
+
+Route::get('/profile-oyen', function () {
+    return view('community.profile-oyen'); 
+})->name('profile-oyen');
+
+Route::get('/profile-warungasep', function () {
+    return view('community.profile-warungasep'); 
+})->name('profile-warungasep');
+
+Route::get('/profile-solid', function () {
+    return view('community.profile-solid'); 
+})->name('profile-solid');
+
 
 Route::get('/community', function () {
     return view('community.community'); 

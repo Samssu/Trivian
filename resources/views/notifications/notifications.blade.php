@@ -36,13 +36,13 @@
                 </div>
 
                 <!-- Card notif -->
-                @include('components.card-notifications')
-                @include('components.card-notifications')
-                @include('components.card-notifications')
-                @include('components.card-notifications')
-                @include('components.card-notifications')
-                @include('components.card-notifications')
-                @include('components.card-notifications')
+                @include('card.card-notifications')
+                @include('card.card-notifications')
+                @include('card.card-notifications')
+                @include('card.card-notifications')
+                @include('card.card-notifications')
+                @include('card.card-notifications')
+                @include('card.card-notifications')
             </div>
         </div>
     </section>

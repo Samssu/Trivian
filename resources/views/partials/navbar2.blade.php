@@ -48,13 +48,22 @@
                         999+
                     </span>
                 </a>
-
             </div>
 
-            <!-- Buttons -->
+            <!-- Buttons or Profile Photo -->
             <div class="d-flex gap-3" style="margin-right: -200px">
+                <!-- Check if user is logged in -->
+                @auth
+                <!-- If user is logged in, show profile picture -->
+                <a href="/profile" class="btn btn-link text-white p-0">
+                    <img src="{{ Auth::user()->profile_photo_url }}" alt="Profile" class="rounded-circle"
+                        style="width: 40px; height: 40px;">
+                </a>
+                @else
+                <!-- If user is not logged in, show login and register buttons -->
                 <a href="/login" class="btn btn-outline-light px-4 py-2">Log In</a>
                 <a href="/register" class="btn btn-light text-primary fw-bold px-4 py-2">Sign Up Now</a>
+                @endauth
             </div>
         </div>
     </div>
