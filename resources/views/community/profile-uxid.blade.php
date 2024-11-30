@@ -105,71 +105,79 @@
                     <section class="main-content flex-grow-1 bg-light p-4 shadow-sm rounded"
                         style="border-radius: 10px;">
                         <!-- Konten Utama -->
-                        <div class="d-flex flex-column"
+                        <section class="d-flex flex-column"
                             style="z-index: 1; position: relative; height: 100%; padding: 20px; overflow-y: auto;">
 
                             <!-- Tabs -->
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
                                     <button class="nav-link active" data-bs-toggle="tab"
-                                        data-bs-target="#all">latest</button>
+                                        data-bs-target="#late">Latest</button>
                                 </li>
                                 <li class="nav-item">
                                     <button class="nav-link" data-bs-toggle="tab"
-                                        data-bs-target="#moderator">Popular</button>
+                                        data-bs-target="#popular">Popular</button>
                                 </li>
                                 <li class="nav-item">
                                     <button class="nav-link" data-bs-toggle="tab"
-                                        data-bs-target="#all1">Collaboration</button>
+                                        data-bs-target="#colab">Collaboration</button>
                                 </li>
                                 <li class="nav-item">
-                                    <button class="nav-link" data-bs-toggle="tab"
-                                        data-bs-target="#moderator1">About</button>
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#about">About</button>
                                 </li>
                             </ul>
-                        </div>
 
-                        <!-- latest -->
-                        <div class="tab-content mt-3">
-                            <div class="tab-pane fade show active" id="all">
-                                <div class="list-group">
-                                    <!-- User Item -->
-                                    @include('form-text.ui-form')
-                                </div>
+                            <!-- Tab Content -->
+                            <div class="tab-content mt-3">
+                                <!-- Latest -->
+                                <section class="tab-pane fade show active" id="late">
+                                    <div class="list-group">
+                                        <!-- Collaboration Item -->
+                                        @include('form-text.ui-form')
+                                    </div>
+                                </section>
+
+                                <!-- Popular-->
+                                <section class="tab-pane fade" id="popular">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                        @include('card.card-uxid')
+                                        @include('card.card-oyen')
+                                        @include('card.card-solid')
+                                        @include('card.card-warungasep')
+                                        @include('card.card-reactjs')
+                                        @include('card.card-google')
+                                    </div>
+                                </section>
+
+                                <!-- Collaboration -->
+                                <section class="tab-pane fade" id="colab">
+                                    <div class="list-group">
+                                        <div class="list-group" id="userList">
+                                            <!-- Konten yang selalu tampil -->
+                                            @include('form-text.user-follow')
+                                            @include('form-text.user-follow')
+                                            @include('form-text.user-follow')
+                                            @include('form-text.user-follow')
+                                            @include('form-text.user-follow')
+                                            @include('form-text.user-follow')
+                                            @include('form-text.user-follow')
+                                            @include('form-text.user-follow')
+                                            @include('form-text.user-follow')
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <!-- About -->
+                                <section class="tab-pane fade" id="about">
+                                    <!-- Community Cards Section -->
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                        <!-- card 1 -->
+                                        @include('card.card-gallery')
+                                    </div>
+                                </section>
                             </div>
-                        </div>
-
-                        <!-- Popular-->
-                        <div class="tab-pane fade" id="moderator">
-                            <div class="list-group">
-
-                                <!-- User Item -->
-                                @include('form-text.ui-form')
-
-                            </div>
-                        </div>
-
-                        <!-- collaboration -->
-                        <div class="tab-pane fade">
-                            <div class="tab-pane fade show active" id="all1">
-                                <div class="list-group">
-                                    <!-- User Item -->
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- about -->
-                        <div class="tab-pane fade" id="moderator1">
-                            <div class="list-group">
-
-                                <!-- User Item -->
-
-
-                            </div>
-                        </div>
+                        </section>
                     </section>
-
 
 
                     <!-- Panggil file JS -->

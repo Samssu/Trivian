@@ -16,8 +16,12 @@ use Illuminate\Support\Facades\Route;
 // Auth
 Route::view('/login', 'auth.login')->name('login');
 Route::view('/register', 'auth.register')->name('register');
+
 Route::get('/search', function () {
     return view('search.search');})->name('search');
+
+Route::get('/search-result', function () {
+    return view('search.search-result');})->name('search-result');
 
 Route::get('/notifications', function () {
     return view('notifications.notifications');
