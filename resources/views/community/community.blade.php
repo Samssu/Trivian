@@ -65,30 +65,30 @@
                 aria-labelledby="my-communities-tab">
                 <!-- Community Cards Section -->
                 <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-                    <!-- Card 1 -->
-                    @include('components.card-community')
-                    <!-- Card 1 -->
-                    @include('components.card-community')
-                    <!-- Card 1 -->
-                    @include('components.card-community')
-                    <!-- Card 1 -->
-                    @include('components.card-community')
-                    <!-- Card 1 -->
-                    @include('components.card-community')
+                    <!-- Card -->
+                    @include('card.card-uxid')
+                    @include('card.card-google')
+                    @include('card.card-laravel')
+                    @include('card.card-reactjs')
+                    @include('card.card-oyen')
+                    @include('card.card-solid')
+                    @include('card.card-warungasep')
+
             </div>
 
             <!-- Explore Tab Pane -->
             <div class="tab-pane fade" id="explore" role="tabpanel" aria-labelledby="explore-tab">
                 <!-- Community Cards Section -->
                 <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-                    <!-- Card 1 -->
-                    @include('components.card-community')
-                    <!-- Card 1 -->
-                    @include('components.card-community')
-                    <!-- Card 1 -->
-                    @include('components.card-community')
-                    <!-- Card 1 -->
-                    @include('components.card-community')
+                    <!-- Card -->
+                    @include('card.card-uxid')
+                    @include('card.card-google')
+                    @include('card.card-laravel')
+                    @include('card.card-reactjs')
+                    @include('card.card-oyen')
+                    @include('card.card-solid')
+                    @include('card.card-warungasep')
+
                 </section>
             </div>
         </div>

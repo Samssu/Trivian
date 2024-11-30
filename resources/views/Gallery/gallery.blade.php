@@ -46,13 +46,8 @@
             <!-- Community Cards Section -->
             <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                 <!-- card 1 -->
-                @include('components.card-gallery')
-                <!-- card 1 -->
-                @include('components.card-gallery')
-                <!-- card 1 -->
-                @include('components.card-gallery')
-                <!-- card 1 -->
-                @include('components.card-gallery')
+                @include('card.card-gallery')
+
 
             </section>
         </div>

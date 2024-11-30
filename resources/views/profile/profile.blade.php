@@ -22,13 +22,13 @@
         <div class="d-flex flex-column"
             style="z-index: 1; position: relative; height: 100%; padding: 20px; overflow-y: auto;">
             <!-- Text Post -->
-            @include('components.input-field')
+            @include('form-text.input-field')
 
             <!-- Main Section -->
             <div class="card-body">
                 <!-- Form comentar  -->
-                @include('components.form-text')
-                @include('components.form-text')
+                @include('form-text.kucing-form')
+                @include('form-text.ui-form')
 
             </div>
         </div>

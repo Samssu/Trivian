@@ -10,10 +10,11 @@ class CreateArtworksTable extends Migration
     {
         Schema::create('artworks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('project_id')->constrained('projects')->onDelete('cascade');
             $table->string('title');
-            $table->string('file_path');
-            $table->text('description')->nullable();
+            $table->text('description');
+            $table->string('image');
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            $table->string('location');
             $table->timestamps();
         });
     }

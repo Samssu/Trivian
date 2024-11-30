@@ -18,7 +18,7 @@
     <section class="col-md-8 col-lg-9 mx-auto bg-light border rounded shadow" style="padding-top: 20px;">
         <!-- Title and Back Button -->
         <div class="d-flex align-items-center mb-4">
-            <a href="{{ route('profile-community') }}" class="btn btn-outline-primary px-3 py-2 me-3">
+            <a href="{{ route('profile-uxid') }}" class="btn btn-outline-primary px-3 py-2 me-3">
                 <i class="bi bi-arrow-left"></i>
             </a>
             <h2 class="fw-bold mb-0">Members</h2>
@@ -49,54 +49,18 @@
                 <div class="tab-pane fade show active" id="all">
                     <div class="list-group">
                         <!-- User Item -->
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <img src="https://via.placeholder.com/40" alt="User" class="rounded-circle me-3">
-                                <div>
-                                    <h6 class="mb-0">Annisa Isnaini Tsaniya</h6>
-                                    <small class="text-muted">@annisain</small>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill">Followed</button>
-                        </div>
-
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <img src="https://via.placeholder.com/40" alt="User" class="rounded-circle me-3">
-                                <div>
-                                    <h6 class="mb-0">Fadhly Rafiansyah</h6>
-                                    <small class="text-muted">@fadhlyrafi</small>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill">Followed</button>
-                        </div>
-
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <img src="https://via.placeholder.com/40" alt="User" class="rounded-circle me-3">
-                                <div>
-                                    <h6 class="mb-0">Rizkiyanto</h6>
-                                    <small class="text-muted">@rizkiiii</small>
-                                </div>
-                            </div>
-                            <button class="btn btn-primary btn-sm rounded-pill">+ Follow</button>
-                        </div>  
+                        @include('form-text.user-follow')
+                        @include('form-text.user-follow')
+                        @include('form-text.user-follow')
                     </div>
                 </div>
 
                 <!-- Moderator Tab -->
                 <div class="tab-pane fade" id="moderator">
                     <div class="list-group">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <img src="https://via.placeholder.com/40" alt="User" class="rounded-circle me-3">
-                                <div>
-                                    <h6 class="mb-0">Annisa Isnaini Tsaniya</h6>
-                                    <small class="text-muted">@annisain</small>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill">Followed</button>
-                        </div>
+                        @include('form-text.user-follow')
+                        @include('form-text.user-follow')
+                        @include('form-text.user-follow')
                     </div>
                 </div>
             </div>
