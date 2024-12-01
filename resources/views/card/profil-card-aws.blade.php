@@ -3,9 +3,9 @@
   <!-- Card 1 -->
   <section class="col">
       <div class="card shadow-sm h-100">
-          <img src="/images/google dev.png" class="card-img-top p-3" alt="AWS">
+          <img src="/images/aws.png" class="card-img-top p-3" alt="AWS">
           <div class="card-body">
-              <h5 class="card-title mb-1">AWS User Group Indonesia</h5>
+              <h5 class="card-title mb-1">AWS</h5>
               <p class="card-text text-muted mb-1">
                   Want to learn about cloud computing? Join the leading-edge AWS User Group.
               </p>
@@ -21,9 +21,10 @@
                       <i class="bi bi-eye" id="view-icon" style="font-size: 1.2rem;"></i>
                       <span id="view-count">123</span>
                   </div>
+
               </div>
               <!-- Button -->
-              <a href="{{ route('profile-gallery') }}" class="btn btn-primary btn-sm w-100 mt-2">See Project</a>
+              <a href="{{ route('profile-gallery-aws') }}" class="btn btn-primary btn-sm w-100 mt-2">See Project</a>
           </div>
 
 

@@ -28,48 +28,26 @@
                     style="font-size: 1.5rem; border-radius: 0;">
                     &lt;
                 </a>
-                <h4 class="fw-bold mb-0">Create New Community</h4>
+                <h4 class="fw-bold mb-0">Create New Gallery</h4>
             </div>
-            <p class="text-muted mb-4">Tell us a bit about your community. You can change this information at any time.
+            <p class="text-muted mb-4">
             </p>
 
 
             <!-- Form -->
             <form>
-                <!-- Community Name -->
+                <!-- gallery Name -->
                 <div class="mb-3">
-                    <label for="communityName" class="form-label">Community Name</label>
-                    <input type="text" id="communityName" class="form-control" placeholder="Enter your community name"
-                        required>
+                    <label for="communityName" class="form-label">gallery Name</label>
+                    <input type="text" id="communityName" class="form-control">
                     <small class="text-muted">Name must contain 3 - 30 characters</small>
                 </div>
 
-                <!-- Community Goals -->
-                <div class="mb-3">
-                    <label for="communityGoals" class="form-label">Community Goals</label>
-                    <input type="text" id="communityGoals" class="form-control" placeholder="Enter your community goals"
-                        required>
-                    <small class="text-muted">Write a clear goal to give people a clear picture of your
-                        community.</small>
-                </div>
-
-                <!-- Community Category -->
-                <div class="mb-3">
-                    <label for="communityCategory" class="form-label">Community Category</label>
-                    <select id="communityCategory" class="form-select" required>
-                        <option selected disabled>Select your category</option>
-                        <option value="1">Education</option>
-                        <option value="2">Technology</option>
-                        <option value="3">Health</option>
-                        <option value="4">Lifestyle</option>
-                    </select>
-                </div>
-
-                <!-- Community Description -->
+                <!-- gallery Description -->
                 <div class="mb-3">
                     <label for="communityDescription" class="form-label">Community Description</label>
-                    <textarea id="communityDescription" class="form-control" rows="4"
-                        placeholder="Enter your community description" maxlength="100" required></textarea>
+                    <textarea id="communityDescription" class="form-control" rows="4" maxlength="100"
+                        required></textarea>
                     <div class="d-flex justify-content-between">
                         <small class="text-muted">Describe your community clearly. This description will be displayed on
                             the community profile.</small>
@@ -77,20 +55,105 @@
                     </div>
                 </div>
 
-                <!-- Community Profile Photo -->
+                <!-- Cover Project -->
                 <div class="mb-3">
-                    <label for="profilePhoto" class="form-label">Community Profile Photo</label>
-                    <input type="file" id="profilePhoto" class="form-control" accept="image/*" required>
-                    <small class="text-muted">Use the best photo for your community (JPG, JPEG, PNG format).</small>
+                    <label for="profilePhoto" class="form-label">Cover Project</label>
+                    <div class="d-flex align-items-center">
+                        <!-- Button to choose file -->
+                        <label for="profilePhoto" class="btn btn-primary me-2" style="white-space: nowrap;">+ add
+                            Images</label>
+                        <!-- Hidden file input -->
+                        <input type="file" id="profilePhoto" class="form-control d-none" accept="image/*" required
+                            onchange="previewImage()">
+                    </div>
+                    <small class="text-muted">JPG, JPEG, PNG format.</small>
+
+                    <!-- Preview Image -->
+                    <div class="mt-3">
+                        <img id="preview" src="#" alt="Preview" class="img-fluid"
+                            style="max-width: 150px; display: none;">
+                    </div>
                 </div>
 
-                <!-- Community Cover Photo -->
+                <!-- Project gallery (opsional) -->
                 <div class="mb-3">
-                    <label for="coverPhoto" class="form-label">Community Cover Photo</label>
-                    <input type="file" id="coverPhoto" class="form-control" accept="image/*" required>
-                    <small class="text-muted">Use the best photo for your community cover (JPG, JPEG, PNG
-                        format).</small>
+                    <label for="profilePhoto" class="form-label">Project gallery (opsional)</label>
+                    <div class="d-flex align-items-center">
+                        <!-- Button to choose file -->
+                        <label for="profilePhoto" class="btn btn-primary me-2" style="white-space: nowrap;">+ Project
+                            Gallery</label>
+                        <!-- Hidden file input -->
+                        <input type="file" id="profilePhoto" class="form-control d-none" accept="image/*" required
+                            onchange="previewImage()">
+                    </div>
+                    <small class="text-muted">JPG, JPEG, PNG format.</small>
+
+                    <!-- Preview Image -->
+                    <div class="mt-3">
+                        <img id="preview" src="#" alt="Preview" class="img-fluid"
+                            style="max-width: 150px; display: none;">
+                    </div>
                 </div>
+                <!-- Category Project -->
+                <div class="mb-3">
+                    <label for="profilePhoto" class="form-label">
+                        Contributor</label>
+                    <div class="d-flex align-items-center">
+                        <!-- Button to choose file -->
+                        <label for="profilePhoto" class="btn btn-primary me-2" style="white-space: nowrap;">+ Add
+                            Contributo</label>
+                        <!-- Hidden file input -->
+                        <input type="file" id="profilePhoto" class="form-control d-none" accept="image/*" required
+                            onchange="previewImage()">
+                    </div>
+
+
+                    <!-- Preview Image -->
+                    <div class="mt-3">
+                        <img id="preview" src="#" alt="Preview" class="img-fluid"
+                            style="max-width: 150px; display: none;">
+                    </div>
+                </div>
+
+                <!-- Cover Project -->
+                <div class="mb-3">
+                    <label for="profilePhoto" class="form-label">Category</label>
+                    <div class="d-flex align-items-center">
+                        <!-- Button to choose file -->
+                        <label for="profilePhoto" class="btn btn-primary me-2" style="white-space: nowrap;">+ add
+                            Category</label>
+                        <!-- Hidden file input -->
+                        <input type="file" id="profilePhoto" class="form-control d-none" accept="image/*" required
+                            onchange="previewImage()">
+                    </div>
+
+
+                    <!-- Preview Image -->
+                    <div class="mt-3">
+                        <img id="preview" src="#" alt="Preview" class="img-fluid"
+                            style="max-width: 150px; display: none;">
+                    </div>
+                </div>
+
+                <script>
+                function previewImage() {
+                    const file = document.getElementById('profilePhoto').files[0];
+                    const preview = document.getElementById('preview');
+                    const reader = new FileReader();
+
+                    reader.onloadend = function() {
+                        preview.src = reader.result;
+                        preview.style.display = 'block';
+                    }
+
+                    if (file) {
+                        reader.readAsDataURL(file);
+                    }
+                }
+                </script>
+
+
+
 
                 <!-- Submit Button -->
                 <div class="d-grid">
