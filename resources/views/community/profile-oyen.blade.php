@@ -182,7 +182,7 @@
 
 
                     <!-- Panggil file JS -->
-                    <script src="{{ asset('js/profil-community.js') }}"></script>
+                    <!-- <script src="{{ asset('js/profil-community.js') }}"></script> -->
                 </div>
             </div>
         </div>
