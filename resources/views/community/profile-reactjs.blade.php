@@ -172,7 +172,7 @@
                                     <!-- Community Cards Section -->
                                     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                                         <!-- card 1 -->
-                                        @include('card.card-gallery')
+
                                     </div>
                                 </section>
                             </div>
@@ -182,7 +182,7 @@
 
 
                     <!-- Panggil file JS -->
-                    <script src="{{ asset('js/profil-community.js') }}"></script>
+                    <!-- <script src="{{ asset('js/profil-community.js') }}"></script> -->
                 </div>
             </div>
         </div>

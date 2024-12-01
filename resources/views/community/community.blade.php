@@ -88,7 +88,6 @@
                     @include('card.card-oyen')
                     @include('card.card-solid')
                     @include('card.card-warungasep')
-
                 </section>
             </div>
         </div>
