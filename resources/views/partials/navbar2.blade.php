@@ -2,7 +2,7 @@
     style="background-color: #232E66; padding: 15px 0;">
     <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand text-white fw-bold d-flex align-items-center" href="/"
+        <a class="navbar-brand text-white fw-bold d-flex align-items-center" href="/home"
             style="margin-left: -200px; font-size: 1.8rem;">
             <img src="/images/maxy.png" alt="Logo" class="me-2" style="width: 40px; height: 40px;">
             Thrivian

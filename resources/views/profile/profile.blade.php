@@ -23,12 +23,7 @@
             style="z-index: 1; position: relative; height: 100%; padding: 20px; overflow-y: auto;">
             <!-- Text Post -->
             @include('form-text.input-field')
-
-            <!-- Konten Utama -->
-            <section class="d-flex flex-column"
-                style="z-index: 1; position: relative; height: 100%; padding: 20px; overflow-y: auto;">
-
-                <!-- Tabs -->
+               <!-- Tabs -->
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#late">post</button>
@@ -82,7 +77,7 @@
     </section>
 
     <!-- Panggil file JS -->
-    <script src="{{ asset('js/comentar.js') }}"></script>
+    {{-- <script src="{{ asset('js/comentar.js') }}"></script> --}}
 </body>
 
 </html>

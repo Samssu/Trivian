@@ -48,10 +48,109 @@
                             <div class="text-start">
                                 <p class="text-muted" style="font-size: 0.85rem;">Link</p>
                                 <p><a href="https://example.com" target="_blank" class="text-decoration-none"
-                                        style="color: #2E2E66;"><strong>Visit My Website</strong></a></p>
+                                        style="color: #2E2E66;"><strong>www.miawmiaw.com</strong></a></p>
                             </div>
                         </div>
                     </div>
+
+
+                    <!-- Judul dan Gambar kecil yang bisa diklik -->
+                    <div class="text-center">
+                        <h5>My Community</h5>
+
+                        <!-- Gambar yang awalnya ditampilkan -->
+                        <div class="row g-3 justify-content-center" id="image-container">
+                            <div class="col-3 d-flex justify-content-center">
+                                <a href="{{ route('profile-solid') }}" class="d-inline-block">
+                                    <img src="/images/solid.webp" alt="Thumbnail" class="rounded-circle"
+                                        style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
+                                </a>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center">
+                                <a href="{{ route('profile-uxid') }}" class="d-inline-block">
+                                    <img src="/images/uxid.png" alt="Thumbnail" class="rounded-circle"
+                                        style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
+                                </a>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center">
+                                <a href="{{ route('profile-oyen') }}" class="d-inline-block">
+                                    <img src="/images/oyen.jpg" alt="Thumbnail" class="rounded-circle"
+                                        style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
+                                </a>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center">
+                                <a href="{{ route('profile-reactjs') }}"class="d-inline-block">
+                                    <img src="/images/react.png" alt="Thumbnail" class="rounded-circle"
+                                        style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
+                                </a>
+                            </div>
+                           
+                        </div>
+
+                        <!-- Gambar tambahan yang disembunyikan awalnya -->
+                        <div class="row g-3 justify-content-center" id="more-images" style="display: none;">
+                            <div class="col-3 d-flex justify-content-center">
+                                <a href="#" class="d-inline-block">
+                                    <img src="/images/kokomi.png" alt="Thumbnail" class="rounded-circle"
+                                        style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
+                                </a>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center">
+                                <a href="#" class="d-inline-block">
+                                    <img src="/images/kokomi.png" alt="Thumbnail" class="rounded-circle"
+                                        style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
+                                </a>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center">
+                                <a href="#" class="d-inline-block">
+                                    <img src="/images/kokomi.png" alt="Thumbnail" class="rounded-circle"
+                                        style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
+                                </a>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center">
+                                <a href="#" class="d-inline-block">
+                                    <img src="/images/kokomi.png" alt="Thumbnail" class="rounded-circle"
+                                        style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
+                                </a>
+                            </div>
+                           
+                        </div>
+
+                        <!-- Tombol See More dan See Less -->
+                        <div class="mt-4">
+                            <button id="see-more" class="btn btn-outline-dark">See More</button>
+                            <button id="see-less" class="btn btn-outline-dark" style="display: none;">See
+                                Less</button>
+                        </div>
+                    </div>
+
+                    <script>
+                        // JavaScript untuk menangani tombol "See More" dan "See Less"
+                        document.getElementById('see-more').addEventListener('click', function() {
+                            // Menampilkan gambar tambahan
+                            document.getElementById('more-images').style.display = 'flex';
+
+                            // Menyembunyikan tombol "See More"
+                            this.style.display = 'none';
+
+                            // Menampilkan tombol "See Less"
+                            document.getElementById('see-less').style.display = 'inline-block';
+                        });
+
+                        document.getElementById('see-less').addEventListener('click', function() {
+                            // Menyembunyikan gambar tambahan
+                            document.getElementById('more-images').style.display = 'none';
+
+                            // Menampilkan tombol "See More"
+                            document.getElementById('see-more').style.display = 'inline-block';
+
+                            // Menyembunyikan tombol "See Less"
+                            this.style.display = 'none';
+                        });
+                    </script>
+
+
+
                 </div>
             </div>
         </aside>
