@@ -142,6 +142,7 @@
         toggleContent("seeMoreBtnPopular", "hiddenContentPopular");
         </script>
     </section>
+    
 </body>
 
 </html>

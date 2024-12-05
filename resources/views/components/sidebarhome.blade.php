@@ -133,12 +133,11 @@
                 </div>
                 <div class="card-body">
                     <!-- Card 1 -->
-                    <a href="#" class="card mb-3 text-decoration-none">
-                        <img src="/images/download.jpeg" class="card-img-top" alt="Conselling App">
+                    <a href="{{ route('profile-gallery-aws') }}" class="card mb-3 text-decoration-none">
+                        <img src="/images/aws.png" class="card-img-top" alt="Aws Community">
                         <div class="card-body">
-                            <h5 class="card-title">Counseling App</h5>
-                            <p class="card-text text-muted">UI/UX design of mobile counseling application
-                                "InnerCalm"</p>
+                            <h5 class="card-title">AWS</h5>
+                            <p class="card-text text-muted"> Want to learn about cloud computing? Join the leading-edge AWS User Group.</p>
                             <div class="d-flex justify-content-between">
                                 <span><i class="bi bi-heart"></i> 253</span>
                                 <span><i class="bi bi-eye"></i> 538</span>
@@ -147,11 +146,11 @@
                     </a>
 
                     <!-- Card 2 -->
-                    <a href="#" class="card mb-3 text-decoration-none">
+                    <a href="{{ route('profile-gallery-onlineshop') }}" class="card mb-3 text-decoration-none">
                         <img src="/images/download.jpeg" class="card-img-top" alt="Conselling App">
                         <div class="card-body">
-                            <h5 class="card-title">Counseling App Mobile</h5>
-                            <p class="card-text text-muted">UI/UX design of application "InnerCalm"</p>
+                            <h5 class="card-title">Online Shop</h5>
+                            <p class="card-text text-muted"> Want to learn about running your own online shop? Join the leading-edge E-commerce User Group.</p>
                             <div class="d-flex justify-content-between">
                                 <span><i class="bi bi-heart"></i> 263</span>
                                 <span><i class="bi bi-eye"></i> 538</span>

@@ -49,18 +49,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Fungsi untuk menambahkan event listener ke elemen baru
             function addInteractivity(commentElement) {
-                // Tombol Like
-                const likeButton = commentElement.querySelector(".like-button");
-                if (likeButton) {
-                    likeButton.addEventListener("click", function (e) {
-                        e.preventDefault();
-                        const likeCount = this.querySelector(".like-count");
-                        let likes = parseInt(this.getAttribute("data-likes"));
-                        likes++;
-                        this.setAttribute("data-likes", likes);
-                        likeCount.textContent = likes;
+                document
+                    .querySelectorAll(".like-button")
+                    .forEach(function (button) {
+                        button.addEventListener("click", function (e) {
+                            e.preventDefault();
+                            var likeIcon = this.querySelector("i");
+                            var likeCount = this.querySelector(".like-count");
+                            var likes = parseInt(this.dataset.likes);
+
+                            if (likeIcon.classList.contains("bi-heart")) {
+                                likeIcon.classList.replace(
+                                    "bi-heart",
+                                    "bi-heart-fill"
+                                );
+                                likeIcon.style.color = "red";
+                                likes += 1;
+                            } else {
+                                likeIcon.classList.replace(
+                                    "bi-heart-fill",
+                                    "bi-heart"
+                                );
+                                likeIcon.style.color = "";
+                                likes -= 1;
+                            }
+
+                            this.dataset.likes = likes;
+                            likeCount.textContent = likes;
+                        });
                     });
-                }
 
                 // Tombol Comment
                 const commentToggle =
@@ -68,7 +85,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (commentToggle) {
                     commentToggle.addEventListener("click", function (e) {
                         e.preventDefault();
-                        alert("Dayat Ngstuck disini 1 minggu lebih!");
+
+                        // Ubah warna teks dan ikon tombol komentar
+                        if (this.style.color === "blue") {
+                            this.style.color = ""; // Kembali ke warna default
+                        } else {
+                            this.style.color = "blue"; // Ubah warna ke biru
+                        }
                     });
                 }
 
@@ -77,18 +100,41 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (shareButton) {
                     shareButton.addEventListener("click", function (e) {
                         e.preventDefault();
-                        alert("sama aja bang masih stuck!");
+
+                        // Ubah warna teks dan ikon tombol berbagi
+                        if (this.style.color === "green") {
+                            this.style.color = ""; // Kembali ke warna default
+                        } else {
+                            this.style.color = "green"; // Ubah warna ke hijau
+                        }
                     });
                 }
 
                 // Tombol Save
-                const saveButton = commentElement.querySelector(".save-button");
-                if (saveButton) {
-                    saveButton.addEventListener("click", function (e) {
-                        e.preventDefault();
-                        alert("Save feature is clicked!");
+                document
+                    .querySelectorAll(".save-button")
+                    .forEach(function (button) {
+                        button.addEventListener("click", function (e) {
+                            e.preventDefault();
+                            var saveIcon = this.querySelector("i");
+
+                            if (saveIcon.classList.contains("bi-bookmark")) {
+                                saveIcon.classList.replace(
+                                    "bi-bookmark",
+                                    "bi-bookmark-fill"
+                                );
+                                saveIcon.style.color = "#007bff";
+                                this.setAttribute("title", "Saved");
+                            } else {
+                                saveIcon.classList.replace(
+                                    "bi-bookmark-fill",
+                                    "bi-bookmark"
+                                );
+                                saveIcon.style.color = "";
+                                this.setAttribute("title", "Save");
+                            }
+                        });
                     });
-                }
             }
 
             // Tambahkan listener awal untuk komentar yang ada

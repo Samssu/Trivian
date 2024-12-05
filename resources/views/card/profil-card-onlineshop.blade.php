@@ -7,7 +7,7 @@
           <div class="card-body">
               <h5 class="card-title mb-1">Online Shop</h5>
               <p class="card-text text-muted mb-1">
-                  Want to learn about cloud computing? Join the leading-edge AWS User Group.
+                Want to learn about running your own online shop? Join the leading-edge E-commerce User Group.
               </p>
               <!-- Like and View Icons -->
               <div class="d-flex align-items-center gap-3">
