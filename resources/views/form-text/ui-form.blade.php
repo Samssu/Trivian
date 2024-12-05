@@ -100,35 +100,35 @@
 
                  <!-- CSS untuk Overlay Fullscreen -->
                  <style>
-                 .image-container {
-                     display: grid;
-                     grid-template-columns: repeat(2, 1fr);
-                     gap: 10px;
-                 }
+                     .image-container {
+                         display: grid;
+                         grid-template-columns: repeat(2, 1fr);
+                         gap: 10px;
+                     }
 
-                 .image-overlay {
-                     display: flex;
-                 }
+                     .image-overlay {
+                         display: flex;
+                     }
 
-                 .image-overlay {
-                     position: fixed;
-                     top: 0;
-                     left: 0;
-                     width: 100%;
-                     height: 100%;
-                     background-color: rgba(0, 0, 0, 0.7);
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                     z-index: 9999;
-                     cursor: pointer;
-                 }
+                     .image-overlay {
+                         position: fixed;
+                         top: 0;
+                         left: 0;
+                         width: 100%;
+                         height: 100%;
+                         background-color: rgba(0, 0, 0, 0.7);
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
+                         z-index: 9999;
+                         cursor: pointer;
+                     }
 
-                 .image-overlay img {
-                     max-width: 90%;
-                     max-height: 90%;
-                     object-fit: contain;
-                 }
+                     .image-overlay img {
+                         max-width: 90%;
+                         max-height: 90%;
+                         object-fit: contain;
+                     }
                  </style>
 
 
@@ -177,7 +177,8 @@
                                      </a>
 
                                      <!-- Share Button -->
-                                     <a href="#" class="text-decoration-none"><i class="bi bi-share me-1"></i></a>
+                                     <a href="#" class="text-decoration-none"><i
+                                             class="bi bi-share me-1"></i></a>
 
                                      <!-- Save Button -->
                                      <a href="#" class="text-decoration-none save-button">
@@ -204,7 +205,8 @@
                                          <i class="bi bi-heart me-1"></i> <span class="like-count">164</span>
                                      </a>
                                      <!-- Share Button -->
-                                     <a href="#" class="text-decoration-none"><i class="bi bi-share me-1"></i></a>
+                                     <a href="#" class="text-decoration-none"><i
+                                             class="bi bi-share me-1"></i></a>
 
                                      <!-- Save Button -->
                                      <a href="#" class="text-decoration-none save-button">
@@ -231,7 +233,8 @@
                                          <i class="bi bi-heart me-1"></i> <span class="like-count">164</span>
                                      </a>
                                      <!-- Share Button -->
-                                     <a href="#" class="text-decoration-none"><i class="bi bi-share me-1"></i></a>
+                                     <a href="#" class="text-decoration-none"><i
+                                             class="bi bi-share me-1"></i></a>
 
                                      <!-- Save Button -->
                                      <a href="#" class="text-decoration-none save-button">

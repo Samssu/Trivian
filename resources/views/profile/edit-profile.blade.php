@@ -37,11 +37,13 @@
                         </div>
                     </div>
 
+
+
                     <form action="#" method="POST">
                         <!-- Name -->
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" value="John Doe" />
+                            <input type="text" class="form-control" id="name" value="{{ $user->name }}" />
                         </div>
                         <!-- Job Title -->
                         <div class="mb-3">
@@ -51,8 +53,7 @@
                         <!-- About -->
                         <div class="mb-3">
                             <label for="about" class="form-label">About</label>
-                            <textarea class="form-control" id="about"
-                                rows="4">Passionate about coding and developing user-friendly web applications. Always learning and improving skills.</textarea>
+                            <textarea class="form-control" id="about" rows="4">Passionate about coding and developing user-friendly web applications. Always learning and improving skills.</textarea>
                         </div>
                         <!-- Location -->
                         <div class="mb-3">
@@ -85,65 +86,65 @@
 
                         <!-- JavaScript -->
                         <script>
-                        // Ambil elemen input dan dropdown
-                        var communityInput = document.getElementById("community");
-                        var communityDropdown = document.getElementById("community-dropdown");
-                        var addButton = document.getElementById("add-community-button");
-                        var addedCommunitiesContainer = document.getElementById("added-communities");
+                            // Ambil elemen input dan dropdown
+                            var communityInput = document.getElementById("community");
+                            var communityDropdown = document.getElementById("community-dropdown");
+                            var addButton = document.getElementById("add-community-button");
+                            var addedCommunitiesContainer = document.getElementById("added-communities");
 
-                        // Tampilkan dropdown saat input diklik
-                        communityInput.addEventListener("click", function() {
-                            communityDropdown.style.display = "block"; // Menampilkan dropdown
-                        });
+                            // Tampilkan dropdown saat input diklik
+                            communityInput.addEventListener("click", function() {
+                                communityDropdown.style.display = "block"; // Menampilkan dropdown
+                            });
 
-                        // Menyembunyikan dropdown ketika memilih dari daftar
-                        communityDropdown.addEventListener("click", function(e) {
-                            if (e.target && e.target.nodeName === "LI") {
-                                communityInput.value = e.target
-                                .textContent; // Set value input ke pilihan yang dipilih
-                                communityDropdown.style.display =
-                                "none"; // Sembunyikan dropdown setelah memilih
-                            }
-                        });
+                            // Menyembunyikan dropdown ketika memilih dari daftar
+                            communityDropdown.addEventListener("click", function(e) {
+                                if (e.target && e.target.nodeName === "LI") {
+                                    communityInput.value = e.target
+                                        .textContent; // Set value input ke pilihan yang dipilih
+                                    communityDropdown.style.display =
+                                        "none"; // Sembunyikan dropdown setelah memilih
+                                }
+                            });
 
-                        // Sembunyikan dropdown jika klik di luar dropdown
-                        document.addEventListener("click", function(e) {
-                            if (!communityDropdown.contains(e.target) && e.target !== communityInput) {
-                                communityDropdown.style.display =
-                                "none"; // Sembunyikan dropdown jika klik di luar
-                            }
-                        });
+                            // Sembunyikan dropdown jika klik di luar dropdown
+                            document.addEventListener("click", function(e) {
+                                if (!communityDropdown.contains(e.target) && e.target !== communityInput) {
+                                    communityDropdown.style.display =
+                                        "none"; // Sembunyikan dropdown jika klik di luar
+                                }
+                            });
 
-                        // Fungsi untuk menambah komunitas baru saat klik tombol "Add"
-                        addButton.addEventListener("click", function() {
-                            var newCommunity = communityInput.value.trim();
+                            // Fungsi untuk menambah komunitas baru saat klik tombol "Add"
+                            addButton.addEventListener("click", function() {
+                                var newCommunity = communityInput.value.trim();
 
-                            // Validasi untuk tidak menambah komunitas kosong dan yang sudah ada
-                            if (newCommunity && !Array.from(communityDropdown.children).some(item => item
-                                    .textContent === newCommunity)) {
-                                var newPill = document.createElement("div");
-                                newPill.classList.add("badge", "badge-pill", "bg-primary", "me-2", "mb-2",
-                                    "position-relative");
-                                newPill.style.padding = "5px 15px"; // Menambahkan padding untuk bentuk pill
-                                newPill.innerHTML = `
+                                // Validasi untuk tidak menambah komunitas kosong dan yang sudah ada
+                                if (newCommunity && !Array.from(communityDropdown.children).some(item => item
+                                        .textContent === newCommunity)) {
+                                    var newPill = document.createElement("div");
+                                    newPill.classList.add("badge", "badge-pill", "bg-primary", "me-2", "mb-2",
+                                        "position-relative");
+                                    newPill.style.padding = "5px 15px"; // Menambahkan padding untuk bentuk pill
+                                    newPill.innerHTML = `
                 ${newCommunity}
                 <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle" 
                       style="font-size: 12px; cursor: pointer;" onclick="removeCommunity(this)">
                     <i class="bi bi-x" style="color: white;"></i>
                 </span>
             `;
-                                addedCommunitiesContainer.appendChild(newPill); // Menambahkan pill ke container
+                                    addedCommunitiesContainer.appendChild(newPill); // Menambahkan pill ke container
 
-                                // Kosongkan input
-                                communityInput.value = "";
+                                    // Kosongkan input
+                                    communityInput.value = "";
+                                }
+                            });
+
+                            // Fungsi untuk menghapus komunitas dari tampilan
+                            function removeCommunity(button) {
+                                var pill = button.closest(".badge");
+                                addedCommunitiesContainer.removeChild(pill); // Menghapus pill dari container
                             }
-                        });
-
-                        // Fungsi untuk menghapus komunitas dari tampilan
-                        function removeCommunity(button) {
-                            var pill = button.closest(".badge");
-                            addedCommunitiesContainer.removeChild(pill); // Menghapus pill dari container
-                        }
                         </script>
 
 
@@ -151,27 +152,27 @@
                         <div class="mb-3">
                             <label for="website" class="form-label">Website</label>
                             <div id="website-container">
-                                <input type="url" class="form-control mb-2" id="website" value="https://example.com"
-                                    placeholder="Enter your website URL" />
+                                <input type="url" class="form-control mb-2" id="website"
+                                    value="https://example.com" placeholder="Enter your website URL" />
                             </div>
                             <button type="button" class="btn btn-primary mt-2" id="add-button">Add</button>
                         </div>
 
                         <!-- JavaScript -->
                         <script>
-                        document.getElementById("add-button").addEventListener("click", function() {
-                            // Get the container for the website inputs
-                            var container = document.getElementById("website-container");
+                            document.getElementById("add-button").addEventListener("click", function() {
+                                // Get the container for the website inputs
+                                var container = document.getElementById("website-container");
 
-                            // Create a new input element
-                            var newInput = document.createElement("input");
-                            newInput.type = "url";
-                            newInput.className = "form-control mb-2"; // Class untuk styling
-                            newInput.placeholder = "Enter your website URL"; // Placeholder
+                                // Create a new input element
+                                var newInput = document.createElement("input");
+                                newInput.type = "url";
+                                newInput.className = "form-control mb-2"; // Class untuk styling
+                                newInput.placeholder = "Enter your website URL"; // Placeholder
 
-                            // Append the new input to the container
-                            container.appendChild(newInput);
-                        });
+                                // Append the new input to the container
+                                container.appendChild(newInput);
+                            });
                         </script>
 
 
