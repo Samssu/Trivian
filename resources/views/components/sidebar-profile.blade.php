@@ -14,8 +14,8 @@
 
                 <div class="card-body text-center">
                     <!-- Name and Job Title -->
-                    <h5 class="card-title" style="color: #2E2E66;">Samsu Hidayat</h5>
-                    <p class="card-text text-muted" style="font-size: 0.85rem;">@miawmiawbiasa</p>
+                    <h5 class="card-title" style="color: #2E2E66;">{{ $user->name }}</h5>
+                    <p class="card-text text-muted" style="font-size: 0.85rem;">{{ $user->email }}</p>
 
                     <!-- About Section -->
                     <p class="text-muted mb-3" style="font-size: 0.9rem;">Passionate about coding and developing
@@ -84,7 +84,7 @@
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
-                           
+
                         </div>
 
                         <!-- Gambar tambahan yang disembunyikan awalnya -->
@@ -113,7 +113,7 @@
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
-                           
+
                         </div>
 
                         <!-- Tombol See More dan See Less -->

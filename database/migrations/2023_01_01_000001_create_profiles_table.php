@@ -10,12 +10,14 @@ class CreateProfilesTable extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('photo')->nullable();
-            $table->date('birthdate')->nullable();
+            $table->string('name')->nullable();
+            $table->string('job_title')->nullable();
+            $table->text('about')->nullable();
             $table->string('location')->nullable();
-            $table->text('interests')->nullable();
-            $table->text('preferences')->nullable();
+            $table->string('community')->nullable();
+            $table->string('website')->nullable();
             $table->timestamps();
         });
     }

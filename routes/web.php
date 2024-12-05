@@ -3,8 +3,9 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\SocialiteController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,12 +52,14 @@ Route::controller(SocialiteController::class)->group(function () {
 });
 
 Route::get('/search-result', function () {
-    return view('search.search-result');})->name('search-result');
+    return view('search.search-result');
+})->name('search-result');
 
 Route::get('/notifications', function () {
     return view('notifications.notifications');
 })->name('notifications');
 
+//profile
 Route::get('/profile', function () {
     return view('profile.profile');
 })->name('profile');
@@ -65,15 +68,19 @@ Route::get('/edit-profile', function () {
     return view('profile.edit-profile');
 })->name('edit-profile');
 
+//
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
+Route::get('/edit-profile', [ProfileController::class, 'editProfile'])->name('edit-profile')->middleware('auth');
+//
 
 // Home
 Route::get('/home', function () {
-    return view('HomePage.home'); 
+    return view('HomePage.home');
 })->name('home');
 
 
 Route::get('/view-post', function () {
-    return view('HomePage.view-post'); 
+    return view('HomePage.view-post');
 })->name('view-post');
 
 // Community
@@ -82,31 +89,31 @@ Route::get('/create-community', function () {
 })->name('create-community');
 
 Route::get('/profile-uxid', function () {
-    return view('community.profile-uxid'); 
+    return view('community.profile-uxid');
 })->name('profile-uxid');
 
 Route::get('/profile-google', function () {
-    return view('community.profile-google'); 
+    return view('community.profile-google');
 })->name('profile-google');
 
 Route::get('/profile-laravel', function () {
-    return view('community.profile-laravel'); 
+    return view('community.profile-laravel');
 })->name('profile-laravel');
 
 Route::get('/profile-reactjs', function () {
-    return view('community.profile-reactjs'); 
+    return view('community.profile-reactjs');
 })->name('profile-reactjs');
 
 Route::get('/profile-oyen', function () {
-    return view('community.profile-oyen'); 
+    return view('community.profile-oyen');
 })->name('profile-oyen');
 
 Route::get('/profile-warungasep', function () {
-    return view('community.profile-warungasep'); 
+    return view('community.profile-warungasep');
 })->name('profile-warungasep');
 
 Route::get('/profile-solid', function () {
-    return view('community.profile-solid'); 
+    return view('community.profile-solid');
 })->name('profile-solid');
 
 
@@ -146,7 +153,7 @@ Route::get('/profile-reactforum', function () {
 
 // Activity
 Route::get('/activity', function () {
-    return view('activity.activity'); 
+    return view('activity.activity');
 })->name('activity');
 
 Route::get('/mytask-activity', function () {

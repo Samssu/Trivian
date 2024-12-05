@@ -23,7 +23,7 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->intended('home');
+            return redirect()->intended('edit-profile');
         }
 
         return redirect()->back()->withErrors(['email' => 'These credentials do not match our records.']);
