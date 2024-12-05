@@ -15,6 +15,8 @@
     <!-- FullCalendar JS -->
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+    <<link rel="stylesheet" href="{{ asset('css/kalender.css') }}">
+
 
 
 </head>
@@ -56,221 +58,310 @@
             </div>
 
             <!-- Main Content -->
-            <section class="">
-                <div class="row flex-column">
-                    <!-- Your Exp Badge -->
-                    <div class="col-12 col-md-4 mb-4">
-                        <div class="card text-center shadow-sm" style="border-radius: 8px; background-color: #f8f9fa;">
-                            <div class="card-body d-flex justify-content-center align-items-center flex-column p-3">
-                                <i class="bi bi-award" style="font-size: 2.5rem; color: #2E2E66;"></i>
-                                <h5 class="card-title mt-3" style="font-size: 1.1rem;">Your Exp Badge</h5>
-                                <div class="fw-bold" style="font-size: 1.3rem; color: #2E2E66;">150</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Complete Task -->
-                    <div class="col-12 col-md-4 mb-4">
-                        <div class="card text-center shadow-sm" style="border-radius: 8px; background-color: #f8f9fa;">
-                            <div class="card-body d-flex justify-content-center align-items-center flex-column p-3">
-                                <i class="bi bi-check-circle" style="font-size: 2.5rem; color: #2E2E66;"></i>
-                                <h5 class="card-title mt-3" style="font-size: 1.1rem;">Complete Task</h5>
-                                <div class="fw-bold" style="font-size: 1.3rem; color: #2E2E66;">120</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Total Projects -->
-                    <div class="col-12 col-md-4 mb-4">
-                        <div class="card text-center shadow-sm" style="border-radius: 8px; background-color: #f8f9fa;">
-                            <div class="card-body d-flex justify-content-center align-items-center flex-column p-3">
-                                <i class="bi bi-folder-fill" style="font-size: 2.5rem; color: #2E2E66;"></i>
-                                <h5 class="card-title mt-3" style="font-size: 1.1rem;">Total Projects</h5>
-                                <div class="fw-bold" style="font-size: 1.3rem; color: #2E2E66;">50</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Task Progress -->
-                <section class="col-md-8 col-lg-9 position-relative bg-light task-container"
-                    style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 20px; gap: 30px;">
-                    <h2 class="card-title" style="display: flex; align-items: center; text-align: left;">
-                        <!-- Icon -->
-                        <i class="fa fa-tasks" style="font-size: 20px; margin-right: 10px;"></i> Task Today
-                    </h2>
+            <section class="container my-5">
+                <div class="row">
+                    <!-- Stats Section -->
                     <div class="row">
-                        <!-- Task Card 1 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <!-- Title with Icon -->
-                                    <h5 class="card-title" style="display: flex; align-items: center;">
-                                        <!-- Icon -->
-                                        <i class="fa fa-tasks" style="font-size: 20px; margin-right: 10px;"></i> Task 1
-                                    </h5>
-                                    <p class="card-text">Prepare a presentation for the client.Prepare a presentation
-                                        for the client.Prepare a presentation for the client.Prepare a presentation for
-                                        the client</p>
+                        <!-- Exp, Badge, and Projects Section (3 cards) -->
+                        <div class="col-md-3">
+                            <!-- Your Exp Badge -->
+                            <div class="card text-center shadow-sm mb-4"
+                                style="border-radius: 8px; background-color: #f8f9fa; padding: 10px;">
+                                <div class="card-body d-flex justify-content-center align-items-center flex-column p-2">
+                                    <i class="bi bi-award" style="font-size: 2rem; color: #2E2E66;"></i>
+                                    <h5 class="card-title mt-2" style="font-size: 0.9rem;">Your Exp Badge</h5>
+                                    <div class="fw-bold" style="font-size: 1rem; color: #2E2E66;">150</div>
+                                </div>
+                            </div>
 
-                                    <!-- Progress Bar -->
-                                    <div class="progress mb-3" style="height: 20px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;"
-                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                                    </div>
+                            <!-- Complete Task -->
+                            <div class="card text-center shadow-sm mb-4"
+                                style="border-radius: 8px; background-color: #f8f9fa; padding: 10px;">
+                                <div class="card-body d-flex justify-content-center align-items-center flex-column p-2">
+                                    <i class="bi bi-check-circle" style="font-size: 2rem; color: #2E2E66;"></i>
+                                    <h5 class="card-title mt-2" style="font-size: 0.9rem;">Complete Task</h5>
+                                    <div class="fw-bold" style="font-size: 1rem; color: #2E2E66;">120</div>
+                                </div>
+                            </div>
 
-                                    <!-- Members Count with Avatars -->
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="d-flex">
-                                            <img src="/images/kokomi.png" alt="Member 1"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 2"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 3"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 4"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 5"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                        </div>
-                                    </div>
+                            <!-- Total Projects -->
+                            <div class="card text-center shadow-sm mb-4"
+                                style="border-radius: 8px; background-color: #f8f9fa; padding: 10px;">
+                                <div class="card-body d-flex justify-content-center align-items-center flex-column p-2">
+                                    <i class="bi bi-folder-fill" style="font-size: 2rem; color: #2E2E66;"></i>
+                                    <h5 class="card-title mt-2" style="font-size: 0.9rem;">Total Projects</h5>
+                                    <div class="fw-bold" style="font-size: 1rem; color: #2E2E66;">50</div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Task Card 2 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="display: flex; align-items: center;">
-                                        <!-- Icon -->
-                                        <i class="fa fa-tasks" style="font-size: 20px; margin-right: 10px;"></i> Task 1
-                                    </h5>
-                                    <p class="card-text">Prepare a presentation for the client.Prepare a presentation
-                                        for the client.Prepare a presentation for the client.Prepare a presentation for
-                                        the client</p>
-
-                                    <!-- Progress Bar -->
-                                    <div class="progress mb-3" style="height: 20px;">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;"
-                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                                    </div>
-
-                                    <!-- Members Count with Avatars -->
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="d-flex">
-                                            <img src="/images/kokomi.png" alt="Member 1"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 2"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 3"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 4"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 5"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                        </div>
-                                    </div>
+                        <!-- Calendar Section -->
+                        <div class="col-md-9">
+                            <div class="card shadow equal-height">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <button id="prevMonth" class="btn btn-outline-primary btn-sm">&lt;</button>
+                                    <h5 id="monthYear" class="mb-0 text-primary"></h5>
+                                    <button id="nextMonth" class="btn btn-outline-primary btn-sm">&gt;</button>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Task Card 3 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title" style="display: flex; align-items: center;">
-                                        <!-- Icon -->
-                                        <i class="fa fa-tasks" style="font-size: 20px; margin-right: 10px;"></i> Task 1
-                                    </h5>
-                                    <p class="card-text">Prepare a presentation for the client.Prepare a presentation
-                                        for the client.Prepare a presentation for the client.Prepare a presentation for
-                                        the client</p>
-
-                                    <!-- Progress Bar -->
-                                    <div class="progress mb-3" style="height: 20px;">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;"
-                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                                    </div>
-
-                                    <!-- Members Count with Avatars -->
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="d-flex">
-                                            <img src="/images/kokomi.png" alt="Member 1"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 2"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 3"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 4"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 5"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Task Card 4 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="display: flex; align-items: center;">
-                                        <!-- Icon -->
-                                        <i class="fa fa-tasks" style="font-size: 20px; margin-right: 10px;"></i> Task 1
-                                    </h5>
-                                    <p class="card-text">Prepare a presentation for the client.Prepare a presentation
-                                        for the client.Prepare a presentation for the client.Prepare a presentation for
-                                        the client</p>
-
-                                    <!-- Progress Bar -->
-                                    <div class="progress mb-3" style="height: 20px;">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 100%;"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
-                                    </div>
-
-                                    <!-- Members Count with Avatars -->
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="d-flex">
-                                            <img src="/images/kokomi.png" alt="Member 1"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 2"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 3"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 4"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                            <img src="/images/kokomi.png" alt="Member 5"
-                                                class="rounded-circle border border-white"
-                                                style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                        </div>
-                                    </div>
+                                    <table class="table table-bordered text-center">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>S</th>
+                                                <th>M</th>
+                                                <th>T</th>
+                                                <th>W</th>
+                                                <th>T</th>
+                                                <th>F</th>
+                                                <th>S</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="calendarBody"></tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+
+                    <!-- Panggil file JS kalender -->
+                    <script src="{{ asset('js/Kalender.js') }}"></script>
+
+
+                    <!-- Task Progress -->
+                    <section class="col-md-8 col-lg-9 position-relative bg-light task-container"
+                        style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 20px; gap: 30px;">
+                        <div class="container mt-4">
+                            <!-- Header Section -->
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="fw-bold"><i class="bi bi-journal-text me-2"></i>Today Task</h5>
+                                <a href="#" id="seeMore" class="text-primary fw-bold"
+                                    style="text-decoration: none;">See All &rarr;</a>
+                            </div>
+
+                            <!-- Task Cards -->
+                            <div class="row g-3">
+                                <!-- Task 1 -->
+                                <div class="col-md-6">
+                                    <div class="card task-card h-100" onclick="handleTaskClick('Wireframe')">
+                                        <div class="card-body">
+                                            <h6 class="fw-bold">Wireframe</h6>
+                                            <p class="text-muted mb-2" style="font-size: 0.9rem;">Think of it as the
+                                                architectural blueprint of your design project.</p>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="avatars me-2">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                </div>
+                                                <span class="text-muted" style="font-size: 0.8rem;">2+</span>
+                                                <span class="ms-auto fw-bold" style="font-size: 0.9rem;">60%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Task 2 -->
+                                <div class="col-md-6">
+                                    <div class="card task-card h-100" onclick="handleTaskClick('Animation')">
+                                        <div class="card-body">
+                                            <h6 class="fw-bold">Animation</h6>
+                                            <p class="text-muted mb-2" style="font-size: 0.9rem;">Think of it as the
+                                                architectural blueprint of your design project.</p>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="avatars me-2">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                </div>
+                                                <span class="text-muted" style="font-size: 0.8rem;">2+</span>
+                                                <span class="ms-auto fw-bold" style="font-size: 0.9rem;">60%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Task 3 -->
+                                <div class="col-md-6">
+                                    <div class="card task-card h-100" onclick="handleTaskClick('Wireframe')">
+                                        <div class="card-body">
+                                            <h6 class="fw-bold">Wireframe</h6>
+                                            <p class="text-muted mb-2" style="font-size: 0.9rem;">Think of it as the
+                                                architectural blueprint of your design project.</p>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="avatars me-2">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                </div>
+                                                <span class="text-muted" style="font-size: 0.8rem;">2+</span>
+                                                <span class="ms-auto fw-bold" style="font-size: 0.9rem;">60%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Task 4 -->
+                                <div class="col-md-6">
+                                    <div class="card task-card h-100" onclick="handleTaskClick('Animation')">
+                                        <div class="card-body">
+                                            <h6 class="fw-bold">Animation</h6>
+                                            <p class="text-muted mb-2" style="font-size: 0.9rem;">Think of it as the
+                                                architectural blueprint of your design project.</p>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="avatars me-2">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                </div>
+                                                <span class="text-muted" style="font-size: 0.8rem;">2+</span>
+                                                <span class="ms-auto fw-bold" style="font-size: 0.9rem;">60%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <!-- Header Section 2 -->
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-5">
+                                <h5 class="fw-bold"><i class="bi bi-journal-text me-2"></i>Last Task</h5>
+                                <a href="#" id="seeMore" class="text-primary fw-bold"
+                                    style="text-decoration: none;">See All &rarr;</a>
+                            </div>
+
+                            <!-- Task Cards -->
+                            <div class="row g-3">
+                                <!-- Task 1 -->
+                                <div class="col-md-6">
+                                    <div class="card task-card h-100" onclick="handleTaskClick('Wireframe')">
+                                        <div class="card-body">
+                                            <h6 class="fw-bold">Wireframe</h6>
+                                            <p class="text-muted mb-2" style="font-size: 0.9rem;">Think of it as the
+                                                architectural blueprint of your design project.</p>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="avatars me-2">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                </div>
+                                                <span class="text-muted" style="font-size: 0.8rem;">2+</span>
+                                                <span class="ms-auto fw-bold" style="font-size: 0.9rem;">60%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Task 2 -->
+                                <div class="col-md-6">
+                                    <div class="card task-card h-100" onclick="handleTaskClick('Animation')">
+                                        <div class="card-body">
+                                            <h6 class="fw-bold">Animation</h6>
+                                            <p class="text-muted mb-2" style="font-size: 0.9rem;">Think of it as the
+                                                architectural blueprint of your design project.</p>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="avatars me-2">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                </div>
+                                                <span class="text-muted" style="font-size: 0.8rem;">2+</span>
+                                                <span class="ms-auto fw-bold" style="font-size: 0.9rem;">60%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Task 3 -->
+                                <div class="col-md-6">
+                                    <div class="card task-card h-100" onclick="handleTaskClick('Wireframe')">
+                                        <div class="card-body">
+                                            <h6 class="fw-bold">Wireframe</h6>
+                                            <p class="text-muted mb-2" style="font-size: 0.9rem;">Think of it as the
+                                                architectural blueprint of your design project.</p>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="avatars me-2">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                </div>
+                                                <span class="text-muted" style="font-size: 0.8rem;">2+</span>
+                                                <span class="ms-auto fw-bold" style="font-size: 0.9rem;">60%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Task 4 -->
+                                <div class="col-md-6">
+                                    <div class="card task-card h-100" onclick="handleTaskClick('Animation')">
+                                        <div class="card-body">
+                                            <h6 class="fw-bold">Animation</h6>
+                                            <p class="text-muted mb-2" style="font-size: 0.9rem;">Think of it as the
+                                                architectural blueprint of your design project.</p>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="avatars me-2">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                    <img src="/images/kokomi.png"
+                                                        class="rounded-circle border border-white" alt="Avatar">
+                                                </div>
+                                                <span class="text-muted" style="font-size: 0.8rem;">2+</span>
+                                                <span class="ms-auto fw-bold" style="font-size: 0.9rem;">60%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
             </section>
         </section>
     </section>

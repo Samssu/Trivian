@@ -1,0 +1,50 @@
+.card {
+    border-radius: 10px;
+}
+
+.table td {
+    cursor: pointer;
+    vertical-align: middle;
+    height: 50px;
+}
+
+.table td:hover {
+    background-color: #f0f9ff;
+}
+
+.table .selected {
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 50%;
+}
+
+#mainTaskSection {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.task-card {
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.avatars img {
+    width: 32px;
+    height: 32px;
+    margin-left: -8px;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    border-radius: 5px;
+}
