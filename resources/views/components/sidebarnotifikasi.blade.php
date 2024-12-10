@@ -8,7 +8,7 @@
                             <a href="#"
                                 class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                                 <div class="d-flex align-items-center">
-                                    <img src="/images/uxid.png" alt="UXID" class="me-2"
+                                    <img src="{{url('images/uxid.png')}}" alt="UXID" class="me-2"
                                         style="width:30px; height:30px;">
                                     UXID (UX Indonesia)
                                 </div>
@@ -18,7 +18,7 @@
                             <a href="#"
                                 class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                                 <div class="d-flex align-items-center">
-                                    <img src="/images/aws.png" alt="AWS" class="me-2" style="width:30px; height:30px;">
+                                    <img src="{{url('images/aws.png')}}" alt="AWS" class="me-2" style="width:30px; height:30px;">
                                     AWS User Group Indonesia
                                 </div>
                                 <button class="btn btn-outline-primary btn-sm"
@@ -27,7 +27,7 @@
                             <a href="#"
                                 class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                                 <div class="d-flex align-items-center">
-                                    <img src="/images/aws.png" alt="AWS" class="me-2" style="width:30px; height:30px;">
+                                    <img src="{{url('images/aws.png')}}" alt="AWS" class="me-2" style="width:30px; height:30px;">
                                     AWS User Group Indonesia
                                 </div>
                                 <button class="btn btn-outline-primary btn-sm"
@@ -36,7 +36,7 @@
                             <a href="#"
                                 class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                                 <div class="d-flex align-items-center">
-                                    <img src="/images/aws.png" alt="AWS" class="me-2" style="width:30px; height:30px;">
+                                    <img src="{{url('images/aws.png')}}" alt="AWS" class="me-2" style="width:30px; height:30px;">
                                     AWS User Group Indonesia
                                 </div>
                                 <button class="btn btn-outline-primary btn-sm"
@@ -45,7 +45,7 @@
                             <a href="#"
                                 class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                                 <div class="d-flex align-items-center">
-                                    <img src="/images/aws.png" alt="AWS" class="me-2" style="width:30px; height:30px;">
+                                    <img src="{{url('images/aws.png')}}" alt="AWS" class="me-2" style="width:30px; height:30px;">
                                     AWS User Group Indonesia
                                 </div>
                                 <button class="btn btn-outline-primary btn-sm"

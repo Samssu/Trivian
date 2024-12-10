@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="d-flex gap-4 text-muted mt-3">
                 <!-- Comment Button -->
                 <a href="#" class="text-decoration-none comment-toggle">
-                    <i class="bi bi-chat me-1"></i> <span class="comment-count">0</span>
+                    <i class="bi bi-chat me-1"></i> <span class="comment-count1">0</span>
                 </a>
                 
                 <!-- Like Button -->
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var saveIcon = this.querySelector("i");
 
             if (saveIcon.classList.contains("bi-bookmark")) {
-                saveIcon.classList.replace("bi-bookmark", "bi-bookmark-fill");
+                saveIcon.classList.replace("bi-bookmark", "bi-bookmark-fill"    );
                 saveIcon.style.color = "#007bff";
                 this.setAttribute("title", "Saved");
             } else {

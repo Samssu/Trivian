@@ -62,25 +62,25 @@
                         <div class="row g-3 justify-content-center" id="image-container">
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="{{ route('profile-solid') }}" class="d-inline-block">
-                                    <img src="/images/solid.webp" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{url('images/solid.webp')}}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="{{ route('profile-uxid') }}" class="d-inline-block">
-                                    <img src="/images/uxid.png" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{url('images/uxid.png')}}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="{{ route('profile-oyen') }}" class="d-inline-block">
-                                    <img src="/images/oyen.jpg" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{url('images/oyen.jpg')}}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="{{ route('profile-reactjs') }}"class="d-inline-block">
-                                    <img src="/images/react.png" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{url('images/react.png')}}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
@@ -91,25 +91,25 @@
                         <div class="row g-3 justify-content-center" id="more-images" style="display: none;">
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="#" class="d-inline-block">
-                                    <img src="/images/kokomi.png" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{url('images/kokomi.png')}}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="#" class="d-inline-block">
-                                    <img src="/images/kokomi.png" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{url('images/kokomi.png')}}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="#" class="d-inline-block">
-                                    <img src="/images/kokomi.png" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{url('images/kokomi.png')}}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="#" class="d-inline-block">
-                                    <img src="/images/kokomi.png" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{url('images/kokomi.png')}}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>

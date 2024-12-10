@@ -18,24 +18,24 @@
                         <!-- Komunitas terlihat secara default -->
                         <a href="{{ route('profile-uxid') }}"
                             class="list-group-item d-flex align-items-center text-decoration-none">
-                            <img src="/images/uxid.png" alt="UXID" class="me-2" style="width: 30px; height: 30px;">
+                            <img src="{{url('images/uxid.png')}}" alt="UXID" class="me-2" style="width: 30px; height: 30px;">
                             UXID (UX Indonesia)
                         </a>
                         <a href="{{ route('profile-google') }}"
                             class="list-group-item d-flex align-items-center text-decoration-none">
-                            <img src="/images/google dev.png" alt="google" class="me-2"
+                            <img src="{{url('images/google dev.png')}}" alt="google" class="me-2"
                                 style="width: 30px; height: 30px;">
                             Google developer Group
                         </a>
                         <a href="{{ route('profile-laravel') }}"
                             class="list-group-item d-flex align-items-center text-decoration-none">
-                            <img src="/images/laravel8.png" alt="Laravel" class="me-2"
+                            <img src="{{url('images/laravel8.png')}}" alt="Laravel" class="me-2"
                                 style="width: 30px; height: 30px;">
                             Laravel Indonesia
                         </a>
                         <a href="{{ route('profile-reactjs') }}"
                             class="list-group-item d-flex align-items-center text-decoration-none">
-                            <img src="/images/React.png" alt="reactjs" class="me-2" style="width: 30px; height: 30px;">
+                            <img src="{{('images/React.png')}}" alt="reactjs" class="me-2" style="width: 30px; height: 30px;">
                             ReactJs Indonesia
                         </a>
 
@@ -43,18 +43,18 @@
                         <div id="hidden-communities" style="display: none;">
                             <a href="{{ route('profile-oyen') }}"
                                 class="list-group-item d-flex align-items-center text-decoration-none">
-                                <img src="/images/oyen.jpg" alt="oyen" class="me-2" style="width: 30px; height: 30px;">
+                                <img src="{{url('images/oyen.jpg')}}" alt="oyen" class="me-2" style="width: 30px; height: 30px;">
                                 Komunitas Oyen
                             </a>
                             <a href="{{ route('profile-warungasep') }}"
                                 class="list-group-item d-flex align-items-center text-decoration-none">
-                                <img src="/images/bgbangasep.webp" alt="asep" class="me-2"
+                                <img src="{{url('images/bgbangasep.webp')}}" alt="asep" class="me-2"
                                     style="width: 30px; height: 30px;">
                                 Warung bang Asep
                             </a>
                             <a href="{{ route('profile-solid') }}"
                                 class="list-group-item d-flex align-items-center text-decoration-none">
-                                <img src="/images/react.png" alt="solid" class="me-2"
+                                <img src="{{url('images/react.png')}}" alt="solid" class="me-2"
                                     style="width: 30px; height: 30px;">
                                 Solid Community
                             </a>
@@ -78,7 +78,7 @@
                         <a href="{{ route('profile-uxid') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                             <div class="d-flex align-items-center">
-                                <img src="/images/uxid.png" alt="UXID" class="me-2" style="width:30px; height:30px;">
+                                <img src="{{url('images/uxid.png')}}" alt="UXID" class="me-2" style="width:30px; height:30px;">
                                 UXID (UX Indonesia)
                             </div>
                             <button class="btn btn-outline-primary btn-sm"
@@ -87,7 +87,7 @@
                         <a href="{{ route('profile-google') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                             <div class="d-flex align-items-center">
-                                <img src="/images/google dev.png" alt="google" class="me-2"
+                                <img src="{{url('images/google dev.png')}}" alt="google" class="me-2"
                                     style="width:30px; height:30px;">
                                 Google Developer Group
                             </div>
@@ -97,7 +97,7 @@
                         <a href="{{ route('profile-laravel') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                             <div class="d-flex align-items-center">
-                                <img src="/images/laravel8.png" alt="Laravel" class="me-2"
+                                <img src="{{url('images/laravel8.png')}}" alt="Laravel" class="me-2"
                                     style="width:30px; height:30px;">
                                 Laravel Indonesia
                             </div>
@@ -107,7 +107,7 @@
                         <a href="{{ route('profile-oyen') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                             <div class="d-flex align-items-center">
-                                <img src="/images/oyen.jpg" alt="oyen" class="me-2" style="width:30px; height:30px;">
+                                <img src="{{url('images/oyen.jpg')}}" alt="oyen" class="me-2" style="width:30px; height:30px;">
                                 Komunitas Oyen
                             </div>
                             <button class="btn btn-outline-primary btn-sm"
@@ -116,7 +116,7 @@
                         <a href="{{ route('profile-solid') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
                             <div class="d-flex align-items-center">
-                                <img src="/images/react.png" alt="solid" class="me-2" style="width:30px; height:30px;">
+                                <img src="{{url('images/react.png')}}" alt="solid" class="me-2" style="width:30px; height:30px;">
                                 Solid Community
                             </div>
                             <button class="btn btn-outline-primary btn-sm"
@@ -134,7 +134,7 @@
                 <div class="card-body">
                     <!-- Card 1 -->
                     <a href="{{ route('profile-gallery-aws') }}" class="card mb-3 text-decoration-none">
-                        <img src="/images/aws.png" class="card-img-top" alt="Aws Community">
+                        <img src="{{url('images/aws.png')}}" class="card-img-top" alt="Aws Community">
                         <div class="card-body">
                             <h5 class="card-title">AWS</h5>
                             <p class="card-text text-muted"> Want to learn about cloud computing? Join the leading-edge AWS User Group.</p>
@@ -147,7 +147,7 @@
 
                     <!-- Card 2 -->
                     <a href="{{ route('profile-gallery-onlineshop') }}" class="card mb-3 text-decoration-none">
-                        <img src="/images/download.jpeg" class="card-img-top" alt="Conselling App">
+                        <img src="{{url('images/download.jpeg')}}" class="card-img-top" alt="Conselling App">
                         <div class="card-body">
                             <h5 class="card-title">Online Shop</h5>
                             <p class="card-text text-muted"> Want to learn about running your own online shop? Join the leading-edge E-commerce User Group.</p>

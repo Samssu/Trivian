@@ -68,6 +68,7 @@
 
         </div>
     </section>
+    
     <script>
     // Toggle Follow/Unfollow
     document.querySelectorAll('.follow-btn').forEach(button => {

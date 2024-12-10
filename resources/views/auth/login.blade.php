@@ -17,6 +17,20 @@
 <body class="bg-light fixed">
     <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
         <div class="bg-white p-4 rounded shadow-lg mx-3" style="width: 100%; max-width: 400px; border-radius: 12px;">
+
+            <!-- Notifications -->
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success!</strong> {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @elseif (session('error'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Error!</strong> {{ session('error') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+
             <h2 class="text-center text-primary fw-bold mb-2">Log In</h2>
             <p class="text-center text-muted mb-4">Please enter your login details to sign in</p>
             <form action="{{ route('login') }}" method="POST">
@@ -62,7 +76,11 @@
                     style="width: 45px; height: 45px;">
                     <i class="bi bi-google text-danger"></i>
                 </a>
+user_auth
                 <a href="{{ route('login.linkedin') }}"
+=======
+                
+ main
                     class="btn btn-outline-secondary rounded-circle shadow-sm d-flex justify-content-center align-items-center"
                     style="width: 45px; height: 45px;">
                     <i class="bi bi-linkedin text-primary"></i>
