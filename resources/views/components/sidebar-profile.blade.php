@@ -9,7 +9,7 @@
             <!-- Profile Card -->
             <div class="card shadow-sm">
                 <!-- Profile Image -->
-                <img src="/images/kokomi.png" class="card-img-top rounded-circle mx-auto d-block mt-3"
+                <img src="/images/default-profile.png" class="card-img-top rounded-circle mx-auto d-block mt-3"
                     alt="Profile Picture" style="width: 120px; height: 120px; object-fit: cover;">
 
                 <div class="card-body text-center">

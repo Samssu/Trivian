@@ -79,12 +79,13 @@
                     <!-- Title below Profile Image with additional margin-top -->
                     <div class="d-flex align-items-center mt-2">
                         <!-- Logo -->
-                        <img src="/images/kokomi.png" alt="Community Logo" class="rounded-circle border border-white"
+                        <img src="/images/default-profile.png" alt="Community Logo"
+                            class="rounded-circle border border-white"
                             style="width: 100px; height: 100px; background: white; object-fit: cover;">
 
                         <!-- Title and Role -->
                         <div class="ms-3">
-                            <h5 class="fw-bold">Dayat Kopling</h5>
+                            <h5 class="fw-bold">{{ $user->name }}</h5>
                             <p class="text-muted">Community Leader</p>
                             <!-- Role  -->
                             <a href="#" class="btn"
@@ -180,58 +181,57 @@
                                 </div>
 
                                 <script>
-                                const uploadArea = document.getElementById('upload-area');
-                                const fileInput = document.getElementById('file');
-                                const fileInfo = document.getElementById('file-info');
+                                    const uploadArea = document.getElementById('upload-area');
+                                    const fileInput = document.getElementById('file');
+                                    const fileInfo = document.getElementById('file-info');
 
-                                // Trigger file input click on click of the drop area
-                                uploadArea.addEventListener('click', () => {
-                                    fileInput.click();
-                                });
+                                    // Trigger file input click on click of the drop area
+                                    uploadArea.addEventListener('click', () => {
+                                        fileInput.click();
+                                    });
 
-                                // Handle drag over and drag leave
-                                uploadArea.addEventListener('dragover', (event) => {
-                                    event.preventDefault();
-                                    uploadArea.style.backgroundColor = '#e9ecef';
-                                });
+                                    // Handle drag over and drag leave
+                                    uploadArea.addEventListener('dragover', (event) => {
+                                        event.preventDefault();
+                                        uploadArea.style.backgroundColor = '#e9ecef';
+                                    });
 
-                                uploadArea.addEventListener('dragleave', () => {
-                                    uploadArea.style.backgroundColor = '#f8f9fa';
-                                });
+                                    uploadArea.addEventListener('dragleave', () => {
+                                        uploadArea.style.backgroundColor = '#f8f9fa';
+                                    });
 
-                                // Handle file drop
-                                uploadArea.addEventListener('drop', (event) => {
-                                    event.preventDefault();
-                                    uploadArea.style.backgroundColor = '#f8f9fa';
-                                    const file = event.dataTransfer.files[0];
-                                    handleFile(file);
-                                });
+                                    // Handle file drop
+                                    uploadArea.addEventListener('drop', (event) => {
+                                        event.preventDefault();
+                                        uploadArea.style.backgroundColor = '#f8f9fa';
+                                        const file = event.dataTransfer.files[0];
+                                        handleFile(file);
+                                    });
 
-                                // Handle file selection via input
-                                fileInput.addEventListener('change', (event) => {
-                                    const file = event.target.files[0];
-                                    handleFile(file);
-                                });
+                                    // Handle file selection via input
+                                    fileInput.addEventListener('change', (event) => {
+                                        const file = event.target.files[0];
+                                        handleFile(file);
+                                    });
 
-                                // Handle file processing
-                                function handleFile(file) {
-                                    if (file) {
-                                        const fileSize = file.size / 1024 / 1024; // Convert size to MB
-                                        if (fileSize > 2) {
-                                            fileInfo.textContent = "File is too large. Max size is 2MB.";
-                                        } else {
-                                            fileInfo.textContent =
-                                                `File selected: ${file.name} (${fileSize.toFixed(2)} MB)`;
+                                    // Handle file processing
+                                    function handleFile(file) {
+                                        if (file) {
+                                            const fileSize = file.size / 1024 / 1024; // Convert size to MB
+                                            if (fileSize > 2) {
+                                                fileInfo.textContent = "File is too large. Max size is 2MB.";
+                                            } else {
+                                                fileInfo.textContent =
+                                                    `File selected: ${file.name} (${fileSize.toFixed(2)} MB)`;
+                                            }
                                         }
                                     }
-                                }
                                 </script>
 
                                 <!-- Bagian Komentar -->
                                 <div class="mb-4">
                                     <label for="comment" class="form-label">Komentar</label>
-                                    <textarea class="form-control" id="comment" rows="3"
-                                        placeholder="Tulis komentar kamu"></textarea>
+                                    <textarea class="form-control" id="comment" rows="3" placeholder="Tulis komentar kamu"></textarea>
                                 </div>
 
                                 <!-- Tombol Kirim -->

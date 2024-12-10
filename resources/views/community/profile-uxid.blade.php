@@ -133,7 +133,7 @@
                                 <section class="tab-pane fade show active" id="late">
                                     <div class="list-group">
                                         <!-- Collaboration Item -->
-                                        @include('form-text.ui-form')
+
                                     </div>
                                 </section>
 

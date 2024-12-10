@@ -75,7 +75,7 @@
                 <span class="bg-white px-2" style="position: relative; top: -12px;">or continue with</span>
             </div>
             <div class="d-flex justify-content-center gap-3 mb-3">
-                <a href="{{ route('auth.google') }}"
+                <a href="#"
                     class="btn btn-outline-secondary rounded-circle shadow-sm d-flex justify-content-center align-items-center"
                     style="width: 45px; height: 45px;">
                     <i class="bi bi-google text-danger"></i>
@@ -85,11 +85,7 @@
                     style="width: 45px; height: 45px;">
                     <i class="bi bi-linkedin text-primary"></i>
                 </a>
-                <a href="#"
-                    class="btn btn-outline-secondary rounded-circle shadow-sm d-flex justify-content-center align-items-center"
-                    style="width: 45px; height: 45px;">
-                    <i class="bi bi-apple"></i>
-                </a>
+
             </div>
             <p class="text-center">
                 <small class="text-muted">Already a member?</small>
