@@ -6,6 +6,9 @@ use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\LikeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,21 +38,12 @@ Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-// Google Auth Routes
-/**
- * Google Login
- */
-Route::controller(SocialiteController::class)->group(function () {
+//routes untuk google dan linkedin
+Route::get('login/google', [SocialiteController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('callback/google', [SocialiteController::class, 'handleGoogleCallback']);
 
-    Route::get('/auth/google', 'googleLogin')->name('auth.google');
-    Route::get('auth/google-callback', 'googleAuthentication')->name('auth.google-callback');
-    Route::get('/redirect', [SocialiteController::class, 'redirect'])->name('auth.redirection');
-
-
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+Route::get('login/linkedin', [SocialiteController::class, 'redirectToLinkedIn'])->name('login.linkedin');
+Route::get('callback/linkedin', [SocialiteController::class, 'handleLinkedInCallback']);
 
 Route::get('/search-result', function () {
     return view('search.search-result');
@@ -71,7 +65,7 @@ Route::get('/edit-profile', function () {
 //
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 Route::get('/edit-profile', [ProfileController::class, 'editProfile'])->name('edit-profile')->middleware('auth');
-//
+
 
 // Home
 Route::get('/home', function () {
@@ -82,6 +76,26 @@ Route::get('/home', function () {
 Route::get('/view-post', function () {
     return view('HomePage.view-post');
 })->name('view-post');
+
+//post
+// Route untuk menampilkan halaman home
+Route::get('/home', [PostController::class, 'index'])->name('home');
+
+// Rute untuk halaman Profile (menampilkan postingan pengguna yang sedang login)
+Route::get('/profile', [ProfileController::class, 'post'])->name('profile');
+
+// Route untuk membuat post
+Route::post('/post', [PostController::class, 'store'])->name('post.store');
+
+// Route untuk menyimpan like
+Route::post('/post/{id}/like', [LikeController::class, 'store'])->name('like.store');
+
+// Route untuk menyimpan komentar
+Route::post('/post/{id}/comment', [CommentController::class, 'store'])->name('comment.store');
+
+
+
+
 
 // Community
 Route::get('/create-community', function () {

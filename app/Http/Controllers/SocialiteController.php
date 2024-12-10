@@ -2,64 +2,61 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use Exception;
-use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class SocialiteController extends Controller
 {
-    /**
-     * Function: authProviderRedirect
-     * Description: This function will redirect to Given Provider
-     * @param NA
-     * @return void
-     */
-    public function authProviderRedirect($provider)
+    // Redirect to Google
+    public function redirectToGoogle()
     {
-        if ($provider) {
-            return Socialite::driver($provider)->redirect();
-        }
-        abort(404);
+        return Socialite::driver('google')->redirect();
     }
 
-    /**
-     * Function: googleAuthentication
-     * Decription: This function will authenticate the user through the Google Account
-     * @param NA
-     * @return void
-     */
-    public function socialAuthentication($provider)
+    // Handle Google callback
+    public function handleGoogleCallback()
     {
         try {
-            if ($provider) {
-                $socialUser = Socialite::driver($provider)->user();
+            $googleUser = Socialite::driver('google')->user();
 
-                $user = User::where('auth_provider_id', $socialUser->id)->first();
+            // Autentikasi berdasarkan email saja
+            $user = User::where('email', $googleUser->getEmail())->first();
 
-                if ($user) {
-                    Auth::login($user);
-                } else {
-                    $userData = User::create([
-                        'name' => $socialUser->name,
-                        'email' => $socialUser->email,
-                        'password' => Hash::make('Password@1234'),
-                        'auth_provider_id' => $socialUser->id,
-                        'auth_provider' => $provider,
-                    ]);
-
-                    if ($userData) {
-                        Auth::login($userData);
-                    }
-                }
-
-                return redirect()->route('dashboard');
+            if (!$user) {
+                return redirect()->route('login')->withErrors('User not registered.');
             }
-            abort(404);
-        } catch (Exception $e) {
-            dd($e);
+
+            Auth::login($user, true);
+            return redirect()->route('home');
+        } catch (\Exception $e) {
+            return redirect()->route('login')->withErrors('Login with Google failed.');
+        }
+    }
+
+    // Redirect to LinkedIn
+    public function redirectToLinkedIn()
+    {
+        return Socialite::driver('linkedin')->redirect();
+    }
+
+    // Handle LinkedIn callback
+    public function handleLinkedInCallback()
+    {
+        try {
+            $linkedinUser = Socialite::driver('linkedin')->user();
+
+            // Autentikasi berdasarkan email saja
+            $user = User::where('email', $linkedinUser->getEmail())->first();
+
+            if (!$user) {
+                return redirect()->route('login')->withErrors('User not registered.');
+            }
+
+            Auth::login($user, true);
+            return redirect()->route('home');
+        } catch (\Exception $e) {
+            return redirect()->route('login')->withErrors('Login with LinkedIn failed.');
         }
     }
 }
