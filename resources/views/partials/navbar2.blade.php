@@ -54,9 +54,9 @@
             <div class="d-flex gap-3" style="margin-right: -200px">
                 <!-- Check if user is logged in -->
                 @auth
-                user_auth
+
                     <!-- If user is logged in, show profile picture and logout button -->
-                    <a href="/profile" class="btn btn-link text-white p-0">
+                    <a href="{{ route('profile') }}" class="btn btn-link text-white p-0">
                         <img src="{{ Auth::user()->profile_photo_url }}" alt="Profile" class="rounded-circle"
                             style="width: 40px; height: 40px;">
                     </a>
@@ -64,17 +64,6 @@
                         @csrf
                         <button type="submit" class="btn btn-outline-light px-4 py-2">Log Out</button>
                     </form>
-=======
-                <!-- If user is logged in, show profile picture and logout button -->
-                <a href="{{route('profile')}}" class="btn btn-link text-white p-0">
-                    <img src="{{ Auth::user()->profile_photo_url }}" alt="Profile" class="rounded-circle"
-                        style="width: 40px; height: 40px;">
-                </a>
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button type="submit" class="btn btn-outline-light px-4 py-2">Log Out</button>
-                </form>
-main
                 @else
                     <!-- If user is not logged in, show login and register buttons -->
                     <a href="/login" class="btn btn-outline-light px-4 py-2">Log In</a>

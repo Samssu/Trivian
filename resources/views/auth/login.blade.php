@@ -76,11 +76,8 @@
                     style="width: 45px; height: 45px;">
                     <i class="bi bi-google text-danger"></i>
                 </a>
-user_auth
+
                 <a href="{{ route('login.linkedin') }}"
-=======
-                
- main
                     class="btn btn-outline-secondary rounded-circle shadow-sm d-flex justify-content-center align-items-center"
                     style="width: 45px; height: 45px;">
                     <i class="bi bi-linkedin text-primary"></i>

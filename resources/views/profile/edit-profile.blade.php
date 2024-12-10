@@ -21,8 +21,9 @@
                     <div class="card">
                         <div class="card-body text-center">
                             <!-- Default Profile Image -->
-                            <img id="profile-picture" src="{{url('images/pasfoto1.png')}}" class="rounded-circle mb-3"
-                                alt="Profile Picture" style="width: 120px; height: 120px; object-fit: cover;">
+                            <img id="profile-picture" src="{{ url('images/default-profile.png') }}"
+                                class="rounded-circle mb-3" alt="Profile Picture"
+                                style="width: 120px; height: 120px; object-fit: cover;">
 
                             <!-- Hidden Input File -->
                             <input type="file" id="upload-photo" class="d-none" accept="image/*"
@@ -162,9 +163,7 @@
                         </div>
 
                         <!-- JavaScript -->
-                        <script>    
-
-
+                        <script>
                             // Function to preview the uploaded photo
                             function previewPhoto(event) {
                                 const input = event.target;
