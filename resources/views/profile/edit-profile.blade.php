@@ -17,27 +17,30 @@
                         </a>
                         <h2 class="fw-bold mb-0">Edit Profile</h2>
                     </div>
-                    <!-- Profile Image -->
-                    <div class="card-body text-center">
-                        <img src="https://via.placeholder.com/200" class="rounded-circle mb-3" alt="Profile Picture"
-                            style="width: 120px; height: 120px; object-fit: cover;">
+                    <!-- Profile Section -->
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <!-- Default Profile Image -->
+                            <img id="profile-picture" src="{{url('images/pasfoto1.png')}}" class="rounded-circle mb-3"
+                                alt="Profile Picture" style="width: 120px; height: 120px; object-fit: cover;">
 
-                        <!-- Input File to Change Profile Picture -->
-                        <input type="file" class="form-control form-control-sm mb-2"
-                            style="width: 50%; margin: 0 auto;" />
+                            <!-- Hidden Input File -->
+                            <input type="file" id="upload-photo" class="d-none" accept="image/*"
+                                onchange="previewPhoto(event)" />
 
-                        <!-- Icons to change or remove photo -->
-                        <div class="d-flex justify-content-center gap-3">
-                            <button class="btn btn-sm btn-outline-secondary" title="Change Photo">
-                                <i class="bi bi-pencil-square"></i> Change Photo
-                            </button>
-                            <button class="btn btn-sm btn-outline-danger" title="Remove Photo">
-                                <i class="bi bi-trash"></i> Remove Photo
-                            </button>
+                            <!-- Buttons to Change or Remove Photo -->
+                            <div class="d-flex justify-content-center gap-3">
+                                <button class="btn btn-sm btn-outline-secondary" title="Change Photo"
+                                    onclick="document.getElementById('upload-photo').click();">
+                                    <i class="bi bi-pencil-square"></i> Change Photo
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger" title="Remove Photo"
+                                    onclick="removePhoto();">
+                                    <i class="bi bi-trash"></i> Remove Photo
+                                </button>
+                            </div>
                         </div>
                     </div>
-
-
 
                     <form action="#" method="POST">
                         <!-- Name -->
@@ -159,22 +162,31 @@
                         </div>
 
                         <!-- JavaScript -->
-                        <script>
-                            document.getElementById("add-button").addEventListener("click", function() {
-                                // Get the container for the website inputs
-                                var container = document.getElementById("website-container");
+                        <script>    
 
-                                // Create a new input element
-                                var newInput = document.createElement("input");
-                                newInput.type = "url";
-                                newInput.className = "form-control mb-2"; // Class untuk styling
-                                newInput.placeholder = "Enter your website URL"; // Placeholder
 
-                                // Append the new input to the container
-                                container.appendChild(newInput);
-                            });
+                            // Function to preview the uploaded photo
+                            function previewPhoto(event) {
+                                const input = event.target;
+                                const reader = new FileReader();
+
+                                reader.onload = function() {
+                                    const profilePicture = document.getElementById('profile-picture');
+                                    profilePicture.src = reader.result; // Set the uploaded image as profile picture
+                                };
+
+                                if (input.files && input.files[0]) {
+                                    reader.readAsDataURL(input.files[0]); // Read the file
+                                }
+                            }
+
+                            // Function to remove the current profile photo and reset to default
+                            function removePhoto() {
+                                const profilePicture = document.getElementById('profile-picture');
+                                profilePicture.src = 'https://via.placeholder.com/200'; // Reset to default image
+                                document.getElementById('upload-photo').value = ''; // Clear the file input
+                            }
                         </script>
-
 
 
                         <!-- Save Changes Button -->

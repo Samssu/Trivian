@@ -29,7 +29,7 @@
                             terbatas
                             dalam perjalananmu mencapai tujuan.
                         </p>
-                        <a href="/start" class="btn btn-primary btn-lg px-4 py-2 shadow-lg">
+                        <a href="{{route('login')}}" class="btn btn-primary btn-lg px-4 py-2 shadow-lg">
                             Start Now →
                         </a>
                     </div>
@@ -219,7 +219,7 @@
                                     </p>
                                     <div class="d-flex justify-content-between align-items-center mt-4">
                                         <span class="text-muted fs-6">12k Members</span>
-                                        <a href="/projects/laravel" class="btn btn-primary btn-sm">Join</a>
+                                        <a href="{{route('login')}}" class="btn btn-primary btn-sm">Join</a>
                                     </div>
                                 </div>
                             </div>
@@ -236,7 +236,7 @@
                                     </p>
                                     <div class="d-flex justify-content-between align-items-center mt-4">
                                         <span class="text-muted fs-6">8k Members</span>
-                                        <a href="/projects/counseling" class="btn btn-primary btn-sm text-white">See
+                                        <a href="{{route('login')}}" class="btn btn-primary btn-sm text-white">See
                                             Project</a>
                                     </div>
                                 </div>
@@ -281,15 +281,15 @@
                 <!-- Card 1 -->
                 <section class="col">
                     <div class="card shadow-sm h-100">
-                        <img src="/images/awssingapore.png" class="card-img-top p-3" alt="AWS">
+                        <img src="{{url('images/awssingapore.png')}}" class="card-img-top p-3" alt="AWS">
                         <div class="card-body">
                             <h5 class="card-title">AWS User Group Indonesia</h5>
                             <p class="card-text text-muted">
                                 Want to learn about cloud computing? Join the leading-edge AWS User Group.
                             </p>
                             <div class="d-flex gap-3">
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="#" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
                             </div>
 
                         </div>
@@ -310,15 +310,15 @@
                 <!-- Card 2 -->
                 <section class="col">
                     <div class="card shadow-sm h-100">
-                        <img src="/images/google dev.png" class="card-img-top p-3" alt="Google Developer Group">
+                        <img src="{{url('images/google dev.png')}}" class="card-img-top p-3" alt="Google Developer Group">
                         <div class="card-body">
                             <h5 class="card-title">Google Developer Group</h5>
                             <p class="card-text text-muted">
                                 Explore Google technologies through hands-on events.
                             </p>
                             <div class="d-flex gap-3">
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="#" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
                             </div>
                         </div>
                         <div class="card-footer bg-white d-flex justify-content-center gap-3">
@@ -338,7 +338,7 @@
                 <!-- Card 3 -->
                 <section class="col">
                     <div class="card shadow-sm h-100">
-                        <img src="/images/react.png" class="card-img-top p-3" alt="ReactJS">
+                        <img src="{{url('images/react.png')}}" class="card-img-top p-3" alt="ReactJS">
                         <div class="card-body">
                             <h5 class="card-title">ReactJS Indonesia</h5>
                             <p class="card-text text-muted">
@@ -346,8 +346,8 @@
                                 portfolio with React technology with the community
                             </p>
                             <div class="d-flex gap-3">
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="#" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
                             </div>
                         </div>
                         <div class="card-footer bg-white d-flex justify-content-center gap-3">
@@ -367,7 +367,7 @@
                 <!-- Card 4 -->
                 <section class="col">
                     <div class="card shadow-sm h-100">
-                        <img src="/images/uxid.png" class="card-img-top p-3" alt="">
+                        <img src="{{url('images/uxid.png')}}" class="card-img-top p-3" alt="">
                         <div class="card-body">
                             <h5 class="card-title">UXID (UX Indonesia)</h5>
                             <p class="card-text text-muted">
@@ -376,8 +376,8 @@
                                 and collaboration opportunities with Indonesia's best designers
                             </p>
                             <div class="d-flex gap-3">
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="#" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
                             </div>
                         </div>
                         <div class="card-footer bg-white d-flex justify-content-center gap-3">
@@ -397,7 +397,7 @@
                 <!-- Card 5-->
                 <section class="col">
                     <div class="card shadow-sm h-100">
-                        <img src="/images/Laravel8.png" class="card-img-top p-3" alt="Laravel Indonesia">
+                        <img src="{{url('images/Laravel8.png')}}" class="card-img-top p-3" alt="Laravel Indonesia">
                         <div class="card-body">
                             <h5 class="card-title">Laravel Indonesia</h5>
                             <p class="card-text text-muted">
@@ -405,8 +405,8 @@
                                 share solutions, and discuss interesting projects.
                             </p>
                             <div class="d-flex gap-3">
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="#" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
                             </div>
                         </div>
                         <div class="card-footer bg-white d-flex justify-content-center gap-3">
@@ -426,7 +426,7 @@
                 <!-- Card 6 -->
                 <section class="col">
                     <div class="card shadow-sm h-100">
-                        <img src="/images/react.png" class="card-img-top p-3" alt="ReactJS">
+                        <img src="{{url('images/react.png')}}" class="card-img-top p-3" alt="ReactJS">
                         <div class="card-body">
                             <h5 class="card-title">Developer Circles by Meta</h5>
                             <p class="card-text text-muted">
@@ -435,8 +435,8 @@
                                 development. Come join and be part of the global community!
                             </p>
                             <div class="d-flex gap-3">
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="#" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
                             </div>
                         </div>
                         <div class="card-footer bg-white d-flex justify-content-center gap-3">
@@ -478,7 +478,7 @@
                                 <i class="bi bi-palette fs-2"></i>
                             </div>
                             <h5 class="fw-bold">Design</h5>
-                            <a href="#" class="stretched-link">
+                            <a href="{{route('login')}}" class="stretched-link">
                                 <i
                                     class="bi bi-arrow-right-circle-fill text-primary position-absolute end-0 top-50 translate-middle-y fs-4 me-3"></i>
                             </a>
@@ -492,7 +492,7 @@
                                 <i class="bi bi-code-slash fs-2"></i>
                             </div>
                             <h5 class="fw-bold">Development</h5>
-                            <a href="#" class="stretched-link">
+                            <a href="{{route('login')}}" class="stretched-link">
                                 <i
                                     class="bi bi-arrow-right-circle-fill text-success position-absolute end-0 top-50 translate-middle-y fs-4 me-3"></i>
                             </a>
@@ -506,7 +506,7 @@
                                 <i class="bi bi-bar-chart-line fs-2"></i>
                             </div>
                             <h5 class="fw-bold">Marketing</h5>
-                            <a href="#" class="stretched-link">
+                            <a href="{{route('login')}}" class="stretched-link">
                                 <i
                                     class="bi bi-arrow-right-circle-fill text-warning position-absolute end-0 top-50 translate-middle-y fs-4 me-3"></i>
                             </a>
@@ -520,7 +520,7 @@
                                 <i class="bi bi-briefcase fs-2"></i>
                             </div>
                             <h5 class="fw-bold">Business</h5>
-                            <a href="#" class="stretched-link">
+                            <a href="{{route('login')}}" class="stretched-link">
                                 <i
                                     class="bi bi-arrow-right-circle-fill text-danger position-absolute end-0 top-50 translate-middle-y fs-4 me-3"></i>
                             </a>
@@ -534,7 +534,7 @@
                                 <i class="bi bi-heart fs-2"></i>
                             </div>
                             <h5 class="fw-bold">Lifestyle</h5>
-                            <a href="#" class="stretched-link">
+                            <a href="{{route('login')}}" class="stretched-link">
                                 <i
                                     class="bi bi-arrow-right-circle-fill text-info position-absolute end-0 top-50 translate-middle-y fs-4 me-3"></i>
                             </a>
@@ -548,7 +548,7 @@
                                 <i class="bi bi-camera fs-2"></i>
                             </div>
                             <h5 class="fw-bold">Photography</h5>
-                            <a href="#" class="stretched-link">
+                            <a href="{{route('login')}}" class="stretched-link">
                                 <i
                                     class="bi bi-arrow-right-circle-fill text-dark position-absolute end-0 top-50 translate-middle-y fs-4 me-3"></i>
                             </a>
@@ -562,7 +562,7 @@
                                 <i class="bi bi-music-note fs-2"></i>
                             </div>
                             <h5 class="fw-bold">Music</h5>
-                            <a href="#" class="stretched-link">
+                            <a href="{{route('login')}}" class="stretched-link">
                                 <i
                                     class="bi bi-arrow-right-circle-fill text-warning position-absolute end-0 top-50 translate-middle-y fs-4 me-3"></i>
                             </a>
@@ -576,7 +576,7 @@
                                 <i class="bi bi-diagram-2 fs-2"></i>
                             </div>
                             <h5 class="fw-bold">Data Science</h5>
-                            <a href="#" class="stretched-link">
+                            <a href="{{route('login')}}" class="stretched-link">
                                 <i
                                     class="bi bi-arrow-right-circle-fill text-secondary position-absolute end-0 top-50 translate-middle-y fs-4 me-3"></i>
                             </a>
@@ -590,7 +590,7 @@
                                 <i class="bi bi-heart-pulse fs-2"></i>
                             </div>
                             <h5 class="fw-bold">Health & Fitness</h5>
-                            <a href="#" class="stretched-link">
+                            <a href="{{route('login')}}" class="stretched-link">
                                 <i
                                     class="bi bi-arrow-right-circle-fill text-danger position-absolute end-0 top-50 translate-middle-y fs-4 me-3"></i>
                             </a>
@@ -604,7 +604,7 @@
                                 <i class="bi bi-currency-exchange fs-2"></i>
                             </div>
                             <h5 class="fw-bold">Finance</h5>
-                            <a href="#" class="stretched-link">
+                            <a href="{{route('login')}}" class="stretched-link">
                                 <i
                                     class="bi bi-arrow-right-circle-fill text-success position-absolute end-0 top-50 translate-middle-y fs-4 me-3"></i>
                             </a>
@@ -618,7 +618,7 @@
                                 <i class="bi bi-mortarboard fs-2"></i>
                             </div>
                             <h5 class="fw-bold">Teaching</h5>
-                            <a href="#" class="stretched-link">
+                            <a href="{{route('login')}}" class="stretched-link">
                                 <i
                                     class="bi bi-arrow-right-circle-fill text-primary position-absolute end-0 top-50 translate-middle-y fs-4 me-3"></i>
                             </a>
@@ -641,7 +641,7 @@
                             can
                             share their work, view projects from others, and get inspired.
                         </p>
-                        <a href="#" class="btn btn-outline-light btn-lg"
+                        <a href="{{route('login')}}" class="btn btn-outline-light btn-lg"
                             style="color: white; background-color: #232E66; border-color: #ffffff;">Start Now</a>
 
                     </div>
@@ -786,7 +786,7 @@
                     Start your journey by joining our community of inspiration and collaboration. Learn new skills, and
                     connect with fellow members who share similar interests. Together, we can achieve more!
                 </p>
-                <a href="/signup" class="btn btn-light btn-lg shadow-sm" style="color: #232E66;">
+                <a href="/register" class="btn btn-light btn-lg shadow-sm" style="color: #232E66;">
                     Sign Up Now →
                 </a>
             </div>

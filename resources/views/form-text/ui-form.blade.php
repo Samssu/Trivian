@@ -168,7 +168,7 @@
                                  <div class="d-flex gap-4 text-muted mt-3">
                                      <!-- Comment Button -->
                                      <a href="#" class="text-decoration-none comment-toggle">
-                                         <i class="bi bi-chat me-1"></i> <span class="comment-count">54</span>
+                                         <i class="bi bi-chat me-1"></i> <span class="comment-count1">54</span>
                                      </a>
 
                                      <!-- Like Button -->

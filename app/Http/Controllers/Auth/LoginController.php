@@ -30,7 +30,7 @@ class LoginController extends Controller
     }
 
     // Melakukan logout
-    public function logout()
+    public function logout()    
     {
         Auth::logout();
         return redirect()->route('login');

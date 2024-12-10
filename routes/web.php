@@ -133,7 +133,7 @@ Route::get('/member-community', function () {
 // Gallery
 Route::get('/gallery', function () {
     return view('gallery.gallery');
-});
+})->name('gallery');
 
 Route::get('/create-gallery', function () {
     return view('gallery.create-gallery');
@@ -168,10 +168,8 @@ Route::get('/leaderboard-activity', function () {
 Route::get('/adminLTE', function () {
     return view('public.adminLTE');
 });
-// admin Dashboard
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-});
+
+
 Route::get('/community-admin', function () {
     return view('admin.layout-admin.community-admin');
 });
@@ -193,5 +191,5 @@ Route::get('/activity-admin', function () {
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 Route::middleware('auth')->get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin.dashboard');
 });

@@ -55,7 +55,7 @@
                 <!-- Check if user is logged in -->
                 @auth
                 <!-- If user is logged in, show profile picture and logout button -->
-                <a href="/profile" class="btn btn-link text-white p-0">
+                <a href="{{route('profile')}}" class="btn btn-link text-white p-0">
                     <img src="{{ Auth::user()->profile_photo_url }}" alt="Profile" class="rounded-circle"
                         style="width: 40px; height: 40px;">
                 </a>
