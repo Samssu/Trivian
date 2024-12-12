@@ -1,8 +1,4 @@
 @extends('layouts.app')
-
-<!DOCTYPE html>
-<html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
     <<link rel="stylesheet" href="{{ asset('css/kalender.css') }}">
-
-
 
 </head>
 
@@ -51,7 +45,7 @@
     <section>
         @include('components.sidebaractivity')
         <!-- Main Content Section -->
-        <section class="col-md-8 col-lg-9 position-relative" style="margin: 20px 20px;">
+        <main class="col-md-8 col-lg-9 position-relative" style="margin: 20px 20px;">
             <!-- Background Kotak -->
             <div class="position-absolute bg-light border rounded shadow"
                 style="width: 100%; height: 100%; top: 0; left: 0; z-index: 0;">
@@ -363,9 +357,6 @@
                         </div>
                     </section>
             </section>
-        </section>
-    </section>
-   
+        </main>
+    </section> 
 </body>
-
-</html>

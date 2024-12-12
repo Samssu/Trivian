@@ -50,7 +50,7 @@
                                     <i class="bi bi-heart me-1"></i> <span
                                         class="like-count">{{ $post->likes->count() }}</span>
                                 </button>
-                            </form>
+                            </form> 
 
                             <a href="#" class="text-decoration-none comment-toggle">
                                 <i class="bi bi-chat me-1"></i> <span
@@ -95,6 +95,7 @@
 
 <!-- Panggil file JS -->
 <script src="{{ asset('js/comentar.js') }}"></script>
+
 <!-- CSS for Overlay -->
 <style>
     .image-container {

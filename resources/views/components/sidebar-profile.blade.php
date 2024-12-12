@@ -24,7 +24,27 @@
                     <!-- Button Edit Profile -->
                     <a href="{{ route('edit-profile') }}" class="btn btn-outline-dark mb-3">Edit Profile</a>
 
-                    <!-- Information Bar (with icons on the left and text on the right) -->
+                    <div class="row">
+                        <div class="col-md-4">
+                          <a href="#" style="text-decoration: none; color: inherit;">
+                            <p class="text-center text-sm">164</p>
+                            <p class="text-center text-xs">Followers</p>
+                          </a>
+                        </div>
+                        <div class="col-md-4">
+                          <a href="#" style="text-decoration: none; color: inherit;">
+                            <p class="text-center text-sm">43</p>
+                            <p class="text-center text-xs">Following</p>
+                          </a>
+                        </div>
+                        <div class="col-md-4">
+                          <a href="#" style="text-decoration: none; color: inherit;">
+                            <p class="text-center text-sm">10</p>
+                            <p class="text-center text-xs">Communities</p>
+                          </a>
+                        </div>
+                      </div>
+
                     <div class="mb-3">
                         <div class="d-flex align-items-center mb-2">
                             <i class="bi bi-geo-alt" style="font-size: 1.2rem; color: #2E2E66; margin-right: 10px;"></i>
@@ -62,25 +82,25 @@
                         <div class="row g-3 justify-content-center" id="image-container">
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="{{ route('profile-solid') }}" class="d-inline-block">
-                                    <img src="{{url('images/solid.webp')}}" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{ url('images/solid.webp') }}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="{{ route('profile-uxid') }}" class="d-inline-block">
-                                    <img src="{{url('images/uxid.png')}}" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{ url('images/uxid.png') }}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="{{ route('profile-oyen') }}" class="d-inline-block">
-                                    <img src="{{url('images/oyen.jpg')}}" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{ url('images/oyen.jpg') }}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="{{ route('profile-reactjs') }}"class="d-inline-block">
-                                    <img src="{{url('images/react.png')}}" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{ url('images/react.png') }}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
@@ -91,25 +111,25 @@
                         <div class="row g-3 justify-content-center" id="more-images" style="display: none;">
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="#" class="d-inline-block">
-                                    <img src="{{url('images/kokomi.png')}}" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{ url('images/kokomi.png') }}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="#" class="d-inline-block">
-                                    <img src="{{url('images/kokomi.png')}}" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{ url('images/kokomi.png') }}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="#" class="d-inline-block">
-                                    <img src="{{url('images/kokomi.png')}}" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{ url('images/kokomi.png') }}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
                             <div class="col-3 d-flex justify-content-center">
                                 <a href="#" class="d-inline-block">
-                                    <img src="{{url('images/kokomi.png')}}" alt="Thumbnail" class="rounded-circle"
+                                    <img src="{{ url('images/kokomi.png') }}" alt="Thumbnail" class="rounded-circle"
                                         style="width: 50px; height: 50px; object-fit: cover; margin: 5px;">
                                 </a>
                             </div>
@@ -154,3 +174,32 @@
                 </div>
             </div>
         </aside>
+
+<style>
+    /* Media queries untuk membuat responsif */
+@media (max-width: 768px) {
+  /* Ubah ukuran sidebar pada perangkat tablet dan smartphone */
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Ubah ukuran gambar profil pada perangkat smartphone */
+  .card-img-top {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ubah ukuran teks pada perangkat smartphone */
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+</style>

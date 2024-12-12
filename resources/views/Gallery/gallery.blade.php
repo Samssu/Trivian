@@ -47,8 +47,6 @@
             <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                 <!-- card 1 -->
                 @include('card.profil-card-aws')
-                @include('card.profil-card-onlineshop')
-                @include('card.profil-card-forumreact')
 
 
             </section>

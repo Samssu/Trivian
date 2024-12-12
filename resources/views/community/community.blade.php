@@ -67,12 +67,9 @@
                 <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                     <!-- Card -->
                     @include('card.card-uxid')
-                    @include('card.card-google')
-                    @include('card.card-laravel')
-                    @include('card.card-reactjs')
                     @include('card.card-oyen')
-                    @include('card.card-solid')
-                    @include('card.card-warungasep')
+    
+              
 
             </div>
 

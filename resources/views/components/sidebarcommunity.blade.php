@@ -2,7 +2,6 @@
 
 {{-- Hilangakan sidebar --}}
 <button id="toggle-sidebar" class="btn btn-outline-primary d-md-none mb-3 mt-5" style="padding: 5px 10px; font-size: 12px;"> Hilangkan Sidebar </button>    
-
 <section class="container d-flex mt-4" style="gap: 50px; ">
     <!-- Sidebar -->
     <section class="sidebar bg-white shadow-sm p-4"
