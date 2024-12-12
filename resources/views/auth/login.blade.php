@@ -14,7 +14,7 @@
 <!-- Navbar  -->
 @include('partials.navbar')
 
-<body class="bg-light fixed">
+<body class="bg-light fixed mt-2">
     <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
         <div class="bg-white p-4 rounded shadow-lg mx-3" style="width: 100%; max-width: 400px; border-radius: 12px;">
 

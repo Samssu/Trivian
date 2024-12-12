@@ -1,3 +1,7 @@
+{{-- Hilangakan sidebar --}}
+<button id="toggle-sidebar" class="btn btn-outline-primary d-md-none mb-3 mt-5"
+    style="padding: 5px 10px; font-size: 12px;"> Hilangkan Sidebar </button>
+
 <!-- SideBar Kanan Community -->
 <section class="container d-flex mt-4" style="gap: 50px;">
     <!-- Sidebar -->
@@ -6,7 +10,7 @@
 
         <!-- Create gallery Button -->
         <section class="create-community mb-3">
-            <a href="{{route('create-gallery')}}" class="btn btn-primary w-100" style="border-radius: 10px;">
+            <a href="{{ route('create-gallery') }}" class="btn btn-primary w-100" style="border-radius: 10px;">
                 + Create Project
             </a>
         </section>
@@ -17,7 +21,8 @@
             <ul class="list-unstyled ms-2">
                 <li><input type="checkbox" id="category1" class="me-2"> <label for="category1">Website</label></li>
                 <li><input type="checkbox" id="category2" class="me-2"> <label for="category2">Technology</label></li>
-                <li><input type="checkbox" id="category3" class="me-2"> <label for="category3">Mobile Developer</label>
+                <li><input type="checkbox" id="category3" class="me-2"> <label for="category3">Mobile
+                        Developer</label>
                 </li>
                 <li><input type="checkbox" id="category4" class="me-2"> <label for="category4">Artificial
                         Intelligence</label></li>
@@ -27,7 +32,8 @@
                 <li><input type="checkbox" id="category8" class="me-2"> <label for="category8">Communication</label>
                 </li>
                 <li><input type="checkbox" id="category9" class="me-2"> <label for="category9">Game</label></li>
-                <li><input type="checkbox" id="category10" class="me-2"> <label for="category10">Education</label></li>
+                <li><input type="checkbox" id="category10" class="me-2"> <label for="category10">Education</label>
+                </li>
                 <li><input type="checkbox" id="category11" class="me-2"> <label for="category11">Sport</label></li>
                 <li><input type="checkbox" id="category12" class="me-2"> <label for="category12">Music</label></li>
                 <li><input type="checkbox" id="category13" class="me-2"> <label for="category13">Health</label></li>
@@ -62,29 +68,59 @@
     </section>
 
     <style>
-    @media (max-width: 768px) {
+        @media (max-width: 768px) {
 
-        /* Perkecil ukuran sidebar pada layar ponsel */
+            /* Perkecil ukuran sidebar pada layar ponsel */
+            .sidebar {
+                width: 50%;
+                /* Sidebar menempati 80% dari lebar layar */
+                max-width: 200px;
+                /* Batasi lebar maksimal sidebar */
+                min-height: auto;
+                /* Tinggi otomatis di ponsel */
+                margin: 0 auto;
+                /* Pusatkan sidebar jika diperlukan */
+            }
+
+            /* Tambahkan padding untuk jarak yang nyaman */
+            .sidebar {
+                padding: 10px;
+            }
+
+            /* Jarak antara elemen container tetap fleksibel */
+            .container.d-flex {
+                gap: 20px;
+                /* Kurangi jarak antar elemen */
+            }
+        }
+
         .sidebar {
-            width: 50%;
-            /* Sidebar menempati 80% dari lebar layar */
-            max-width: 200px;
-            /* Batasi lebar maksimal sidebar */
-            min-height: auto;
-            /* Tinggi otomatis di ponsel */
-            margin: 0 auto;
-            /* Pusatkan sidebar jika diperlukan */
+            transition: opacity 0.5s, transform 0.5s;
         }
 
-        /* Tambahkan padding untuk jarak yang nyaman */
-        .sidebar {
-            padding: 10px;
+        .sidebar.d-none {
+            opacity: 0;
+            transform: translateX(-100%);
         }
-
-        /* Jarak antara elemen container tetap fleksibel */
-        .container.d-flex {
-            gap: 20px;
-            /* Kurangi jarak antar elemen */
-        }
-    }
     </style>
+
+    <script>
+        // Pilih tombol toggle sidebar
+        const toggleSidebarButton = document.getElementById('toggle-sidebar');
+
+        // Pilih sidebar
+        const sidebar = document.querySelector('.sidebar');
+
+        // Tambahkan event listener pada tombol toggle sidebar
+        toggleSidebarButton.addEventListener('click', () => {
+            // Toggle class 'd-none' pada sidebar
+            sidebar.classList.toggle('d-none');
+
+            // Ubah teks tombol toggle sidebar
+            if (sidebar.classList.contains('d-none')) {
+                toggleSidebarButton.textContent = 'Tampilkan Sidebar';
+            } else {
+                toggleSidebarButton.textContent = 'Hilangkan Sidebar';
+            }
+        });
+    </script>

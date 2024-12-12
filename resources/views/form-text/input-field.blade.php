@@ -1,30 +1,26 @@
-<!-- Content Area -->
 <div class="container">
     <!-- Input for New Post -->
     <div class="card shadow-sm mb-4" style="border-radius: 20px;">
         <div class="card-body">
-            <div class="d-flex flex-wrap align-items-center">
+            <div class="row align-items-center">
                 <!-- User Profile -->
-                <div class="me-3 mb-3 mb-md-0">
+                <div class="col-auto">
                     <img src="/images/default-profile.png" alt="User Avatar" class="rounded-circle"
                         style="width: 50px; height: 50px; object-fit: cover;">
                 </div>
 
                 <!-- Input Form -->
-                <div class="flex-grow-1">
-                    <!-- Form untuk create post -->
-                    <form id="postForm" action="{{ route('post.store') }}" method="POST"
-                        enctype="multipart/form-data">
+                <div class="col flex-grow-1">
+                    <form id="postForm" action="{{ route('post.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <!-- Textarea -->
                         <textarea class="form-control" name="content" id="postTextarea" placeholder="Let's share what's on your mind..."
                             rows="1" style="border-radius: 20px;"></textarea>
 
-                        <!-- Toolbar for formatting (hidden by default) -->
+                        <!-- Toolbar for formatting -->
                         <div id="toolbar" class="mt-2 d-none">
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
                                 <!-- Formatting Tools -->
-                                <div class="d-flex gap-2">
+                                <div class="d-flex gap-2 flex-wrap">
                                     <button type="button" class="btn btn-sm btn-outline-secondary"
                                         onclick="formatText('bold')">
                                         <i class="bi bi-type-bold"></i>
@@ -43,15 +39,12 @@
                                         <option value="16px" selected>Normal</option>
                                         <option value="20px">Large</option>
                                     </select>
-                                    <!-- Input File -->
                                     <label class="btn btn-sm btn-outline-secondary">
                                         <i class="bi bi-image"></i>
                                         <input type="file" accept="image/*" style="display: none;" name="image"
                                             id="uploadImage">
-
                                     </label>
-                                    <!-- Input for Link -->
-                                    <input type="text" class="form-control form-control-sm" id="linkInput"
+                                    <input type="text" class="form-control form-control-sm w-auto" id="linkInput"
                                         placeholder="Enter URL" aria-label="Link">
                                     <button type="button" class="btn btn-sm btn-outline-secondary"
                                         onclick="insertLink()">
@@ -69,9 +62,8 @@
                 </div>
 
                 <!-- Post Button -->
-                <div class="ms-3 mt-3 mt-md-0">
-                    <button class="btn btn-primary w-100 w-md-auto"
-                        style="border-radius: 20px; background-color: #2E2E66; border-color: #2E2E66"
+                <div class="col-auto">
+                    <button class="btn btn-primary w-100" style="border-radius: 20px; background-color: #2E2E66; border-color: #2E2E66"
                         onclick="submitPostForm()">
                         Create Post
                     </button>
@@ -110,3 +102,37 @@
         document.getElementById('toolbar').classList.add('d-none');
     }
 </script>
+
+<style>
+    @media (max-width: 768px) {
+        #postTextarea {
+            font-size: 0.9rem; /* Ukuran teks lebih kecil */
+        }
+
+        #toolbar {
+            flex-direction: column; /* Tools ditumpuk ke bawah */
+        }
+
+        #toolbar .btn {
+            padding: 5px 10px; /* Ukuran tombol lebih kecil */
+        }
+
+        #toolbar .form-select {
+            width: 100%; /* Form select full width */
+        }
+
+        .btn-primary {
+            font-size: 0.85rem; /* Ukuran font tombol lebih kecil */
+        }
+    }
+
+    @media (max-width: 576px) {
+        #postTextarea {
+            font-size: 0.85rem; /* Ukuran teks lebih kecil di layar sangat kecil */
+        }
+
+        #toolbar .form-select {
+            width: 100%; /* Select dropdown full width */
+        }
+    }
+</style>

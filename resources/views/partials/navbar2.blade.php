@@ -2,9 +2,8 @@
     style="background-color: #232E66; padding: 15px 0;">
     <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand text-white fw-bold d-flex align-items-center" href="/home"
-            style="margin-left: -200px; font-size: 1.8rem;">
-            <img src="/images/maxy.png" alt="Logo" class="me-2" style="width: 40px; height: 40px;">
+        <a class="navbar-brand text-white fw-bold d-flex align-items-center" href="/home" style="font-size: 1.8rem;">
+            <img src="/images/maxy.png" alt="Logo" class="me-2" style="width: 40px  ; height: 40px;">
             Thrivian
         </a>
 
@@ -14,6 +13,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Collapsible Navbar Menu -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <!-- Navigation Links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-5 ms-5">
@@ -44,18 +44,15 @@
                 <a href="{{ route('notifications') }}" class="btn btn-link text-white position-relative p-0"
                     style="text-decoration: none;">
                     <i class="bi bi-bell fs-3"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        999+
-                    </span>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">999+</span>
                 </a>
             </div>
 
             <!-- Buttons or Profile Photo -->
-            <div class="d-flex gap-3" style="margin-right: -200px">
-                <!-- Check if user is logged in -->
+            <div class="d-flex gap-3">
                 @auth
-
-                    <!-- If user is logged in, show profile picture and logout button -->
+                    <!-- Logged-in user -->
                     <a href="{{ route('profile') }}" class="btn btn-link text-white p-0">
                         <img src="{{ Auth::user()->profile_photo_url }}" alt="Profile" class="rounded-circle"
                             style="width: 40px; height: 40px;">
@@ -65,7 +62,7 @@
                         <button type="submit" class="btn btn-outline-light px-4 py-2">Log Out</button>
                     </form>
                 @else
-                    <!-- If user is not logged in, show login and register buttons -->
+                    <!-- Guest user -->
                     <a href="/login" class="btn btn-outline-light px-4 py-2">Log In</a>
                     <a href="/register" class="btn btn-light text-primary fw-bold px-4 py-2">Sign Up Now</a>
                 @endauth
@@ -73,3 +70,19 @@
         </div>
     </div>
 </nav>
+
+
+<!-- JavaScript for Toggle Functionality -->
+<script>
+    // Automatically close the navbar when toggler button is clicked
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    navbarToggler.addEventListener('click', () => {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: true
+            });
+            bsCollapse.hide();
+        }
+    });
+</script>

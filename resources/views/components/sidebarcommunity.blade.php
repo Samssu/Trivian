@@ -1,8 +1,13 @@
 <!-- SideBar Kanan Community -->
+
+{{-- Hilangakan sidebar --}}
+<button id="toggle-sidebar" class="btn btn-outline-primary d-md-none mb-3 mt-5" style="padding: 5px 10px; font-size: 12px;"> Hilangkan Sidebar </button>    
+
 <section class="container d-flex mt-4" style="gap: 50px; ">
     <!-- Sidebar -->
     <section class="sidebar bg-white shadow-sm p-4"
         style="border-radius: 10px; width: 100%; max-width: 250px; min-height: 600px;">
+         
 
         <!-- Create Community Button -->
         <section class="create-community mb-3">
@@ -18,9 +23,11 @@
             <ul class="list-unstyled ms-2">
                 <li><input type="checkbox" id="website" class="me-2"> <label for="website">Website</label></li>
                 <li><input type="checkbox" id="tecnology" class="me-2"> <label for="tecnology">Technology</label></li>
-                <li><input type="checkbox" id="mobiledev" class="me-2"> <label for="mobiledev">Mobile Developer</label>
+                <li><input type="checkbox" id="mobiledev" class="me-2"> <label for="mobiledev">Mobile
+                        Developer</label>
                 </li>
-                <li><input type="checkbox" id="ai" class="me-2"> <label for="ai">Artificial Intelligence</label></li>
+                <li><input type="checkbox" id="ai" class="me-2"> <label for="ai">Artificial
+                        Intelligence</label></li>
                 <li><input type="checkbox" id="design" class="me-2"> <label for="design">Design</label></li>
                 <li><input type="checkbox" id="business" class="me-2"> <label for="business">Business</label></li>
                 <li><input type="checkbox" id="lifestyle" class="me-2"> <label for="lifestyle">Lifestyle</label></li>
@@ -63,29 +70,59 @@
     </section>
 
     <style>
-    @media (max-width: 768px) {
+        @media (max-width: 768px) {
 
-        /* Perkecil ukuran sidebar pada layar ponsel */
+            /* Perkecil ukuran sidebar pada layar ponsel */
+            .sidebar {
+                width: 50%;
+                /* Sidebar menempati 80% dari lebar layar */
+                max-width: 200px;
+                /* Batasi lebar maksimal sidebar */
+                min-height: auto;
+                /* Tinggi otomatis di ponsel */
+                margin: 0 auto;
+                /* Pusatkan sidebar jika diperlukan */
+            }
+
+            /* Tambahkan padding untuk jarak yang nyaman */
+            .sidebar {
+                padding: 10px;
+            }
+
+            /* Jarak antara elemen container tetap fleksibel */
+            .container.d-flex {
+                gap: 20px;
+                /* Kurangi jarak antar elemen */
+            }
+        }
+
         .sidebar {
-            width: 50%;
-            /* Sidebar menempati 80% dari lebar layar */
-            max-width: 200px;
-            /* Batasi lebar maksimal sidebar */
-            min-height: auto;
-            /* Tinggi otomatis di ponsel */
-            margin: 0 auto;
-            /* Pusatkan sidebar jika diperlukan */
+            transition: opacity 0.5s, transform 0.5s;
         }
 
-        /* Tambahkan padding untuk jarak yang nyaman */
-        .sidebar {
-            padding: 10px;
+        .sidebar.d-none {
+            opacity: 0;
+            transform: translateX(-100%);
         }
-
-        /* Jarak antara elemen container tetap fleksibel */
-        .container.d-flex {
-            gap: 20px;
-            /* Kurangi jarak antar elemen */
-        }
-    }
     </style>
+
+    <script>
+        // Pilih tombol toggle sidebar
+        const toggleSidebarButton = document.getElementById('toggle-sidebar');
+
+        // Pilih sidebar
+        const sidebar = document.querySelector('.sidebar');
+
+        // Tambahkan event listener pada tombol toggle sidebar
+        toggleSidebarButton.addEventListener('click', () => {
+            // Toggle class 'd-none' pada sidebar
+            sidebar.classList.toggle('d-none');
+
+            // Ubah teks tombol toggle sidebar
+            if (sidebar.classList.contains('d-none')) {
+                toggleSidebarButton.textContent = 'Tampilkan Sidebar';
+            } else {
+                toggleSidebarButton.textContent = 'Hilangkan Sidebar';
+            }
+        });
+    </script>
