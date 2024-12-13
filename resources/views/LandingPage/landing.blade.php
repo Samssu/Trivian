@@ -289,7 +289,7 @@
                             </p>
                             <div class="d-flex gap-3">
                                 <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100" style="background-color: #2E2E66">Join</a>
                             </div>
 
                         </div>
@@ -318,7 +318,7 @@
                             </p>
                             <div class="d-flex gap-3">
                                 <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100" style="background-color: #2E2E66">Join</a>
                             </div>
                         </div>
                         <div class="card-footer bg-white d-flex justify-content-center gap-3">
@@ -347,7 +347,7 @@
                             </p>
                             <div class="d-flex gap-3">
                                 <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100" style="background-color: #2E2E66">Join</a>
                             </div>
                         </div>
                         <div class="card-footer bg-white d-flex justify-content-center gap-3">
@@ -377,7 +377,7 @@
                             </p>
                             <div class="d-flex gap-3">
                                 <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100" style="background-color: #2E2E66">Join</a>
                             </div>
                         </div>
                         <div class="card-footer bg-white d-flex justify-content-center gap-3">
@@ -406,7 +406,7 @@
                             </p>
                             <div class="d-flex gap-3">
                                 <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100" style="background-color: #2E2E66">Join</a>
                             </div>
                         </div>
                         <div class="card-footer bg-white d-flex justify-content-center gap-3">
@@ -436,7 +436,7 @@
                             </p>
                             <div class="d-flex gap-3">
                                 <a href="{{route('login')}}" class="btn btn-outline-primary btn-sm w-100">View</a>
-                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100">Join</a>
+                                <a href="{{route('login')}}" class="btn btn-primary btn-sm w-100" style="background-color: #2E2E66">Join</a>
                             </div>
                         </div>
                         <div class="card-footer bg-white d-flex justify-content-center gap-3">

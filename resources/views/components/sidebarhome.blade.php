@@ -7,7 +7,7 @@
 
     <section class="row gx-0">
         <!-- Left Sidebar -->
-        <aside class="col-md-3 col-lg-2 px-md-2 bg-light" style="margin-left: 20px;">
+        <aside class="col-md-3 col-lg-2 px-md-2 bg-light" style="margin-left: 0px;">
 
 
             <!-- My Communities -->

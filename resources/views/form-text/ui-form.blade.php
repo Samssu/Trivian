@@ -44,25 +44,21 @@
 
                         <!-- Post Actions -->
                         <div class="d-flex flex-wrap gap-3 text-muted mt-3">
-                            <form action="{{ route('like.store', $post->id) }}" method="POST" class="d-inline">
-                                @csrf
-                                <button type="submit" class="btn btn-link text-decoration-none like-button">
-                                    <i class="bi bi-heart me-1"></i> <span
-                                        class="like-count">{{ $post->likes->count() }}</span>
-                                </button>
-                            </form> 
+    <button type="button" class="btn btn-link text-decoration-none like-button" data-liked="false">
+        <i class="bi bi-heart me-1"></i> <span class="like-count">{{ $post->likes->count() }}</span>
+    </button>
 
-                            <a href="#" class="text-decoration-none comment-toggle">
-                                <i class="bi bi-chat me-1"></i> <span
-                                    class="comment-count">{{ $post->comments->count() }}</span>
-                            </a>
+    <a href="#" class="text-decoration-none comment-toggle">
+        <i class="bi bi-chat me-1"></i> <span class="comment-count">{{ $post->comments->count() }}</span>
+    </a>
 
-                            <a href="#" class="text-decoration-none"><i class="bi bi-share me-1"></i></a>
+    <a href="#" class="text-decoration-none"><i class="bi bi-share me-1"></i></a>
 
-                            <a href="#" class="text-decoration-none save-button">
-                                <i class="bi bi-bookmark me-1"></i>
-                            </a>
-                        </div>
+    <a href="#" class="text-decoration-none save-button">
+        <i class="bi bi-bookmark me-1"></i>
+    </a>
+</div>
+
 
                         <!-- Comments Section -->
                         <div class="comments-section mt-3">

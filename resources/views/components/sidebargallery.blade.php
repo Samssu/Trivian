@@ -10,14 +10,14 @@
 
         <!-- Create gallery Button -->
         <section class="create-community mb-3">
-            <a href="{{ route('create-gallery') }}" class="btn btn-primary w-100" style="border-radius: 10px;">
+            <a href="{{ route('create-gallery') }}" class="btn btn-primary w-100" style=" background-color: #2E2E66;">
                 + Create Project
             </a>
         </section>
 
         <!-- Category Section -->
         <section class="category-section mb-4">
-            <h6 class="text-white bg-primary p-2 rounded" style="font-size: 14px;">Category</h6>
+            <h6 class="text-white p-2 rounded" style="font-size: 14px; background-color: #2E2E66; ">Category</h6>
             <ul class="list-unstyled ms-2">
                 <li><input type="checkbox" id="category1" class="me-2"> <label for="category1">Website</label></li>
                 <li><input type="checkbox" id="category2" class="me-2"> <label for="category2">Technology</label></li>
@@ -42,7 +42,7 @@
 
         <!-- Filter Section -->
         <section class="filter-section">
-            <h6 class="text-white bg-primary p-2 rounded" style="font-size: 14px;">Filter</h6>
+            <h6 class="text-white  p-2 rounded" style="font-size: 14px; background-color: #2E2E66;">Filter</h6>
             <!-- Location Filter -->
             <div class="mb-3">
                 <label for="location" class="form-label" style="font-size: 14px;">Location</label>

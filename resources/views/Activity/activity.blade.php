@@ -44,6 +44,7 @@
     <!-- sidebar -->
     <section>
         @include('components.sidebaractivity')
+        
         <!-- Main Content Section -->
         <main class="col-md-8 col-lg-9 position-relative" style="margin: 20px 20px;">
             <!-- Background Kotak -->

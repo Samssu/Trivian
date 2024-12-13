@@ -10,12 +10,7 @@
 </head>
 <body>
 
-    <!-- Main Content -->
-    <main class="container my-4">
-        @yield('content')
-    </main>
 
- 
 
    <!-- Footer -->
    @include('partials.footer')

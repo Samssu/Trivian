@@ -1,8 +1,5 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,13 +25,14 @@
         <div class="card mb-4 border-0 shadow-sm">
             <div class="card-body">
                 <!-- Title and Back Button -->
-                <div class="d-flex align-items-center mb-4">
-                    <a href="{{ route('home') }}" class="btn btn-outline-primary px-3 py-2 me-3">
+                <div class="d-flex flex-wrap align-items-center mb-4">
+                    <a href="{{ route('gallery') }}" class="btn btn-outline-primary px-3 py-2 me-3 mb-2 mb-md-0">
                         <i class="bi bi-arrow-left"></i>
                     </a>
-                    <h2 class="fw-bold mb-0">Project</h2>
+                    <h2 class="fw-bold mb-0 text-center text-md-start">Project</h2>
+
                     <!-- Three Dots Button -->
-                    <div class="dropdown ms-auto">
+                    <div class="dropdown ms-auto mt-2 mt-md-0">
                         <button class="btn btn-link text-muted p-0" data-bs-toggle="dropdown">
                             <i class="bi bi-three-dots"></i>
                         </button>
@@ -44,106 +42,237 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Cover Image -->
-                <div class="position-relative" style="height: 500px;">
-                    <img src="/images/herossection.png" alt="Community Cover" class="w-100 h-100 object-fit-cover">
-                </div>
 
+                <!-- Container -->
+                <div class="container mt-4">
+                    <!-- Title -->
+                    <h1 class="fw-bold text-center text-md-start" style="color: #232E66; font-size: 2.5rem;">Travel
+                        Booking Website</h1>
 
-                <!-- Title below Profile Image with additional margin-top -->
-                <div class="d-flex align-items-center mt-2">
-                    <!-- Logo -->
-                    <img src="/images/kokomi.png" alt="Community Logo" class="rounded-circle border border-white"
-                        style="width: 100px; height: 100px; background: white; object-fit: cover;">
-
-                    <!-- Title and Role -->
-                    <div class="ms-3">
-                        <h5 class="fw-bold">Dayat Kopling</h5>
-                        <p class="text-muted">Community Leader</p>
-                        <!-- Members Count with Avatars -->
-                        <div class="d-flex align-items-center mt-2">
-                            <!-- Avatar Group -->
-                            <div class="d-flex">
-                                <img src="/images/kokomi.png" alt="Member 1" class="rounded-circle border border-white"
-                                    style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                <img src="/images/kokomi.png" alt="Member 2" class="rounded-circle border border-white"
-                                    style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                                <img src="/images/kokomi.png" alt="Member 3" class="rounded-circle border border-white"
-                                    style="width: 30px; height: 30px; margin-right: -10px; object-fit: cover;">
-                            </div>
-
-                            <!-- Member Count -->
-                            <a href="{{ route('member-community') }}" class="ms-3 text-primary text-decoration-none">
-                                <small><i class="bi bi-people"></i> 154.3K members</small>
+                    <!-- User Info and Follow Button -->
+                    <div class="d-flex flex-wrap align-items-center justify-content-between mt-3">
+                        <!-- User Details -->
+                        <div class="d-flex align-items-center mb-3 mb-md-0">
+                            <!-- Profile Picture -->
+                            <a href="/profile" style="text-decoration: none;">
+                                <img src="/images/profilekosongan.jpg" alt="User Profile" class="rounded-circle"
+                                    style="width: 50px; height: 50px; object-fit: cover;">
                             </a>
+
+                            <!-- User Information -->
+                            <div class="ms-3">
+                                <a href="/profile" style="text-decoration: none; color: inherit;">
+                                    <h6 class="mb-0 fw-bold">Miawmiaw Biasa<span class="text-muted">@dayat</span></h6>
+                                </a>
+                                <small class="text-muted">14:35 • 19 November 2024</small>
+                            </div>
+                        </div>
+
+                        <!-- Follow Button -->
+                        <button id="followButton" class="btn btn-primary rounded-pill px-4 " style="background-color: #232E66">
+                            <i class="bi bi-plus"></i> Follow
+                        </button>
+                    </div>
+
+                    <!-- Contributors -->
+                    <div class="d-flex align-items-center flex-wrap mt-3">
+                        <!-- Contributor Avatars -->
+                        <div class="d-flex">
+                            <img src="/images/kokomi.png" alt="Contributor 1" class="rounded-circle"
+                                style="width: 35px; height: 35px; margin-right: -10px; object-fit: cover;">
+                            <img src="/images/kokomi.png" alt="Contributor 2" class="rounded-circle"
+                                style="width: 35px; height: 35px; margin-right: -10px; object-fit: cover;">
+                            <img src="/images/kokomi.png" alt="Contributor 3" class="rounded-circle"
+                                style="width: 35px; height: 35px; margin-right: -10px; object-fit: cover;">
+                            <img src="/images/kokomi.png" alt="Contributor 4" class="rounded-circle"
+                                style="width: 35px; height: 35px; margin-right: -10px; object-fit: cover;">
+                        </div>
+
+                        <!-- Contributor Count -->
+                        <div class="ms-3">
+                            <span class="fw-bold text-primary">+ 7</span> Contributors in this project
                         </div>
                     </div>
                 </div>
 
-                <!-- Adjusted padding and margin for community description -->
+                <!-- Cover Image -->
+                <div class="position-relative mt-3" style="height: 400px;">
+                    <img src="{{ url('images/cover1.png') }}" alt="Community Cover"
+                        class="w-100 h-100 object-fit-cover rounded" onclick="enlargeImage(this)">
+                </div>
+
+                <!-- Explore Destinations Section -->
+                <section class="container mt-5">
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="ratio ratio-1x1">
+                                <img src="/images/cover2.png" class="img-fluid rounded object-fit-cover" alt="..."
+                                    onclick="enlargeImage(this)">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="ratio ratio-1x1">
+                                <img src="/images/cover3.png" class="img-fluid rounded object-fit-cover" alt="..."
+                                    onclick="enlargeImage(this)">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="ratio ratio-1x1">
+                                <img src="/images/cover4.png" class="img-fluid rounded object-fit-cover" alt="..."
+                                    onclick="enlargeImage(this)">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Modal -->
+                <div id="enlargeModal" class="modal" onclick="closeModal()">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img id="enlargedImage" class="modal-content">
+                </div>
+
+
+
+                <!-- Community Description -->
                 <div class="pt-3 px-4 pb-4">
                     <div class="d-flex flex-column justify-content-between align-items-start">
-                        <!-- Community Description -->
                         <p class="text-muted mt-2">
-                            Connect with a global network of Laravel developers and enthusiasts who share your passion
-                            for creating powerful and scalable web applications. Gain access to exclusive tutorials,
-                            development challenges, and the latest updates on Laravel features. Whether you're a
-                            beginner or an experienced developer, the Laravel Community offers valuable resources and a
-                            supportive environment to enhance your development skills.
+                            Development and deployment of "Wanderlust", a travel booking website designed to simplify
+                            trip planning and inspire exploration. The project involved creating a user-friendly
+                            interface and a powerful backend system.
                         </p>
-                        <p class="text-muted mt-2">
-                            Come be a part of our vibrant community and take your Laravel projects to the next level!
-                            Connect with a global network of Laravel developers and enthusiasts who share your passion
-                            for creating powerful and scalable web applications. Gain access to exclusive tutorials,
-                            development challenges, and the latest updates on Laravel features.
+                        <p>
+                            The website was developed using Angular for the frontend and Express.js with MongoDB for the
+                            backend. Key features include a comprehensive search and filter system for travel deals,
+                            detailed destination guides, user reviews and ratings, and a streamlined booking process.
+                            The website integrates various third-party APIs for real-time data on flights, hotels, and
+                            car rentals, ensuring users get the best options available.
+                            The design process focused on delivering a seamless user experience. Extensive user research
+                            and testing were conducted to understand user needs and preferences. The visual design
+                            incorporates a clean and modern aesthetic, with intuitive navigation to enhance usability.
                         </p>
-                        <p class="text-muted mt-2">
-                            Whether you're a beginner or an experienced developer, the Laravel Community offers valuable
-                            resources and a supportive environment to enhance your development skills. Come be a part of
-                            our vibrant community and take your Laravel projects to the next level!
+                        <p>
+                            Highlights:
+                            Search and Filter System: Comprehensive search and filter system for finding the best travel
+                            deals.
+                            Destination Guides: Detailed guides with information on popular destinations, including user
+                            reviews and ratings.
+                            Streamlined Booking: A simplified and secure booking process for flights, hotels, and car
+                            rentals.
+                            Real-Time Data Integration: Integration with third-party APIs to provide up-to-date
+                            information and availability.
+                            User Reviews and Ratings: Allows users to leave reviews and rate their experiences, helping
+                            others make informed decisions.
+                            Responsive Design: Ensures a consistent and optimal experience across all devices, including
+                            desktops, tablets, and smartphones
                         </p>
+                    </div>
+                </div>
+
+                <!-- Actions Section -->
+                <div class="card border-0">
+                    <!-- Categories -->
+                    <div class="mb-3">
+                        <p class="mb-1">Category:</p>
+                        <a href="#" class="btn"
+                            style="font-size: 0.6rem; padding: 3px 6px; background-color: #808080;">
+                            Community
+                        </a>
+                        <a href="#" class="btn"
+                            style="font-size: 0.6rem; padding: 3px 6px; background-color: #FF7F3E;">
+                            LifeStyle
+                        </a>
+                        <a href="#" class="btn"
+                            style="font-size: 0.6rem; padding: 3px 6px; background-color: #3F7F3E;">
+                            javascriipt
+                        </a>
+                    </div>
+                    <hr>
+
+                    <!-- Statistics -->
+                    <div class="d-flex justify-content-between text-muted mb-3">
+                        <div><span class="fw-bold">164</span> Likes</div>
+                        <div><span class="fw-bold">43</span> Bookmark</div>
+                        <div><span class="fw-bold">372</span> Views</div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <!-- Like Button -->
+                        <button id="likeButton" class="btn btn-link text-danger">
+                            <i class="bi bi-heart-fill"></i>
+                        </button>
+
+                        <!-- Bookmark Button -->
+                        <button id="bookmarkButton" class="btn btn-link text-muted">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+
+                        <!-- Share Button -->
+                        <button id="shareButton" class="btn btn-link text-muted">
+                            <i class="bi bi-share"></i>
+                        </button>
                     </div>
 
                 </div>
-                <!-- Role with Category -->
-                <div class="d-flex align-items-center">
-                    <p class="mr-2 mb-0">Category : </p>
-                    <a href="#" class="btn"
-                        style="font-size: 0.7rem; padding: 5px 10px; background-color: #808080; color: white; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bold; margin-right: 5px;">
-                        Community
-                    </a>
-                    <a href="#" class="btn"
-                        style="font-size: 0.7rem; padding: 5px 10px; background-color: #FF7F3E; color: white; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bold;">
-                        LifeStyle
-                    </a>
-                </div>
-
-                <!-- Post Actions -->
-                <div class="d-flex justify-content-between text-muted mt-3">
-                    <!-- Like Button (Kiri) -->
-                    <a href="#" class="text-decoration-none like-button" data-likes="164">
-                        <i class="bi bi-heart me-1"></i> <span class="like-count">164</span>
-                    </a>
-
-                    <!-- Share Button (Tengah) -->
-                    <a href="#" class="text-decoration-none">
-                        <i class="bi bi-share me-1"></i>
-                    </a>
-
-                    <!-- Save Button (Kanan) -->
-                    <a href="#" class="text-decoration-none save-button">
-                        <i class="bi bi-bookmark me-1"></i>
-                    </a>
-                </div>
-
-
             </div>
         </div>
-
     </section>
+
+    <script>
+        // Like Button Click
+        const likeButton = document.getElementById('likeButton');
+        likeButton.addEventListener('click', () => {
+            likeButton.classList.toggle('text-danger');
+        });
+
+        // Bookmark Button Click
+        const bookmarkButton = document.getElementById('bookmarkButton');
+        bookmarkButton.addEventListener('click', () => {
+            bookmarkButton.classList.toggle('text-primary');
+        });
+
+        // Share Button Click
+        const shareButton = document.getElementById('shareButton');
+        shareButton.addEventListener('click', () => {
+            alert('Share functionality triggered!');
+        });
+
+        // JavaScript to handle follow button functionality
+        const followButton = document.getElementById('followButton');
+
+        followButton.addEventListener('click', function() {
+            if (followButton.textContent.trim() === 'Follow') {
+                followButton.innerHTML = '<i class="bi bi-check"></i> Followed';
+                followButton.classList.remove('btn-primary');
+                followButton.classList.add('btn-secondary');
+            } else {
+                followButton.innerHTML = '<i class="bi bi-plus"></i> Follow';
+                followButton.classList.remove('btn-secondary');
+                followButton.classList.add('btn-primary');
+            }
+        });
+
+        //Image membesar jika di klik
+        function enlargeImage(image) {
+            const modal = document.getElementById('enlargeModal');
+            const enlargedImage = document.getElementById('enlargedImage');
+
+            modal.style.display = 'block';
+            enlargedImage.src = image.src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('enlargeModal');
+            modal.style.display = 'none';
+        }
+    </script>
+
 
     <!-- Panggil file JS -->
     <script src="{{ asset('js/profile-gallery.js') }}"></script>
+
+
 </body>
 
 </html>

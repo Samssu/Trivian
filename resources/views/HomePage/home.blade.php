@@ -3,9 +3,9 @@
 @section('content')
     @include('partials.navbar2')
     @include('components.sidebarhome')
-
+     
     <section class="col-md-8 col-lg-9 position-relative" style="margin: 20px 20px;">
-        <div class="d-flex flex-column" style="height: 100%; padding: 20px; overflow-y: auto;">
+        <div class="d-flex flex-column" style="height: 100%; padding: 20px; overflow-y: auto; ">
 
             <!-- Form untuk create post -->
             @include('form-text.input-field')

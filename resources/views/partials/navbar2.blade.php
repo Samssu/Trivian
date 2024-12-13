@@ -34,7 +34,7 @@
             </ul>
 
             <!-- Search and Notifications -->
-            <div class="d-flex align-items-center gap-4 me-3">
+            <div class="d-flex align-items-center gap-4 mx-3">
                 <!-- Search Icon -->
                 <a href="{{ route('search') }}" class="btn btn-link text-white p-0" style="text-decoration: none;">
                     <i class="bi bi-search fs-3"></i>
@@ -50,12 +50,12 @@
             </div>
 
             <!-- Buttons or Profile Photo -->
-            <div class="d-flex gap-3">
+            <div class="d-flex gap-3 mx-3">
                 @auth
                     <!-- Logged-in user -->
                     <a href="{{ route('profile') }}" class="btn btn-link text-white p-0">
-                        <img src="{{ Auth::user()->profile_photo_url }}" alt="Profile" class="rounded-circle"
-                            style="width: 40px; height: 40px;">
+                        <img src="{{ Auth::user()->profile_photo_url ?? asset('images/profilekosongan.jpg') }}"
+                            alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
                     </a>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
@@ -67,6 +67,8 @@
                     <a href="/register" class="btn btn-light text-primary fw-bold px-4 py-2">Sign Up Now</a>
                 @endauth
             </div>
+
+
         </div>
     </div>
 </nav>

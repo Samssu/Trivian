@@ -3,11 +3,13 @@
   <!-- Card 1 -->
   <section class="col">
       <div class="card shadow-sm h-100">
-          <img src="/images/aws.png" class="card-img-top p-3" alt="AWS">
+          <img src="/images/cover1.png" class="card-img-top p-3" alt="AWS">
           <div class="card-body">
-              <h5 class="card-title mb-1">AWS</h5>
+              <h5 class="card-title mb-1">Travel Book Website</h5>
               <p class="card-text text-muted mb-1">
-                  Want to learn about cloud computing? Join the leading-edge AWS User Group.
+                  The website was developed using Angular for the frontend and Express.js with MongoDB for the backend.
+                  Key features include a comprehensive search and filter system for travel deals, detailed destination
+                  guides, user reviews and ratings, and a streamlined booking process.
               </p>
               <!-- Like and View Icons -->
               <div class="d-flex align-items-center gap-3">
@@ -24,7 +26,8 @@
 
               </div>
               <!-- Button -->
-              <a href="{{ route('profile-gallery-aws') }}" class="btn btn-primary btn-sm w-100 mt-2">See Project</a>
+              <a href="{{ route('profile-gallery-aws') }}" class="btn btn-primary btn-sm w-100 mt-2"
+                  style="background-color: #2E2E66;">See Project</a>
           </div>
 
 
@@ -44,6 +47,4 @@
   <!-- Panggil file JS -->
   <script src="{{ asset('js/cardgallery.js') }}"></script>
 
-  <script>
-
-  </script>
+  <script></script>

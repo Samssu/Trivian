@@ -1,18 +1,13 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community</title>
 </head>
 
-<body>
     <!-- navbar -->
     @include('partials.navbar2')
-
     <section class="hero-section d-flex align-items-center justify-content-center text-white position-relative"
         style="height: 50vh; background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/images/gedung.png'); background-size: cover; background-position: center; margin-top: 56px;">
         <div class="container text-center">
@@ -67,7 +62,6 @@
                 <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                     <!-- Card -->
                     @include('card.card-uxid')
-                    @include('card.card-oyen')
     
               
 
@@ -94,6 +88,3 @@
 
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-</body>
-
-</html>
