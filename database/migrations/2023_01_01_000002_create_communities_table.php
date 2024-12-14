@@ -11,7 +11,12 @@ class CreateCommunitiesTable extends Migration
         Schema::create('communities', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description')->nullable();
+            $table->text('goals');
+            $table->string('category');
+            $table->string('description');
+            $table->string('location');
+            $table->string('profile_photo')->nullable();
+            $table->string('cover_photo')->nullable();
             $table->timestamps();
         });
     }

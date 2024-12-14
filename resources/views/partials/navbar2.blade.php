@@ -45,7 +45,7 @@
                     style="text-decoration: none;">
                     <i class="bi bi-bell fs-3"></i>
                     <span
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">999+</span>
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1</span>
                 </a>
             </div>
 
