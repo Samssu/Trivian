@@ -9,6 +9,8 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\CommunityController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -143,6 +145,28 @@ Route::get('/community', function () {
 Route::get('/member-community', function () {
     return view('community.member-community');
 })->name('member-community');
+
+//community be
+Route::prefix('community')->name('community.')->group(function () {
+    // Menampilkan halaman daftar komunitas
+    Route::get('/', [CommunityController::class, 'index'])->name('index');
+
+    // Menampilkan halaman form untuk membuat komunitas baru
+    Route::get('/create', [CommunityController::class, 'create'])->name('create');
+
+    // Menyimpan komunitas baru
+    Route::post('/store', [CommunityController::class, 'store'])->name('store');
+});
+
+// Route untuk menampilkan halaman profil UXID
+Route::get('/communities', [CommunityController::class, 'index'])->name('community.index');
+//Route::get('/community', [CommunityController::class, 'index'])->name('community.index');
+Route::post('/community/{id}/toggle-join', [CommunityController::class, 'toggleJoin'])->name('community.toggleJoin')->middleware('auth');
+Route::get('/community', [CommunityController::class, 'index'])->name('community');
+Route::get('/profile-uxid', [CommunityController::class, 'show'])->name('profile-uxid');
+
+
+
 
 // Gallery
 Route::get('/gallery', function () {

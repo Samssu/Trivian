@@ -69,7 +69,7 @@
         <h2 class="mb-4 text-primary mt-3">People You May Know</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
             <!-- Card -->
-            @include('card.card-uxid')
+
             @include('card.card-google')
             @include('card.card-laravel')
             @include('card.card-reactjs')
@@ -79,7 +79,7 @@
 
         <!-- Konten tersembunyi untuk Community Cards -->
         <div id="hiddenContentCommunityCards" class="d-none row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-            @include('card.card-uxid')
+
             @include('card.card-google')
             @include('card.card-laravel')
             @include('card.card-reactjs')
@@ -100,14 +100,14 @@
         <section>
             @include('form-text.js-form')
             @include('form-text.kucing-form')
-            @include('form-text.ui-form')
+
         </section>
 
         <!-- Konten tersembunyi untuk Popular -->
         <div id="hiddenContentPopular" class="d-none">
             @include('form-text.js-form')
             @include('form-text.kucing-form')
-            @include('form-text.ui-form')
+
         </div>
 
         <!-- Tombol See More untuk Popular -->
@@ -120,29 +120,29 @@
 
         <!-- Js untuk mengelola tombol See More -->
         <script>
-        // Fungsi untuk toggle visibility dan teks tombol
-        function toggleContent(buttonId, contentId) {
-            const button = document.getElementById(buttonId);
-            const content = document.getElementById(contentId);
+            // Fungsi untuk toggle visibility dan teks tombol
+            function toggleContent(buttonId, contentId) {
+                const button = document.getElementById(buttonId);
+                const content = document.getElementById(contentId);
 
-            button.addEventListener("click", function() {
-                if (content.classList.contains("d-none")) {
-                    content.classList.remove("d-none");
-                    button.textContent = "See Less"; // Ganti teks menjadi "See Less"
-                } else {
-                    content.classList.add("d-none");
-                    button.textContent = "See More"; // Kembali ke teks "See More"
-                }
-            });
-        }
+                button.addEventListener("click", function() {
+                    if (content.classList.contains("d-none")) {
+                        content.classList.remove("d-none");
+                        button.textContent = "See Less"; // Ganti teks menjadi "See Less"
+                    } else {
+                        content.classList.add("d-none");
+                        button.textContent = "See More"; // Kembali ke teks "See More"
+                    }
+                });
+            }
 
-        // Mengaitkan tombol dengan konten untuk masing-masing bagian
-        toggleContent("seeMoreBtnUserList", "hiddenContentUserList");
-        toggleContent("seeMoreBtnCommunityCards", "hiddenContentCommunityCards");
-        toggleContent("seeMoreBtnPopular", "hiddenContentPopular");
+            // Mengaitkan tombol dengan konten untuk masing-masing bagian
+            toggleContent("seeMoreBtnUserList", "hiddenContentUserList");
+            toggleContent("seeMoreBtnCommunityCards", "hiddenContentCommunityCards");
+            toggleContent("seeMoreBtnPopular", "hiddenContentPopular");
         </script>
     </section>
-    
+
 </body>
 
 </html>
