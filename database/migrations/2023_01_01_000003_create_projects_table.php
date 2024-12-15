@@ -10,9 +10,14 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('community_id')->constrained('communities')->onDelete('cascade');
-            $table->string('title');
+            $table->string('name');
             $table->text('description')->nullable();
+            $table->string('cover_image');
+            $table->json('gallery_images')->nullable();
+            $table->json('contributors')->nullable();
+            $table->json('likes')->nullable(); // Menyimpan likes sebagai array
+            $table->string('category');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

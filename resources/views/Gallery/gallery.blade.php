@@ -35,11 +35,11 @@
         </div>
     </section>
 
-    
+
     <!-- Sidebar -->
     @include('components.sidebargallery')
 
-      <!-- Main Content -->
+    <!-- Main Content -->
     <section class="main-content flex-grow-1 bg-light p-4 shadow-sm rounded" style="border-radius: 10px;">
         <!-- Tabs Content -->
         <div class="tab-content mt-3">

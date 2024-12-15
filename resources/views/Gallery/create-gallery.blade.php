@@ -23,7 +23,7 @@
         <div class="card shadow-sm p-4">
             <!-- Header -->
             <div class="d-flex align-items-center mb-3">
-                <a href="{{ route('home') }}" class="btn btn-outline-primary me-3"
+                <a href="{{ route('gallery') }}" class="btn btn-outline-primary me-3"
                     style="font-size: 1.5rem; border-radius: 0;">
                     &lt;
                 </a>
@@ -31,103 +31,43 @@
             </div>
 
             <!-- Form -->
-            <form>
-                <!-- Project Name -->
+            <form action="{{ route('store-project') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+
                 <div class="mb-3">
-                    <label for="communityName" class="form-label">Project Name</label>
-                    <input type="text" id="communityName" class="form-control">
+                    <label for="name" class="form-label">Project Name</label>
+                    <input type="text" name="name" id="name" class="form-control" required>
                 </div>
 
-                <!-- Description -->
                 <div class="mb-3">
-                    <label for="communityDescription" class="form-label">Description</label>
-                    <textarea id="communityDescription" class="form-control" rows="4" maxlength="30000" required></textarea>
-                    <div class="d-flex justify-content-end mt-2">
-                        <small id="wordCount" class="text-muted">0/30000</small>
-                    </div>
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="description" id="description" class="form-control" rows="4"></textarea>
                 </div>
 
-                <!-- Cover Project -->
                 <div class="mb-3">
-                    <label class="form-label">Cover Project</label>
-                    <div class="d-flex align-items-center">
-                        <label for="coverPhoto" class="btn btn-outline-primary me-2" style="white-space: nowrap;">+ Add
-                            Images</label>
-                        <input type="file" id="coverPhoto" class="form-control d-none" accept="image/*" multiple
-                            onchange="previewImages(event, 'coverPreview')">
-                    </div>
-                    <div id="coverPreview" class="mt-3 d-flex flex-wrap gap-2"></div>
+                    <label for="cover_image" class="form-label">Cover Project</label>
+                    <input type="file" name="cover_image" id="cover_image" class="form-control" required>
                 </div>
 
-                <!-- Project Gallery -->
                 <div class="mb-3">
-                    <label class="form-label">Project Gallery (Optional)</label>
-                    <div class="d-flex align-items-center">
-                        <label for="galleryPhoto" class="btn btn-outline-primary me-2" style="white-space: nowrap;">
-                            + Project Gallery
-                        </label>
-                        <input type="file" id="galleryPhoto" class="form-control d-none" accept="image/*" multiple
-                            onchange="previewImages(event, 'galleryPreview')">
-                    </div>
-                    <div id="galleryPreview" class="mt-3 d-flex flex-wrap gap-2"></div>
+                    <label for="gallery_images" class="form-label">Project Gallery (Optional)</label>
+                    <input type="file" name="gallery_images[]" id="gallery_images" class="form-control" multiple>
                 </div>
 
-                <!-- Contributor -->
                 <div class="mb-3">
-                    <label class="form-label">Contributor</label>
-                    <div class="d-flex flex-column">
-                        <label id="contributorButton" class="btn btn-outline-primary me-2"
-                            style="padding: 5px 10px; width: 160px; white-space: nowrap;">
-                            + Add Contributor
-                        </label>
-
-                        <div id="searchBarSection" class="mt-3" style="display: none;">
-                            <div class="mb-3">
-                                <input type="text" id="searchBar" class="form-control"
-                                    placeholder="Search for people" style="border-radius: 25px;">
-                            </div>
-                            @include('form-text.user-follow')
-                            @include('form-text.user-follow')
-                        </div>
-                    </div>
+                    <label for="contributors" class="form-label">Contributors</label>
+                    <input type="text" name="contributors" id="contributors" class="form-control">
                 </div>
 
-                <!-- Category -->
                 <div class="mb-3">
-                    <label class="form-label">Category</label>
-                    <div class="d-flex flex-column">
-                        <!-- Button to toggle roles -->
-                        <label id="categoryButton" class="btn btn-outline-primary me-2"
-                            style="padding: 5px 10px; width: 160px; white-space: nowrap;">
-                            + Add Category
-                        </label>
-
-                        <!-- Roles Section -->
-                        <div id="roleSection" class="mt-3" style="display: none;">
-                            <!-- Role: Community -->
-                            <a href="#" class="btn"
-                                style="font-size: 0.7rem; padding: 5px 10px; background-color: #808080; color: white; border-radius: 50px; margin-top: 5px; text-decoration: none; font-weight: bold;">
-                                Community
-                            </a>
-                            <!-- Role: Marketing -->
-                            <a href="#" class="btn"
-                                style="font-size: 0.7rem; padding: 5px 10px; background-color: #B3C8CF; color: white; border-radius: 50px; margin-top: 5px; text-decoration: none; font-weight: bold;">
-                                Marketing
-                            </a>
-                            <!-- Role: LifeStyle -->
-                            <a href="#" class="btn"
-                                style="font-size: 0.7rem; padding: 5px 10px; background-color: #FF7F3E; color: white; border-radius: 50px; margin-top: 5px; text-decoration: none; font-weight: bold;">
-                                LifeStyle
-                            </a>
-                        </div>
-                    </div>
+                    <label for="category" class="form-label">Category</label>
+                    <input type="text" name="category" id="category" class="form-control" required>
                 </div>
 
-                <!-- Submit Button -->
-                <div class="d-grid mt-3 mb-3">
-                    <button type="submit" class="btn btn-outline-primary">Create</button>
-                </div>
+                <button type="submit" class="btn btn-primary">Create Project</button>
             </form>
+
+
         </div>
     </div>
 
