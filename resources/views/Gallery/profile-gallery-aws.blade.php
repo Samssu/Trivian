@@ -46,8 +46,8 @@
                 <!-- Container -->
                 <div class="container mt-4">
                     <!-- Title -->
-                    <h1 class="fw-bold text-center text-md-start" style="color: #232E66; font-size: 2.5rem;">Travel
-                        Booking Website</h1>
+                    <h1 class="fw-bold text-center text-md-start" style="color: #232E66; font-size: 2.5rem;">
+                        {{ $project->name }}</h1>
 
                     <!-- User Info and Follow Button -->
                     <div class="d-flex flex-wrap align-items-center justify-content-between mt-3">
@@ -62,14 +62,18 @@
                             <!-- User Information -->
                             <div class="ms-3">
                                 <a href="/profile" style="text-decoration: none; color: inherit;">
-                                    <h6 class="mb-0 fw-bold">Miawmiaw Biasa<span class="text-muted">@dayat</span></h6>
+                                    <h6 class="mb-0 fw-bold">{{ $project->user->name }}
+                                        <span class="text-muted">{{ $project->user->email }}
+                                        </span>
+                                    </h6>
                                 </a>
                                 <small class="text-muted">14:35 • 19 November 2024</small>
                             </div>
                         </div>
 
                         <!-- Follow Button -->
-                        <button id="followButton" class="btn btn-primary rounded-pill px-4 " style="background-color: #232E66">
+                        <button id="followButton" class="btn btn-primary rounded-pill px-4 "
+                            style="background-color: #232E66">
                             <i class="bi bi-plus"></i> Follow
                         </button>
                     </div>
@@ -78,26 +82,27 @@
                     <div class="d-flex align-items-center flex-wrap mt-3">
                         <!-- Contributor Avatars -->
                         <div class="d-flex">
-                            <img src="/images/kokomi.png" alt="Contributor 1" class="rounded-circle"
+                            <img src="/images/default-profile.png" alt="Contributor 1" class="rounded-circle"
                                 style="width: 35px; height: 35px; margin-right: -10px; object-fit: cover;">
-                            <img src="/images/kokomi.png" alt="Contributor 2" class="rounded-circle"
+                            <img src="/images/default-profile.png" alt="Contributor 2" class="rounded-circle"
                                 style="width: 35px; height: 35px; margin-right: -10px; object-fit: cover;">
-                            <img src="/images/kokomi.png" alt="Contributor 3" class="rounded-circle"
+                            <img src="/images/default-profile.png" alt="Contributor 3" class="rounded-circle"
                                 style="width: 35px; height: 35px; margin-right: -10px; object-fit: cover;">
-                            <img src="/images/kokomi.png" alt="Contributor 4" class="rounded-circle"
+                            <img src="/images/default-profile.png" alt="Contributor 4" class="rounded-circle"
                                 style="width: 35px; height: 35px; margin-right: -10px; object-fit: cover;">
                         </div>
 
                         <!-- Contributor Count -->
                         <div class="ms-3">
-                            <span class="fw-bold text-primary">+ 7</span> Contributors in this project
+                            <span class="fw-bold text-primary">+7
+                            </span> Contributors in this project
                         </div>
                     </div>
                 </div>
 
                 <!-- Cover Image -->
                 <div class="position-relative mt-3" style="height: 400px;">
-                    <img src="{{ url('images/cover1.png') }}" alt="Community Cover"
+                    <img src="{{ asset('storage/' . $project->cover_image) }}" alt="Community Cover"
                         class="w-100 h-100 object-fit-cover rounded" onclick="enlargeImage(this)">
                 </div>
 
@@ -106,19 +111,22 @@
                     <div class="row g-4">
                         <div class="col-12 col-sm-6 col-md-4">
                             <div class="ratio ratio-1x1">
-                                <img src="/images/cover2.png" class="img-fluid rounded object-fit-cover" alt="..."
+                                <img src="{{ asset('storage/' . $project->cover_image) }}"
+                                    class="img-fluid rounded object-fit-cover" alt="..."
                                     onclick="enlargeImage(this)">
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4">
                             <div class="ratio ratio-1x1">
-                                <img src="/images/cover3.png" class="img-fluid rounded object-fit-cover" alt="..."
+                                <img src="{{ asset('storage/' . $project->cover_image) }}"
+                                    class="img-fluid rounded object-fit-cover" alt="..."
                                     onclick="enlargeImage(this)">
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4">
                             <div class="ratio ratio-1x1">
-                                <img src="/images/cover4.png" class="img-fluid rounded object-fit-cover" alt="..."
+                                <img src="{{ asset('storage/' . $project->cover_image) }}"
+                                    class="img-fluid rounded object-fit-cover" alt="..."
                                     onclick="enlargeImage(this)">
                             </div>
                         </div>
@@ -137,63 +145,35 @@
                 <div class="pt-3 px-4 pb-4">
                     <div class="d-flex flex-column justify-content-between align-items-start">
                         <p class="text-muted mt-2">
-                            Development and deployment of "Wanderlust", a travel booking website designed to simplify
-                            trip planning and inspire exploration. The project involved creating a user-friendly
-                            interface and a powerful backend system.
+
                         </p>
                         <p>
-                            The website was developed using Angular for the frontend and Express.js with MongoDB for the
-                            backend. Key features include a comprehensive search and filter system for travel deals,
-                            detailed destination guides, user reviews and ratings, and a streamlined booking process.
-                            The website integrates various third-party APIs for real-time data on flights, hotels, and
-                            car rentals, ensuring users get the best options available.
-                            The design process focused on delivering a seamless user experience. Extensive user research
-                            and testing were conducted to understand user needs and preferences. The visual design
-                            incorporates a clean and modern aesthetic, with intuitive navigation to enhance usability.
+                            {{ $project->description }}
                         </p>
-                        <p>
-                            Highlights:
-                            Search and Filter System: Comprehensive search and filter system for finding the best travel
-                            deals.
-                            Destination Guides: Detailed guides with information on popular destinations, including user
-                            reviews and ratings.
-                            Streamlined Booking: A simplified and secure booking process for flights, hotels, and car
-                            rentals.
-                            Real-Time Data Integration: Integration with third-party APIs to provide up-to-date
-                            information and availability.
-                            User Reviews and Ratings: Allows users to leave reviews and rate their experiences, helping
-                            others make informed decisions.
-                            Responsive Design: Ensures a consistent and optimal experience across all devices, including
-                            desktops, tablets, and smartphones
-                        </p>
+
                     </div>
                 </div>
+
 
                 <!-- Actions Section -->
                 <div class="card border-0">
                     <!-- Categories -->
                     <div class="mb-3">
                         <p class="mb-1">Category:</p>
-                        <a href="#" class="btn"
-                            style="font-size: 0.6rem; padding: 3px 6px; background-color: #808080;">
-                            Community
-                        </a>
+
                         <a href="#" class="btn"
                             style="font-size: 0.6rem; padding: 3px 6px; background-color: #FF7F3E;">
-                            LifeStyle
+                            {{ $project->category }}
                         </a>
-                        <a href="#" class="btn"
-                            style="font-size: 0.6rem; padding: 3px 6px; background-color: #3F7F3E;">
-                            javascriipt
-                        </a>
+
                     </div>
                     <hr>
 
                     <!-- Statistics -->
                     <div class="d-flex justify-content-between text-muted mb-3">
-                        <div><span class="fw-bold">164</span> Likes</div>
-                        <div><span class="fw-bold">43</span> Bookmark</div>
-                        <div><span class="fw-bold">372</span> Views</div>
+                        <div><span class="fw-bold">2</span> Likes</div>
+                        <div><span class="fw-bold">2</span> Bookmark</div>
+                        <div><span class="fw-bold">2</span> Views</div>
                     </div>
 
                     <!-- Action Buttons -->

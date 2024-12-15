@@ -10,6 +10,10 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\CommunityController;
+use App\Http\Controllers\ProjectController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -188,6 +192,18 @@ Route::get('/profile-gallery-onlineshop', function () {
 Route::get('/profile-reactforum', function () {
     return view('gallery.profile-gallery-reactforum');
 })->name('profile-gallery-reactforum');
+// gallery be
+// Menampilkan form create gallery
+Route::get('/create-gallery', [ProjectController::class, 'create'])->name('create-gallery');
+
+// Menyimpan data project
+Route::post('/store-project', [ProjectController::class, 'store'])->name('store-project');
+
+// Menampilkan halaman gallery
+Route::get('/gallery', [ProjectController::class, 'index'])->name('gallery');
+Route::get('/project/{id}', [ProjectController::class, 'show'])->name('project.show');
+//
+
 
 // Activity
 Route::get('/activity', function () {
