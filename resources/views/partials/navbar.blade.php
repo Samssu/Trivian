@@ -2,7 +2,7 @@
     <div class="container">
         <!-- Logo -->
         <a class="navbar-brand fw-bold d-flex align-items-center" href="/" style="font-size: 1.8rem;">
-            <img src="/images/maxy.png" alt="Logo" class="me-2" style="width: 40px; height: 40px;">
+            <img src="{{url('images/trivian.png')}}" alt="Logo" class="me-2" style="width: 40px; height: 40px;">
             <span style="color: #232E66;">Thrivian</span>
         </a>
 
@@ -21,7 +21,7 @@
                     Log In
                 </a>
                 <a href="{{route('register')}}" 
-                   class="btn btn-light text-primary fw-bold px-4 py-2" 
+                   class="btn btn-light fw-bold px-4 py-2" 
                    style="background-color: #232E66; color: white; border-radius: 10px;">
                     Sign Up Now
                 </a>

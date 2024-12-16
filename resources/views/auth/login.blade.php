@@ -31,7 +31,7 @@
                 </div>
             @endif
 
-            <h2 class="text-center text-primary fw-bold mb-2">Log In</h2>
+            <h2 class="text-center fw-bold mb-2" style="color: #232E66;">Log In</h2>
             <p class="text-center text-muted mb-4">Please enter your login details to sign in</p>
             <form action="{{ route('login') }}" method="POST">
                 @csrf
@@ -62,7 +62,7 @@
                 </div>
                 <!-- Submit Button -->
                 <div class="d-grid mb-4">
-                    <button type="submit" class="btn btn-primary fw-bold py-2">Log In</button>
+                    <button type="submit" class="btn btn-primary fw-bold py-2" style="background-color: #232E66; border-color: #232E66; color: white;">Log In</button>
                 </div>
             </form>
             <!-- Or Continue With -->

@@ -60,28 +60,28 @@
         <!-- Tabs Content -->
         <div class="tab-content mt-3">
 
-            <!-- My Communities Tab Pane -->
-            <div class="tab-pane fade show active" id="my-communities" role="tabpanel"
-                aria-labelledby="my-communities-tab">
-                <!-- Community Cards Section -->
-                <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-                    <!-- Card My Communities-->
-                    @include('card.card-uxid')
+             <!-- My Communities Tab Pane -->
+             <div class="tab-pane fade show active" id="my-communities" role="tabpanel"
+             aria-labelledby="my-communities-tab">
+             <!-- Community Cards Section -->
+             <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                 <!-- Card My Communities-->
+                 @include('card.card-uxid')
 
 
 
 
-            </div>
+         </div>
 
-            <!-- Explore Tab Pane -->
-            <div class="tab-pane fade" id="explore" role="tabpanel" aria-labelledby="explore-tab">
-                <!-- Community Cards Section -->
-                <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-                    <!-- Card Explore-->
-                    @include('card.card-uxid')
+         <!-- Explore Tab Pane -->
+         <div class="tab-pane fade" id="explore" role="tabpanel" aria-labelledby="explore-tab">
+             <!-- Community Cards Section -->
+             <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                 <!-- Card Explore-->
+                 @include('card.card-uxid')
 
-                </section>
-            </div>
+             </section>
+         </div>
         </div>
     </section>
     </section>

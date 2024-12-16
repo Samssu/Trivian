@@ -59,6 +59,51 @@
                                     class="comment-count">{{ $post->comments->count() }}</span>
                             </a>
 
+                            <!-- Button Colab -->
+                            <a href="#" id="collabToggle" class="text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#collabModal">
+                                <i class="bi bi-people"></i> Ask to Collaboration
+                            </a>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="collabModal" tabindex="-1" aria-labelledby="collabModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header" style="background-color: #2E2E66; color: white;">
+                                            <h5 class="modal-title" id="collabModalLabel">Ask to Collaborate</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+
+                                        <!-- Modal Body -->
+                                        <div class="modal-body">
+                                            <label for="collabNote" class="form-label">Add an invitation note about what
+                                                you want to collaborate</label>
+                                            <textarea id="collabNote" class="form-control" rows="4" maxlength="80" oninput="updateCounter()"></textarea>
+                                            <div id="counter" class="mt-1 text-end"
+                                                style="font-size: 0.9rem; color: #999;">0/80</div>
+                                        </div>
+
+                                        <!-- Modal Footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-secondary" id="cancelButton"
+                                                data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="sendInvitation()">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Notifikasi Pembatalan -->
+                            <div id="cancelNotification"
+                                class="alert alert-warning position-fixed top-0 end-0 m-3 shadow"
+                                style="display: none;">
+                                You have canceled the Ask to Collaboration.
+                            </div>
+
                             <!-- Share Button -->
                             <a href="#" class="text-decoration-none"><i class="bi bi-share me-1"></i></a>
 
@@ -66,7 +111,6 @@
                             <a href="#" class="text-decoration-none save-button">
                                 <i class="bi bi-bookmark me-1"></i>
                             </a>
-
                         </div>
 
                         <!-- Comments Section -->
@@ -128,5 +172,45 @@
     }
 </style>
 
-     <!-- Panggil file JS -->
-     <script src="{{ asset('js/comentar.js') }}"></script>
+<script>
+    // Update the character counter
+    function updateCounter() {
+        const textarea = document.getElementById('collabNote');
+        const counter = document.getElementById('counter');
+        counter.textContent = `${textarea.value.length}/80`;
+    }
+
+    // Handle sending the invitation
+    function sendInvitation() {
+        // Change the button text and style after sending
+        const collabButton = document.getElementById('collabToggle');
+        collabButton.innerHTML = '<i class="bi bi-check-circle"></i> Invitation Sent'; // Update button text
+        collabButton.classList.add('btn-success',
+        'disabled'); // Change the button style to indicate success and disable it
+
+        // Close the modal after sending
+        const modal = bootstrap.Modal.getInstance(document.getElementById('collabModal'));
+        modal.hide();
+
+        // Optionally, display an alert or another message
+        alert("Invitation Sent Successfully!");
+
+        // Redirect to home page after submission (optional)
+        window.location.href = '/home'; // Change the URL to your home page or desired page
+    }
+
+    // Show notification when the cancel button is clicked
+    document.getElementById('cancelButton').addEventListener('click', function() {
+        // Show the cancel notification
+        const cancelNotification = document.getElementById('cancelNotification');
+        cancelNotification.style.display = 'block';
+
+        // Hide the notification after 3 seconds
+        setTimeout(() => {
+            cancelNotification.style.display = 'none';
+        }, 3000); // 3 seconds
+    });
+</script>
+
+<!-- Panggil file JS -->
+<script src="{{ asset('js/comentar.js') }}"></script>

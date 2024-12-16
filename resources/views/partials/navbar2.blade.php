@@ -3,7 +3,7 @@
     <div class="container">
         <!-- Logo -->
         <a class="navbar-brand text-white fw-bold d-flex align-items-center" href="/home" style="font-size: 1.8rem;">
-            <img src="/images/maxy.png" alt="Logo" class="me-2" style="width: 40px  ; height: 40px;">
+            <img src="{{url('images/trivianputih.png')}}" alt="Logo" class="me-2" style="width: 40px  ; height: 40px;">
             Thrivian
         </a>
 

@@ -37,12 +37,9 @@
 
                 <!-- Card notif -->
                 @include('card.card-notifications')
-                @include('card.card-notifications')
-                @include('card.card-notifications')
-                @include('card.card-notifications')
-                @include('card.card-notifications')
-                @include('card.card-notifications')
-                @include('card.card-notifications')
+                @include('card.card-notifications-colab')
+                @include('card.card-notifications-follow')
+            
             </div>
         </div>
     </section>

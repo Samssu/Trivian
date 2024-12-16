@@ -78,10 +78,18 @@ Route::get('/home', function () {
     return view('HomePage.home');
 })->name('home');
 
+//kolaborasi
+Route::get('/colabkomentar', function () {
+    return view('kolab.colabkomentar');
+})->name('colabkomentar');
 
-Route::get('/view-post', function () {
-    return view('HomePage.view-post');
-})->name('view-post');
+Route::get('/createpost_kolab', function () {
+    return view('kolab.createpost_kolab');
+})->name('createpost_kolab');
+
+Route::get('/askcolab', function () {
+    return view('kolab.askcolab');
+})->name('askcolab');
 
 //post
 // Route untuk menampilkan halaman home
@@ -192,6 +200,7 @@ Route::get('/profile-gallery-onlineshop', function () {
 Route::get('/profile-reactforum', function () {
     return view('gallery.profile-gallery-reactforum');
 })->name('profile-gallery-reactforum');
+
 // gallery be
 // Menampilkan form create gallery
 Route::get('/create-gallery', [ProjectController::class, 'create'])->name('create-gallery');
@@ -247,3 +256,7 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name
 Route::middleware('auth')->get('/dashboard', function () {
     return view('admin.dashboard');
 });
+
+
+Route::post('/post/{post}/like', [PostController::class, 'toggleLike'])->name('post.like');
+Route::post('/post/{post}/save', [PostController::class, 'toggleSave'])->name('post.save');

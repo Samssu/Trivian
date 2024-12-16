@@ -52,7 +52,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- Join Button -->
+       
                         <!-- Tombol Join / Cancel Join -->
                         <form action="{{ route('community.toggleJoin', $community->id) }}" method="POST"
                             class="w-10">
@@ -85,9 +85,14 @@
                         </a>
                     </div>
 
+                   
 
                     <!-- Main Content -->
                     <section class="main-content flex-grow-1 p-3 p-md-4 shadow-sm">
+
+                        {{-- tempat post --}}
+                        @include('form-text.input-field')
+
                         <!-- Konten Utama -->
                         <section class="d-flex flex-column"
                             style="z-index: 1; position: relative; height: 100%; padding: 15px; overflow-y: auto;">
@@ -116,7 +121,7 @@
                                 <!-- Latest -->
                                 <section class="tab-pane fade show active" id="late">
                                     <div class="list-group">
-                                        <!-- Collaboration Item -->
+                                       @include('form-text.kucing-form')
                                     </div>
                                 </section>
 

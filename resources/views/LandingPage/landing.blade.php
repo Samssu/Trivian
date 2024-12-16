@@ -1,14 +1,14 @@
     @extends('layouts.app')
 
-
-    <!DOCTYPE html>
-    <html lang="id">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Thrivian | Landing Page</title>
+         <!-- Link ke favicon -->
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     </head>
+
+
 
     <body>
         <!-- Navbar -->
@@ -29,9 +29,10 @@
                             terbatas
                             dalam perjalananmu mencapai tujuan.
                         </p>
-                        <a href="{{route('login')}}" class="btn btn-primary btn-lg px-4 py-2 shadow-lg">
+                        <a href="{{route('login')}}" class="btn btn-light btn-lg px-4 py-2 shadow-lg" style="border: 1px solid #232E66;">
                             Start Now →
                         </a>
+                        
                     </div>
                 </div>
             </div>
@@ -45,8 +46,8 @@
                     <div class="col">
                         <div class="d-flex flex-column align-items-center">
                             <!-- Icon Circle -->
-                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 bg-primary text-white"
-                                style="width: 70px; height: 70px;">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 text-white"
+                                style="width: 70px; height: 70px;  background-color: #232E66;">
                                 <i class="bi bi-globe2 fs-3"></i>
                             </div>
                             <!-- Heading and Text -->
@@ -60,8 +61,8 @@
                     <!-- Feature 2 -->
                     <div class="col">
                         <div class="d-flex flex-column align-items-center">
-                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 bg-primary text-white"
-                                style="width: 70px; height: 70px;">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 text-white"
+                                style="width: 70px; height: 70px;  background-color: #232E66;">
                                 <i class="bi bi-search fs-3"></i>
                             </div>
                             <h5 class="fw-bold">Find Your Community</h5>
@@ -74,8 +75,8 @@
                     <!-- Feature 3 -->
                     <div class="col">
                         <div class="d-flex flex-column align-items-center">
-                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 bg-primary text-white"
-                                style="width: 70px; height: 70px;">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 text-white"
+                                style="width: 70px; height: 70px;  background-color: #232E66;">
                                 <i class="bi bi-people fs-3"></i>
                             </div>
                             <h5 class="fw-bold">User Connection</h5>
@@ -88,8 +89,8 @@
                     <!-- Feature 4 -->
                     <div class="col">
                         <div class="d-flex flex-column align-items-center">
-                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 bg-primary text-white"
-                                style="width: 70px; height: 70px;">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 text-white"
+                                style="width: 70px; height: 70px;  background-color: #232E66;">
                                 <i class="bi bi-folder fs-3"></i>
                             </div>
                             <h5 class="fw-bold">Project Gallery</h5>
@@ -101,9 +102,6 @@
                 </div>
             </div>
         </section>
-
-        </section>
-
 
         <!-- Dicory News -->
         <section class="py-5">
@@ -132,15 +130,15 @@
                     <!-- Right Content (Text) -->
                     <div class="col-lg-6 col-md-20">
                         <h2 class="fw-bold display-4 text-dark mb-4 text-center text-lg-start">
-                            Discover New Opportunities and Relationships
+                            Discover New
+                            <span style="color: #232E66;">Opportunities and Relationships</span>
                         </h2>
                         <p class="fs-5 text-muted mb-4 text-center text-lg-start">
-                            Discover new opportunities and join communities that match your interests. Tap into a
-                            community
+                            Discover new opportunities and join communities that match your interests. Tap into a community
                             that supports your personal and professional development, and be inspired by fellow members
-                            with
-                            similar interests.
+                            with similar interests.
                         </p>
+
                         <div
                             class="d-flex align-items-center justify-content-center justify-content-lg-start flex-wrap gap-3">
                             <img src="{{ asset('images/pasfoto1.png') }}" alt="User 1" class="rounded-circle shadow-sm"
@@ -793,4 +791,4 @@
         </section>
     </body>
 
-    </html>
+  

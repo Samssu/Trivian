@@ -3,7 +3,12 @@
         <div class="row">
             <!-- Section 1: Logo and Contact -->
             <div class="col-lg-3 col-md-6 mb-4">
-                <h2 class="text-primary">Thrivian</h2>
+                <!-- Logo and Text -->
+                <div class="d-flex align-items-center">
+                    <img src="{{ url('images/trivian.png') }}" alt="Trivian Logo"
+                        style="width: 60px; height: 60px; margin-right: 10px;">
+                    <span style="font-size: 28px; font-weight: 700; color: #3B4A9A;">Thrivian</span>
+                </div>
                 <p class="mt-3 fw-bold">Contact Us</p>
                 <p class="mt-2">
                     <i class="fas fa-phone-alt text-primary me-2"></i>Call: +123 400 123
@@ -87,7 +92,8 @@
             <!-- Section 4: Subscribe -->
             <div class="col-lg-3 col-md-6 mb-4">
                 <h5 class="fw-bold">Subscribe</h5>
-                <p class="mt-3"><i class="fas fa-info-circle text-primary me-2"></i>Lorem Ipsum has been the industry's
+                <p class="mt-3"><i class="fas fa-info-circle text-primary me-2"></i>Lorem Ipsum has been the
+                    industry's
                     standard dummy text ever since the 1500s.</p>
                 <form class="mt-3">
                     <div class="mb-3">

@@ -122,6 +122,9 @@
                          <i class="bi bi-heart me-1"></i> <span class="like-count">164</span>
                      </a>
 
+                     <!-- colab Button -->
+                     <a href="#" class="text-decoration-none"><i class="bi bi-share me-1"></i></a>
+
                      <!-- Share Button -->
                      <a href="#" class="text-decoration-none"><i class="bi bi-share me-1"></i></a>
 

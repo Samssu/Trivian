@@ -10,7 +10,8 @@ class CommunityController extends Controller
 {
     public function communities()
     {
-        $communities = Community::all();
+        // Menghapus duplikat berdasarkan ID
+        $communities = Community::all()->unique('id');
         return view('communities.index', compact('communities'));
     }
 
@@ -81,7 +82,6 @@ class CommunityController extends Controller
         return view('community.profile-uxid', compact('community'));
     }
 
-
     // Fungsi untuk bergabung ke komunitas
     public function join($id)
     {
@@ -115,11 +115,11 @@ class CommunityController extends Controller
         if ($user->communities->contains($communityId)) {
             // User leave komunitas
             $user->communities()->detach($communityId);
-            $community->decrement('members_count');  // Kurangi jumlah anggota
+            $community->decrement('members_count'); // Kurangi jumlah anggota
         } else {
             // User join komunitas
             $user->communities()->attach($communityId);
-            $community->increment('members_count');  // Tambah jumlah anggota
+            $community->increment('members_count'); // Tambah jumlah anggota
         }
 
         return back();

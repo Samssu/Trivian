@@ -27,19 +27,19 @@
                     <div class="row">
                         <div class="col-md-4">
                           <a href="#" style="text-decoration: none; color: inherit;">
-                            <p class="text-center text-sm">164</p>
+                            <p class="text-center text-sm">0</p>
                             <p class="text-center text-xs">Followers</p>
                           </a>
                         </div>
                         <div class="col-md-4">
                           <a href="#" style="text-decoration: none; color: inherit;">
-                            <p class="text-center text-sm">43</p>
+                            <p class="text-center text-sm">0</p>
                             <p class="text-center text-xs">Following</p>
                           </a>
                         </div>
                         <div class="col-md-4">
                           <a href="#" style="text-decoration: none; color: inherit;">
-                            <p class="text-center text-sm">10</p>
+                            <p class="text-center text-sm">0</p>
                             <p class="text-center text-xs">Communities</p>
                           </a>
                         </div>
