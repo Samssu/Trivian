@@ -64,7 +64,8 @@
                     <input type="text" name="category" id="category" class="form-control" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Create Project</button>
+                <button type="submit" class="btn" style="background-color: #FBB041; color: white; border-color: #FBB041;">Create Project</button>
+
             </form>
 
 

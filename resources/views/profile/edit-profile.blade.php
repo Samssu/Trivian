@@ -190,8 +190,12 @@
 
                         <!-- Save Changes Button -->
                         <div class="d-flex justify-content-center mt-4">
-                            <button type="submit" class="btn btn-outline-dark">Save Changes</button>
+                            <button type="submit" class="btn"
+                                style="background-color: #FBB041; color: white; border: 1px solid #FBB041;">
+                                Save Changes
+                            </button>
                         </div>
+
                     </form>
                 </div>
             </div>

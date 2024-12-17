@@ -69,8 +69,9 @@
                     </ul>
                     <!-- Tombol untuk toggle "See All" / "See Less" -->
                     <button id="toggle-btn" class="btn btn-outline-primary w-100 mt-3"
-                        style="background-color: #ffffff; border-color: #2E2E66" onclick="toggleCommunities()">See
-                        All</button>
+                        style="border-color: #2E2E66" onclick="toggleCommunities()">See
+                        All
+                    </button>
                 </div>
             </section>
 
@@ -89,8 +90,8 @@
                                     style="width:30px; height:30px;">
                                 UXID (UX Indonesia)
                             </div>
-                            <button class="btn btn-outline-primary btn-sm join-button"
-                                style="background-color: #ffffff; border-color: #2E2E66;">Join</button>
+                            <button class="btn btn-sm rounded-pill join-button"
+                                style="background-color: #FBB041; color: white; ">Join</button>
                         </a>
                         <a href="{{ route('profile-google') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
@@ -99,8 +100,8 @@
                                     style="width:30px; height:30px;">
                                 Google Developer Group
                             </div>
-                            <button class="btn btn-outline-primary btn-sm join-button"
-                                style="background-color: #ffffff; border-color: #2E2E66;">Join</button>
+                            <button class="btn btn-sm rounded-pill join-button"
+                                style="background-color: #FBB041; color: white;">Join</button>
                         </a>
                         <a href="{{ route('profile-laravel') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
@@ -109,8 +110,8 @@
                                     style="width:30px; height:30px;">
                                 Laravel Indonesia
                             </div>
-                            <button class="btn btn-outline-primary btn-sm join-button"
-                                style="background-color: #ffffff; border-color: #2E2E66;">Join</button>
+                            <button class="btn btn-sm rounded-pill join-button"
+                                style="background-color: #FBB041; color: white;">Join</button>
                         </a>
                         <a href="{{ route('profile-oyen') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
@@ -119,8 +120,8 @@
                                     style="width:30px; height:30px;">
                                 Komunitas Oyen
                             </div>
-                            <button class="btn btn-outline-primary btn-sm join-button"
-                                style="background-color: #ffffff; border-color: #2E2E66;">Join</button>
+                            <button class="btn btn-sm rounded-pill join-button"
+                                style="background-color: #FBB041; color: white;">Join</button>
                         </a>
                         <a href="{{ route('profile-solid') }}"
                             class="list-group-item d-flex justify-content-between align-items-center text-decoration-none">
@@ -129,11 +130,12 @@
                                     style="width:30px; height:30px;">
                                 Solid Community
                             </div>
-                            <button class="btn btn-outline-primary btn-sm join-button"
-                                style="background-color: #ffffff; border-color: #2E2E66;">Join</button>
+                            <button class="btn btn-sm rounded-pill join-button"
+                                style="background-color: #FBB041; color: white;">Join</button>
                         </a>
                     </ul>
                 </div>
+
             </section>
 
             <!-- You Might Like -->
@@ -254,73 +256,95 @@
                 }
             }
 
-             /* Styling for the toggle button */
-    .toggle-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #232E66; /* Primary background color */
-        color: #ffffff; /* White text */
-        border: none; /* Remove border */
-        border-radius: 50px; /* Rounded edges */
-        padding: 10px 20px; /* Add padding */
-        font-size: 1rem; /* Text size */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
-        transition: all 0.3s ease; /* Smooth transitions */
-    }
+            /* Styling for the toggle button */
+            .toggle-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #232E66;
+                /* Primary background color */
+                color: #ffffff;
+                /* White text */
+                border: none;
+                /* Remove border */
+                border-radius: 50px;
+                /* Rounded edges */
+                padding: 10px 20px;
+                /* Add padding */
+                font-size: 1rem;
+                /* Text size */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                /* Add shadow */
+                transition: all 0.3s ease;
+                /* Smooth transitions */
+            }
 
-    .toggle-btn:hover {
-        background-color: #1A2255; /* Darker shade on hover */
-        transform: translateY(-2px); /* Slight lift effect */
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Intense shadow on hover */
-    }
+            .toggle-btn:hover {
+                background-color: #1A2255;
+                /* Darker shade on hover */
+                transform: translateY(-2px);
+                /* Slight lift effect */
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+                /* Intense shadow on hover */
+            }
 
-    .toggle-btn:active {
-        transform: translateY(0); /* Reset lift effect on click */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow */
-    }
+            .toggle-btn:active {
+                transform: translateY(0);
+                /* Reset lift effect on click */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                /* Reset shadow */
+            }
 
-    /* Styling for the toggle icon */
-    .toggle-icon {
-        display: inline-block;
-        width: 20px;
-        height: 2px;
-        background-color: #ffffff; /* White color for icon */
-        position: relative;
-        transition: all 0.3s ease; /* Smooth transition */
-    }
+            /* Styling for the toggle icon */
+            .toggle-icon {
+                display: inline-block;
+                width: 20px;
+                height: 2px;
+                background-color: #ffffff;
+                /* White color for icon */
+                position: relative;
+                transition: all 0.3s ease;
+                /* Smooth transition */
+            }
 
-    .toggle-icon::before,
-    .toggle-icon::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #ffffff; /* White color for icon */
-        left: 0;
-        transition: all 0.3s ease; /* Smooth transition */
-    }
+            .toggle-icon::before,
+            .toggle-icon::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #ffffff;
+                /* White color for icon */
+                left: 0;
+                transition: all 0.3s ease;
+                /* Smooth transition */
+            }
 
-    .toggle-icon::before {
-        top: -6px; /* Position above main line */
-    }
+            .toggle-icon::before {
+                top: -6px;
+                /* Position above main line */
+            }
 
-    .toggle-icon::after {
-        top: 6px; /* Position below main line */
-    }
+            .toggle-icon::after {
+                top: 6px;
+                /* Position below main line */
+            }
 
-    /* Rotate icon when active */
-    .toggle-btn.active .toggle-icon {
-        background-color: transparent; /* Hide the middle line */
-    }
+            /* Rotate icon when active */
+            .toggle-btn.active .toggle-icon {
+                background-color: transparent;
+                /* Hide the middle line */
+            }
 
-    .toggle-btn.active .toggle-icon::before {
-        transform: rotate(45deg) translate(5px, 5px); /* Cross effect */
-    }
+            .toggle-btn.active .toggle-icon::before {
+                transform: rotate(45deg) translate(5px, 5px);
+                /* Cross effect */
+            }
 
-    .toggle-btn.active .toggle-icon::after {
-        transform: rotate(-45deg) translate(5px, -5px); /* Cross effect */
-    }
+            .toggle-btn.active .toggle-icon::after {
+                transform: rotate(-45deg) translate(5px, -5px);
+                /* Cross effect */
+            }
         </style>
 
 

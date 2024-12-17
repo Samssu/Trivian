@@ -72,7 +72,7 @@
                 <!-- Post Button -->
                 <div class="col-auto">
                     <button class="btn btn-primary w-100"
-                        style="border-radius: 20px; background-color: #2E2E66; border-color: #2E2E66"
+                        style="background-color: #232E66; color: white; border-color: #232E66;"
                         onclick="submitPostForm()">
                         Create Post
                     </button>

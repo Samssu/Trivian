@@ -90,8 +90,8 @@
 
                 <!-- Submit Button -->
                 <div class="d-flex justify-content-end mt-3">
-                    <button type="submit" class="btn btn-outline-primary btn-sm rounded-pill"
-                        style="padding: 10px 25px;">
+                    <button type="submit" class="btn "
+                        style="background-color: #FBB041; color: white; border-color: #FBB041;">
                         Create
                     </button>
                 </div>

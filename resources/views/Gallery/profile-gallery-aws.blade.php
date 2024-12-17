@@ -212,7 +212,7 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color: #2E2E66; color: white;">
+                                    <div class="modal-header" style="background-color: #FBB041; color: white;">
                                         <h5 class="modal-title" id="collabModalLabel">Ask to Collaborate</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>

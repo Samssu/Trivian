@@ -23,7 +23,7 @@
         overflow-y: auto; 
         z-index: 1000;">
     <!-- Header Card -->
-    <div class="d-flex justify-content-between align-items-center p-3 rounded-top" style="background-color: #2E2E66;">
+    <div class="d-flex justify-content-between align-items-center p-3 rounded-top" style="background-color: #FBB041; ">
         <h5 class="mb-0 fw-bold text-white w-100 text-center">Select Community</h5>
         <button id="close-card" class="btn text-white p-0" style="font-size: 1.5rem;">
             &times;

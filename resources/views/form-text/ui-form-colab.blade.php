@@ -24,7 +24,7 @@
                         <!-- Role -->
                         <div>
                             <a href="#" class="btn"
-                                style="font-size: 0.7rem; padding: 5px 10px; background-color: #E5E3D4; color: black; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bolder;">
+                                style="font-size: 0.7rem; padding: 5px 10px; background-color: #FBB041; color: white; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bolder;">
                                 {{ $post->user->role ?? 'Member' }}
                             </a>
                         </div>
@@ -74,7 +74,7 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <!-- Modal Header -->
-                                        <div class="modal-header" style="background-color: #2E2E66; color: white;">
+                                        <div class="modal-header" style="background-color: #FBB041; color: white;">
                                             <h5 class="modal-title" id="collabModalLabel">Ask to Collaborate</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>

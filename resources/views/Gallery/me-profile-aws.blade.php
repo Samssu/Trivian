@@ -46,7 +46,7 @@
 
                             <!-- Button -->
                             <a href="{{ route('profile-gallery-aws') }}" class="btn btn-primary btn-sm w-50 mt-2"
-                                style="font-size: 0.85rem; padding: 8px 20px;">
+                                style="font-size: 0.85rem; padding: 8px 20px; background-color:#FBB041;">
                                 See Project
                             </a>
 

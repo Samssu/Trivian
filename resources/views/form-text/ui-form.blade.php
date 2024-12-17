@@ -24,7 +24,7 @@
                         <!-- Role -->
                         <div>
                             <a href="#" class="btn"
-                                style="font-size: 0.7rem; padding: 5px 10px; background-color: #E5E3D4; color: black; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bolder;">
+                                style="font-size: 0.7rem; padding: 5px 10px; background-color: #FBB041; color: white; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bolder;">
                                 {{ $post->user->role ?? 'Member' }}
                             </a>
                         </div>
