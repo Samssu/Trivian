@@ -4,7 +4,8 @@
         <li class="list-group-item d-flex justify-content-between align-items-center notification-item unread">
             <div class="d-flex align-items-start">
                 <!-- Gambar Profil -->
-                <img src="{{url('images/profilekosongan.jpg')}}" alt="Logo" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                <img src="{{ url('images/profilekosongan.jpg') }}" alt="Logo" class="rounded-circle me-3"
+                    style="width: 50px; height: 50px; object-fit: cover;">
 
                 <!-- Konten Notifikasi -->
                 <div>
@@ -17,12 +18,16 @@
 
             <!-- Tombol Action -->
             <div class="d-flex gap-2 align-items-center">
-                <button class="btn btn-outline-primary btn-sm">View Profile</button>
-                <button class="btn btn-primary btn-sm accept-btn">Accept</button>
+                <a href="{{route('view-request')}}" class="btn btn-outline-primary btn-sm">View Request</a>
+                <a href="{{route('profile')}}" class="btn btn-outline-primary btn-sm">View Profile</a>
+                <a href="#" class="btn btn-primary btn-sm accept-btn">Accept</a>
+
+
 
                 <!-- Three dots button with dropdown -->
                 <div class="dropdown">
-                    <button class="btn btn-link text-dark p-0 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-link text-dark p-0 dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <i class="bi bi-three-dots"></i>
                     </button>
                     <ul class="dropdown-menu">
@@ -39,7 +44,7 @@
 <script>
     // Event listener for Accept Button
     document.querySelectorAll('.accept-btn').forEach(button => {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function() {
             // Change button text to 'Accepted' or hide it
             this.textContent = 'Accepted';
             this.classList.remove('btn-primary');

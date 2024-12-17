@@ -138,3 +138,18 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Animation for the Like and Bookmark button */
+.btn-clicked {
+    animation: scale-up 0.3s ease-out forwards;
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+

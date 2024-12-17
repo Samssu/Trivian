@@ -21,21 +21,24 @@
                             <small class="text-muted ms-3">{{ $post->created_at->diffForHumans() }}</small>
                         </div>
 
-                        <!-- Role  -->
-                        <a href="#" class="btn"
-                            style="font-size: 0.7rem; padding: 5px 10px; background-color: #E5E3D4; color: white; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bold;">
-                            {{ $post->user->role ?? 'Member' }}
-                        </a>
+                        <!-- Role -->
+                        <div>
+                            <a href="#" class="btn"
+                                style="font-size: 0.7rem; padding: 5px 10px; background-color: #E5E3D4; color: black; border-radius: 50px; margin-top: 9px; text-decoration: none; opacity: 1; transition: opacity 0.3s; font-weight: bolder;">
+                                {{ $post->user->role ?? 'Member' }}
+                            </a>
+                        </div>
 
                         <!-- Post Content -->
-                        <p class="mt-3 mb-1">{{ $post->content }}</p>
+                        <p class="mt-3 mb-1" style="margin-bottom: 15px;">{{ $post->content }}</p>
+
 
                         @if ($post->image)
                             <!-- Grid Image -->
                             <div class="image-container mt-3"
                                 style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-                                <a href="#"
-                                    onclick="openImageFullscreen(event, '{{ asset('storage/' . $post->image) }}')">
+                                <a href="javascript:void(0)"
+                                    onclick="openImageFullscreen('{{ asset('storage/' . $post->image) }}')">
                                     <img id="fullscreen-1" src="{{ asset('storage/' . $post->image) }}" alt="Post Image"
                                         class="img-fluid rounded" style="width: 100%; cursor: pointer;" />
                                 </a>
@@ -66,7 +69,6 @@
                             <a href="#" class="text-decoration-none save-button">
                                 <i class="bi bi-bookmark me-1"></i>
                             </a>
-
                         </div>
 
                         <!-- Comments Section -->
@@ -86,7 +88,8 @@
                             <form action="{{ route('comment.store', $post->id) }}" method="POST">
                                 @csrf
                                 <textarea class="form-control mt-2" name="comment" placeholder="Add a comment" rows="1"></textarea>
-                                <button type="submit" class="btn btn-sm btn-primary mt-2">Post Comment</button>
+                                <button type="submit" class="btn btn-sm btn-primary mt-2"
+                                    style="background-color: #2E2E66; color: white;">Post Comment</button>
                             </form>
                         </div>
                     </div>
@@ -102,10 +105,6 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-    }
-
-    .image-overlay {
-        display: flex;
     }
 
     .image-overlay {
@@ -128,5 +127,21 @@
     }
 </style>
 
-     <!-- Panggil file JS -->
-     <script src="{{ asset('js/comentar.js') }}"></script>
+<!-- JavaScript for fullscreen image -->
+<script>
+    function openImageFullscreen(imageSrc) {
+        const overlay = document.createElement('div');
+        overlay.classList.add('image-overlay');
+        const img = document.createElement('img');
+        img.src = imageSrc;
+        overlay.appendChild(img);
+
+        // Add overlay to body
+        document.body.appendChild(overlay);
+
+        // Close overlay on double click
+        overlay.addEventListener('dblclick', function() {
+            overlay.remove();
+        });
+    }
+</script>

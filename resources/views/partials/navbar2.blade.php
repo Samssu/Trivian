@@ -27,10 +27,10 @@
                 <li class="nav-item">
                     <a class="nav-link text-white fs-5 hover-effect" href="/gallery" data-target="gallery">Gallery</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link text-white fs-5 hover-effect" href="/activity"
                         data-target="activity">Activity</a>
-                </li>
+                </li> --}}
             </ul>
 
             <!-- Search and Notifications -->

@@ -91,6 +91,14 @@ Route::get('/askcolab', function () {
     return view('kolab.askcolab');
 })->name('askcolab');
 
+Route::get('/view-request', function () {
+    return view('kolab.view-request');
+})->name('view-request');
+
+Route::get('/view-post', function () {
+    return view('HomePage.view-post');
+})->name('view-post');
+
 //post
 // Route untuk menampilkan halaman home
 Route::get('/home', [PostController::class, 'index'])->name('home');

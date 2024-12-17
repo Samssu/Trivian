@@ -169,15 +169,25 @@
                     </div>
                     <hr>
 
+
                     <!-- Statistics -->
-                    <div class="d-flex justify-content-between text-muted mb-3">
-                        <div><span class="fw-bold">2</span> Likes</div>
-                        <div><span class="fw-bold">2</span> Bookmark</div>
-                        <div><span class="fw-bold">2</span> Views</div>
+                    <div class="d-flex justify-content-start text-muted mb-3">
+                        <div class="d-flex align-items-center me-4">
+                            <i class="me-1"></i>
+                            <span id="likeCount" class="fw-bold ms-1">0 </span> Likes
+                        </div>
+                        <div class="d-flex align-items-center me-4">
+                            <i class="me-1"></i>
+                            <span id="bookmarkCount" class="fw-bold ms-1">0 </span> Bookmark
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="me-1"></i>
+                            <span class="fw-bold ms-1">0 </span> Views
+                        </div>
                     </div>
 
                     <!-- Action Buttons -->
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between gap-3">
                         <!-- Like Button -->
                         <button id="likeButton" class="btn btn-link text-danger">
                             <i class="bi bi-heart-fill"></i>
@@ -187,6 +197,53 @@
                         <button id="bookmarkButton" class="btn btn-link text-muted">
                             <i class="bi bi-bookmark"></i>
                         </button>
+
+                        <!-- Button Colab -->
+                        <a href="#" id="collabToggle" class="text-decoration-none" data-bs-toggle="modal"
+                            data-bs-target="#collabModal">
+                            <i class="bi bi-people"></i> Ask to Collaboration
+                        </a>
+
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="collabModal" tabindex="-1" aria-labelledby="collabModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" style="background-color: #2E2E66; color: white;">
+                                        <h5 class="modal-title" id="collabModalLabel">Ask to Collaborate</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <!-- Modal Body -->
+                                    <div class="modal-body">
+                                        <label for="collabNote" class="form-label">Add an invitation note about what
+                                            you want to collaborate</label>
+                                        <textarea id="collabNote" class="form-control" rows="4" maxlength="80" oninput="updateCounter()"></textarea>
+                                        <div id="counter" class="mt-1 text-end"
+                                            style="font-size: 0.9rem; color: #999;">0/80</div>
+                                    </div>
+
+                                    <!-- Modal Footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary" id="cancelButton"
+                                            data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="sendInvitation()">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notifikasi Pembatalan -->
+                        <div id="cancelNotification" class="alert alert-warning position-fixed top-0 end-0 m-3 shadow"
+                            style="display: none;">
+                            You have canceled the Ask to Collaboration.
+                        </div>
+
 
                         <!-- Share Button -->
                         <button id="shareButton" class="btn btn-link text-muted">
@@ -246,6 +303,89 @@
             const modal = document.getElementById('enlargeModal');
             modal.style.display = 'none';
         }
+
+
+        // Update the character counter
+        function updateCounter() {
+            const textarea = document.getElementById('collabNote');
+            const counter = document.getElementById('counter');
+            counter.textContent = `${textarea.value.length}/80`;
+        }
+
+        // Handle sending the invitation
+        function sendInvitation() {
+            // Change the button text and style after sending
+            const collabButton = document.getElementById('collabToggle');
+            collabButton.innerHTML = '<i class="bi bi-check-circle"></i> Invitation Sent'; // Update button text
+            collabButton.classList.add('btn-success',
+                'disabled'); // Change the button style to indicate success and disable it
+
+            // Close the modal after sending
+            const modal = bootstrap.Modal.getInstance(document.getElementById('collabModal'));
+            modal.hide();
+
+            // Optionally, display an alert or another message
+            alert("Invitation Sent Successfully!");
+
+            // Redirect to home page after submission (optional)
+            window.location.href = '/gallery'; // Change the URL to your home page or desired page
+        }
+
+        // Show notification when the cancel button is clicked
+        document.getElementById('cancelButton').addEventListener('click', function() {
+            // Show the cancel notification
+            const cancelNotification = document.getElementById('cancelNotification');
+            cancelNotification.style.display = 'block';
+
+            // Hide the notification after 3 seconds
+            setTimeout(() => {
+                cancelNotification.style.display = 'none';
+            }, 3000); // 3 seconds
+        });
+
+        // Untuk Animasi Tambah like, Saved
+        let likeClicked = false;
+        document.getElementById('likeButton').addEventListener('click', () => {
+            const likeCount = document.getElementById('likeCount');
+            let currentLikes = parseInt(likeCount.textContent);
+
+            if (likeClicked) {
+                likeCount.textContent = currentLikes - 1;
+                likeClicked = false;
+            } else {
+                likeCount.textContent = currentLikes + 1;
+                likeClicked = true;
+            }
+
+            const likeButton = document.getElementById('likeButton');
+            likeButton.classList.add('btn-clicked');
+
+            setTimeout(() => {
+                likeButton.classList.remove('btn-clicked');
+            }, 300);
+        });
+
+        // Handle Bookmark Button Click
+        let bookmarkClicked = false;
+        document.getElementById('bookmarkButton').addEventListener('click', () => {
+            const bookmarkCount = document.getElementById('bookmarkCount');
+            let currentBookmarks = parseInt(bookmarkCount.textContent);
+
+            if (bookmarkClicked) {
+                bookmarkCount.textContent = currentBookmarks - 1;
+                bookmarkClicked = false;
+            } else {
+                bookmarkCount.textContent = currentBookmarks + 1;
+                bookmarkClicked = true; // Mark as clicked
+            }
+
+            const bookmarkButton = document.getElementById('bookmarkButton');
+            bookmarkButton.classList.add('btn-clicked');
+
+            setTimeout(() => {
+                bookmarkButton.classList.remove('btn-clicked');
+            }, 300);
+        });
     </script>
 
 
@@ -254,5 +394,3 @@
 
 
 </body>
-
-</html>

@@ -82,7 +82,7 @@
                     <i class="bi bi-arrow-left"></i>
                 </a>
 
-                <h2 class="fw-bold mb-0">Colab</h2>
+                <h2 class="fw-bold mb-0">Collaboration Request</h2>
 
             </div>
 

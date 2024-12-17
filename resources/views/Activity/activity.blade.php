@@ -23,7 +23,7 @@
         style="height: 50vh; background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/images/bgactivity.png'); background-size: cover; background-position: center; margin-top: 56px;">
         <div class="container text-center">
             <!-- Title -->
-            <h1 class="display-4 fw-bold mb-4">Find Your Community</h1>
+            <h1 class="display-4 fw-bold mb-4">Find Your Activity</h1>
             <p class="lead mb-5">Explore, connect, and grow with like-minded individuals across the globe.</p>
 
             <!-- Search Bar -->
