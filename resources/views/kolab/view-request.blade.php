@@ -95,8 +95,8 @@
                             <img src="/images/default-profile.png" alt="User" class="rounded-circle me-3"
                                 style="width: 60px; height: 60px;">
                             <div>
-                                <h6 class="fw-bold mb-0">Jeje Getalia</h6>
-                                <small class="text-muted">@jejejoesux | UI/UX Warriors</small>
+                                <h6 class="fw-bold mb-0">SamsuHidayat</h6>
+                                <small class="text-muted">@Hidayat | UI/UX Warriors</small>
                             </div>
                         </div>
 

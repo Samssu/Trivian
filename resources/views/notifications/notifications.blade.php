@@ -39,6 +39,10 @@
                 @include('card.card-notifications')
                 @include('card.card-notifications-colab')
                 @include('card.card-notifications-follow')
+                @include('card.card-notifications')
+                @include('card.card-notifications-colab')
+                @include('card.card-notifications-follow')
+
             
             </div>
         </div>

@@ -14,7 +14,7 @@
             <!-- Menampilkan Postingan -->
 
             
-            @include('form-text.ui-form')
+            {{-- @include('form-text.ui-form') --}}
             @include('form-text.ui-form-colab')
 
         </div>
