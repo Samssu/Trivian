@@ -1,0 +1,9 @@
+1. Download File pada GitHub dan ekstrak fle tersebut
+2. lakukan "Composer Install" pada terminal.
+3. buat database pada di phpMyAdmin dengan nama yang sesuai pada .env (trivian)
+4. Jika selesai melakukan composer instal, dan membuat database lakukan perintah "Php artisan migrate" pada
+terminal kalian.
+5.(Opsional)jika sudah membuat database, silakan ambil "trivian.sql" dan lakukan import di dalam database tersebut.
+6. jika semua Step di atas di gunakan, silakan buat perintah "php artisan serve" untuk menjalankan program 
+
+Happy Nice day :)
